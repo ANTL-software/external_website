@@ -1,0 +1,134 @@
+@use '../../utils/styles/variables' as vars;
+
+#footerComponent {
+  background-color: vars.$secondary-color;
+  color: vars.$background-color;
+  padding: vars.$spacing-xxl 0 vars.$spacing-xl;
+  margin-top: vars.$spacing-xxl;
+}
+
+#footerComponent .footerContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: vars.$spacing-xl;
+  margin-bottom: vars.$spacing-xl;
+}
+
+#footerComponent .companySection {
+  max-width: 400px;
+}
+
+#footerComponent .companyLogo {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: vars.$spacing-base;
+  margin-bottom: vars.$spacing-lg;
+}
+
+#footerComponent .logoIcon {
+  width: 32px;
+  height: 32px;
+  background-color: vars.$background-color;
+  border-radius: 4px;
+}
+
+#footerComponent .companyLogo h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$background-color;
+  margin: 0;
+}
+
+#footerComponent .companySection p {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: vars.$text-muted;
+  line-height: 1.6;
+  margin: 0 0 vars.$spacing-lg 0;
+}
+
+#footerComponent .socialIcons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: vars.$spacing-base;
+}
+
+#footerComponent .socialIcons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$background-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#footerComponent .socialIcons a:hover {
+  background-color: vars.$primary-color;
+  transform: translateY(-2px);
+}
+
+#footerComponent .footerSection h4 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$background-color;
+  margin: 0 0 vars.$spacing-lg 0;
+}
+
+#footerComponent .footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-sm;
+}
+
+#footerComponent .footerSection ul li a {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: vars.$text-muted;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#footerComponent .footerSection ul li a:hover {
+  color: vars.$primary-color;
+}
+
+#footerComponent .footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: vars.$spacing-lg;
+  text-align: center;
+}
+
+#footerComponent .footerBottom p {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: vars.$text-muted;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #footerComponent {
+    padding: vars.$spacing-xl vars.$spacing-base;
+  }
+
+  #footerComponent .footerContent {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-lg;
+  }
+
+  #footerComponent .companySection {
+    max-width: none;
+  }
+
+  #footerComponent .socialIcons {
+    justify-content: center;
+  }
+
+  #footerComponent .footerSection {
+    text-align: center;
+  }
+}

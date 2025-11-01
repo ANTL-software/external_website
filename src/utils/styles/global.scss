@@ -1,0 +1,126 @@
+@use 'variables' as vars;
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+// Normalize / Reset CSS
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: vars.$font-family-primary;
+    font-size: vars.$font-size-base;
+    font-weight: vars.$font-weight-normal;
+    line-height: 1.6;
+    color: vars.$text-color;
+    background-color: vars.$background-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// links
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+// Listes
+ul,
+ol {
+    list-style: none;
+}
+
+// Titles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: vars.$font-weight-medium;
+    line-height: 1.2;
+    margin: 0;
+}
+
+// Paragraphes
+p {
+    margin: 0;
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Buttons
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button:focus {
+    outline: none;
+}
+
+// Inputs
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    outline: none;
+}
+
+// Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// Remove default styles for HTML5 elements
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// Container utility class for responsive margins
+.container {
+    @include mixins.container;
+}

@@ -1,0 +1,121 @@
+@use '../../utils/styles/variables' as vars;
+
+#getInTouchComponent {
+  width: 100%;
+  padding: vars.$spacing-xxl 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xl;
+  align-items: center;
+}
+
+#getInTouchComponent .getInTouchHeader {
+  text-align: center;
+  max-width: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-base;
+}
+
+#getInTouchComponent .getInTouchHeader h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+}
+
+#getInTouchComponent .getInTouchHeader p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#getInTouchComponent .contactCards {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vars.$spacing-xl;
+}
+
+#getInTouchComponent .contactCard {
+  background: vars.$background-color;
+  border-radius: 16px;
+  padding: vars.$spacing-xl;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
+  align-items: center;
+  box-shadow: 0 4px 12px vars.$shadow-color;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#getInTouchComponent .contactCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(45, 55, 72, 0.15);
+}
+
+#getInTouchComponent .cardImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#getInTouchComponent .cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#getInTouchComponent .contactCard h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$text-color;
+  margin: 0;
+}
+
+#getInTouchComponent .contactCard address {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-medium;
+  margin: 0;
+  font-style: normal;
+}
+
+#getInTouchComponent .contactCard address a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#getInTouchComponent .contactCard address a:hover {
+  color: vars.$accent-color;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #getInTouchComponent {
+    padding: vars.$spacing-xl vars.$spacing-base;
+  }
+
+  #getInTouchComponent .contactCards {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-lg;
+  }
+
+  #getInTouchComponent .contactCard {
+    padding: vars.$spacing-lg;
+    gap: vars.$spacing-base;
+  }
+
+  #getInTouchComponent .cardImage {
+    width: 100px;
+    height: 100px;
+  }
+}

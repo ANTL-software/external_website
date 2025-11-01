@@ -1,0 +1,212 @@
+@use '../../utils/styles/variables' as vars;
+
+#joinUsComponent.joinUs {
+  padding: vars.$spacing-xxl 0;
+}
+
+#joinUsComponent .joinUsHeader {
+  text-align: center;
+  margin-bottom: vars.$spacing-xl;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#joinUsComponent .joinUsTitle {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-base;
+  line-height: 1.2;
+}
+
+#joinUsComponent .joinUsSubtitle {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+  font-weight: vars.$font-weight-normal;
+  color: vars.$text-light;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#joinUsComponent .benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vars.$spacing-lg;
+  max-width: 1200px;
+  margin: 0 auto vars.$spacing-xl auto;
+  align-items: stretch;
+}
+
+#joinUsComponent .benefitCard {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+}
+
+#joinUsComponent .benefitImageContainer {
+  width: 200px;
+  height: 200px;
+  border-radius: vars.$border-radius-lg;
+  overflow: hidden;
+  margin-bottom: vars.$spacing-lg;
+  flex-shrink: 0;
+  box-shadow: vars.$shadow-base;
+  background: linear-gradient(135deg, vars.$primary-color, vars.$accent-color);
+  padding: 4px;
+}
+
+#joinUsComponent .benefitImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: vars.$border-radius-lg;
+  transition: transform 0.3s ease;
+}
+
+#joinUsComponent .benefitCard:hover .benefitImage {
+  transform: scale(1.05);
+}
+
+#joinUsComponent .benefitContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex-grow: 1;
+  gap: vars.$spacing-base;
+}
+
+#joinUsComponent .benefitTitle {
+  font-size: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+  line-height: 1.3;
+}
+
+#joinUsComponent .benefitDescription {
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+#joinUsComponent .joinUsAction {
+  text-align: center;
+  margin-top: vars.$spacing-lg;
+}
+
+#joinUsComponent .joinOurTeamLink {
+  display: inline-flex;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  color: vars.$primary-color;
+  text-decoration: none;
+  font-weight: vars.$font-weight-medium;
+  font-size: vars.$font-size-base;
+  transition: color 0.3s ease, gap 0.3s ease;
+  padding: vars.$spacing-sm vars.$spacing-lg;
+  border: 2px solid vars.$primary-color;
+  border-radius: vars.$border-radius-base;
+  background: transparent;
+}
+
+#joinUsComponent .joinOurTeamLink:hover {
+  color: vars.$background-color;
+  background: vars.$primary-color;
+  gap: vars.$spacing-sm;
+}
+
+#joinUsComponent .linkText {
+  transition: color 0.3s ease;
+}
+
+#joinUsComponent .linkArrow {
+  font-size: vars.$font-size-lg;
+  transition: transform 0.3s ease;
+}
+
+#joinUsComponent .joinOurTeamLink:hover .linkArrow {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #joinUsComponent .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: vars.$spacing-base;
+  }
+
+  #joinUsComponent .benefitCard:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 500px;
+    justify-self: center;
+  }
+
+  #joinUsComponent .benefitCard {
+    min-height: 350px;
+  }
+
+  #joinUsComponent .benefitImageContainer {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  #joinUsComponent.joinUs {
+    padding: vars.$spacing-xl 0;
+  }
+
+  #joinUsComponent .joinUsHeader {
+    margin-bottom: vars.$spacing-lg;
+  }
+
+  #joinUsComponent .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-base;
+    margin-bottom: vars.$spacing-lg;
+  }
+
+  #joinUsComponent .benefitCard:nth-child(3) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: auto;
+  }
+
+  #joinUsComponent .benefitCard {
+    min-height: 320px;
+  }
+
+  #joinUsComponent .benefitImageContainer {
+    width: 140px;
+    height: 140px;
+    margin-bottom: vars.$spacing-base;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #joinUsComponent .benefitImage {
+    transition: none;
+  }
+
+  #joinUsComponent .benefitCard:hover .benefitImage {
+    transform: none;
+  }
+
+  #joinUsComponent .joinOurTeamLink {
+    transition: none;
+  }
+
+  #joinUsComponent .linkArrow {
+    transition: none;
+  }
+
+  #joinUsComponent .joinOurTeamLink:hover .linkArrow {
+    transform: none;
+  }
+}

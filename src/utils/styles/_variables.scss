@@ -1,0 +1,56 @@
+$primary-color: #8b5cf6; // violet principal - énergique et moderne
+$secondary-color: #2d3748; // Gris foncé - sophistiqué et lisible
+$accent-color: #DDa0DD; // parne plus sombre pour les accents
+$text-color: #2d3748; // Gris foncé pour le texte principal
+$text-light: #718096; // Gris moyen pour le texte secondaire
+$text-muted: #a0aec0; // Gris clair pour les éléments discrets
+$background-color: #ffffff; // Blanc pur
+$background-light: #f7fafc; // Gris très clair pour les sections
+$border-color: #e2e8f0; // Bordures subtiles
+$shadow-color: rgba(45, 55, 72, 0.1); // Ombres douces
+
+$font-family-primary: 'Playfair Display', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-family-mono: 'Fira Code', 'Consolas', monospace;
+
+$font-size-xs: 11px;
+$font-size-sm: 13px;
+$font-size-base: 15px;
+$font-size-lg: 17px;
+$font-size-xl: 20px;
+$font-size-xxl: 28px;
+$font-size-title: 32px;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$spacing-xs: 6px;
+$spacing-sm: 12px;
+$spacing-base: 20px;
+$spacing-lg: 32px;
+$spacing-xl: 48px;
+$spacing-xxl: 64px;
+
+$border-radius-sm: 6px;
+$border-radius-base: 12px;
+$border-radius-lg: 20px;
+$border-radius-full: 9999px;
+
+$shadow-xs: 0 1px 2px 0 $shadow-color;
+$shadow-sm: 0 1px 3px 0 $shadow-color, 0 1px 2px 0 $shadow-color;
+$shadow-base: 0 4px 6px -1px $shadow-color, 0 2px 4px -1px $shadow-color;
+$shadow-lg: 0 10px 15px -3px $shadow-color, 0 4px 6px -2px $shadow-color;
+
+// Container responsive margins
+$container-margin-mobile: 16px;
+$container-margin-tablet: 32px;
+$container-margin-desktop: 64px;
+$container-margin-wide: 128px;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

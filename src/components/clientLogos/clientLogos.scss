@@ -1,0 +1,116 @@
+@use '../../utils/styles/variables' as vars;
+
+#clientLogosComponent {
+    min-height: clamp(15dvh, 20dvh, 25dvh);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(vars.$spacing-sm, vars.$spacing-lg, vars.$spacing-xl);
+    width: 100%;
+    padding: vars.$spacing-xxl 0;
+    margin-top: vars.$spacing-xl;
+}
+
+#clientLogosComponent h2 {
+    font-size: clamp(1rem, 3vw + 0.3rem, 1.8rem);
+    font-weight: vars.$font-weight-semibold;
+    color: vars.$text-color;
+    text-align: center;
+    margin-bottom: vars.$spacing-base;
+}
+
+#clientLogosComponent .clientLogos {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#clientLogosComponent .logoItem {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: vars.$spacing-xs;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#clientLogosComponent .logoItem:hover {
+    opacity: 1;
+}
+
+#clientLogosComponent .logoIcon {
+    width: clamp(35px, 6vw, 50px);
+    height: clamp(35px, 6vw, 50px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 2.5vw, 1.5em);
+    color: white;
+    font-weight: bold;
+}
+
+#clientLogosComponent .logoIcon.boltshift {
+    background-color: #2563eb;
+}
+
+#clientLogosComponent .logoIcon.lightbox {
+    background-color: #000000;
+}
+
+#clientLogosComponent .logoIcon.featherdev {
+    background-color: #059669;
+}
+
+#clientLogosComponent .logoIcon.spherule {
+    background-color: #7c3aed;
+}
+
+#clientLogosComponent .logoIcon.globalbank {
+    background-color: #2563eb;
+}
+
+#clientLogosComponent .logoIcon.nietzsche {
+    background-color: #ea580c;
+}
+
+#clientLogosComponent .logoText {
+    font-size: clamp(0.7rem, 1.8vw + 0.1rem, 1rem);
+    font-weight: vars.$font-weight-bold;
+    color: vars.$text-color;
+    text-align: center;
+    font-style: normal;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #clientLogosComponent .clientLogos {
+        flex-flow: row wrap;
+        justify-content: space-around;
+        gap: vars.$spacing-sm;
+    }
+    
+    #clientLogosComponent .logoItem {
+        flex-flow: column nowrap;
+        gap: vars.$spacing-xs;
+        min-width: calc(33.333% - vars.$spacing-sm);
+    }
+}
+
+/* Desktop behavior */
+@media (min-width: 769px) {
+    #clientLogosComponent .clientLogos {
+        justify-content: space-between;
+        flex-flow: row nowrap;
+    }
+    
+    #clientLogosComponent .logoItem {
+        flex-flow: row nowrap;
+    }
+}

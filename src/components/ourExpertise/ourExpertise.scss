@@ -1,0 +1,111 @@
+@use '../../utils/styles/variables' as vars;
+
+#ourExpertiseComponent.ourExpertise {
+    padding: vars.$spacing-xxl 0;
+}
+
+#ourExpertiseComponent .expertiseHeader {
+    text-align: center;
+    margin-bottom: vars.$spacing-xxl;
+}
+
+#ourExpertiseComponent .expertiseTitle {
+    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-weight: vars.$font-weight-bold;
+    color: vars.$text-color;
+    margin: 0 0 vars.$spacing-base 0;
+    line-height: 1.2;
+}
+
+#ourExpertiseComponent .expertiseSubtitle {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+    font-weight: vars.$font-weight-normal;
+    color: vars.$text-light;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#ourExpertiseComponent .expertiseGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: vars.$spacing-lg;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#ourExpertiseComponent .expertiseGrid > * {
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #ourExpertiseComponent .expertiseGrid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #ourExpertiseComponent.ourExpertise {
+        padding: vars.$spacing-xl 0;
+    }
+    
+    #ourExpertiseComponent .expertiseHeader {
+        margin-bottom: vars.$spacing-xl;
+    }
+    
+    #ourExpertiseComponent .expertiseGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: vars.$spacing-base;
+        max-width: 400px;
+    }
+    
+    #ourExpertiseComponent .expertiseGrid > * {
+        max-width: none;
+        min-width: 280px;
+    }
+}
+
+#ourExpertiseComponent {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$spacing-lg;
+    width: 100%;
+    min-height: 25dvh;
+    padding: vars.$spacing-xl 0;
+    text-align: center;
+}
+
+#ourExpertiseComponent h2 {
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+    font-weight: vars.$font-weight-bold;
+    color: vars.$text-color;
+    margin-bottom: 0;
+}
+
+#ourExpertiseComponent blockquote {
+    font-size: clamp(1rem, 2.5vw + 0.3rem, 1.4rem);
+    font-weight: vars.$font-weight-medium;
+    color: vars.$text-color;
+    width: 60%;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    #ourExpertiseComponent {
+        padding: vars.$spacing-xxl vars.$spacing-base;
+    }
+    
+    #ourExpertiseComponent blockquote {
+        width: 90%;
+    }
+}

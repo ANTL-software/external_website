@@ -1,0 +1,95 @@
+@use '../../utils/styles/variables' as vars;
+
+
+#goToConsultationLink .consultationLink {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$spacing-xs;
+    padding: vars.$spacing-xs vars.$spacing-sm;
+    background-color: vars.$secondary-color;
+    color: vars.$background-color;
+    text-decoration: none;
+    border-radius: vars.$border-radius-base;
+    width: 220px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+#goToConsultationLink .consultationLink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 150%;
+    height: 100%;
+    background-color: vars.$primary-color;
+    transition: transform 0.5s ease;
+    z-index: 1;
+    transform: translateX(-100%) skewX(15deg);
+    transform-origin: center;
+}
+
+#goToConsultationLink .consultationLink:hover::before {
+    transform: translateX(35%) skewX(15deg);
+}
+
+#goToConsultationLink .consultationLink:hover {
+    color: vars.$background-color;
+}
+
+#goToConsultationLink .consultationLinkText {
+    font-size: vars.$font-size-base;
+    font-weight: vars.$font-weight-medium;
+    position: relative;
+    z-index: 2;
+}
+
+#goToConsultationLink .chevronContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+}
+
+#goToConsultationLink .chevronBack {
+    position: absolute;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.3s ease;
+}
+
+#goToConsultationLink .chevronFront {
+    position: absolute;
+    font-size: 14px;
+    color: vars.$background-color;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+#goToConsultationLink .consultationLink:hover .chevronBack {
+    transform: translateX(4px);
+}
+
+#goToConsultationLink .consultationLink:hover .chevronFront {
+    transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #goToConsultationLink .consultationLink {
+        transition: none;
+    }
+    
+    #goToConsultationLink .consultationLink::before {
+        transition: none;
+    }
+    
+    #goToConsultationLink .chevronBack,
+    #goToConsultationLink .chevronFront {
+        transition: none;
+    }
+}

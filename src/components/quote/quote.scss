@@ -1,0 +1,128 @@
+@use '../../utils/styles/variables' as vars;
+
+#quoteComponent.quote {
+  padding: vars.$spacing-xxl 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(59, 130, 246, 0.03) 100%);
+  position: relative;
+}
+
+#quoteComponent.quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+#quoteComponent .quoteContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+#quoteComponent .quoteText {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.2rem);
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+  line-height: 1.4;
+  margin: 0 0 vars.$spacing-xl 0;
+  position: relative;
+  font-style: italic;
+}
+
+#quoteComponent .quoteText::before {
+  content: '"';
+  font-size: clamp(3rem, 5vw + 1rem, 4rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-color;
+  position: absolute;
+  top: -1.5rem;
+  left: -2rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+#quoteComponent .quoteText::after {
+  content: '"';
+  font-size: clamp(3rem, 5vw + 1rem, 4rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-color;
+  position: absolute;
+  bottom: -1rem;
+  right: -2rem;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+#quoteComponent .quoteFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: vars.$spacing-lg;
+}
+
+#quoteComponent .quoteAuthor {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  font-style: normal;
+}
+
+#quoteComponent .authorName {
+  font-size: clamp(1.1rem, 2vw + 0.3rem, 1.3rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-color;
+  margin: 0;
+}
+
+#quoteComponent .authorTitle {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-normal;
+  color: vars.$text-light;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #quoteComponent.quote {
+    padding: vars.$spacing-xl 0;
+  }
+
+  #quoteComponent .quoteText {
+    margin-bottom: vars.$spacing-lg;
+  }
+
+  #quoteComponent .quoteText::before {
+    top: -1rem;
+    left: -.1rem;
+  }
+
+  #quoteComponent .quoteText::after {
+    top: 3.8rem;
+    right: -.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #quoteComponent .quoteText {
+    padding: 1rem 1.5rem;
+  }
+
+  #quoteComponent .quoteText::before {
+    top: 0;
+    left: 0;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  #quoteComponent .quoteText::after {
+    bottom: 0;
+    right: 0;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+}

@@ -1,0 +1,218 @@
+@use '../../utils/styles/variables' as vars;
+
+#meetOurTeamComponent.meetOurTeam {
+  padding: vars.$spacing-xxl 0;
+}
+
+#meetOurTeamComponent .meetOurTeamHeader {
+  text-align: center;
+  margin-bottom: vars.$spacing-xl;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#meetOurTeamComponent .meetOurTeamTitle {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-base;
+  line-height: 1.2;
+}
+
+#meetOurTeamComponent .meetOurTeamSubtitle {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+  font-weight: vars.$font-weight-normal;
+  color: vars.$text-light;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#meetOurTeamComponent .teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vars.$spacing-lg;
+  max-width: 1000px;
+  margin: 0 auto vars.$spacing-xl auto;
+  align-items: stretch;
+}
+
+#meetOurTeamComponent .teamMemberCard {
+  background: vars.$background-color;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-lg;
+  box-shadow: vars.$shadow-base;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  min-height: 280px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+#meetOurTeamComponent .teamMemberCard:hover {
+  transform: translateY(-8px);
+  box-shadow: vars.$shadow-lg;
+}
+
+#meetOurTeamComponent .memberImageContainer {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: vars.$spacing-base;
+  flex-shrink: 0;
+  box-shadow: vars.$shadow-sm;
+  background: linear-gradient(135deg, vars.$primary-color, vars.$accent-color);
+  padding: 3px;
+}
+
+#meetOurTeamComponent .memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#meetOurTeamComponent .teamMemberCard:hover .memberImage {
+  transform: scale(1.05);
+}
+
+#meetOurTeamComponent .memberContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex-grow: 1;
+  gap: vars.$spacing-xs;
+}
+
+#meetOurTeamComponent .memberName {
+  font-size: clamp(1.1rem, 2vw + 0.3rem, 1.3rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+  line-height: 1.3;
+}
+
+#meetOurTeamComponent .memberPosition {
+  font-size: vars.$font-size-sm;
+  color: vars.$text-light;
+  line-height: 1.4;
+  margin: 0;
+}
+
+#meetOurTeamComponent .teamAction {
+  text-align: center;
+  margin-top: vars.$spacing-lg;
+}
+
+#meetOurTeamComponent .joinTeamLink {
+  display: inline-flex;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  color: vars.$primary-color;
+  text-decoration: none;
+  font-weight: vars.$font-weight-medium;
+  font-size: vars.$font-size-base;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+#meetOurTeamComponent .joinTeamLink:hover {
+  color: vars.$accent-color;
+  gap: vars.$spacing-sm;
+}
+
+#meetOurTeamComponent .linkText {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+#meetOurTeamComponent .joinTeamLink:hover .linkText {
+  border-bottom-color: vars.$accent-color;
+}
+
+#meetOurTeamComponent .linkArrow {
+  font-size: vars.$font-size-lg;
+  transition: transform 0.3s ease;
+}
+
+#meetOurTeamComponent .joinTeamLink:hover .linkArrow {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #meetOurTeamComponent .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: vars.$spacing-base;
+  }
+
+  #meetOurTeamComponent .teamMemberCard {
+    min-height: 250px;
+  }
+
+  #meetOurTeamComponent .memberImageContainer {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #meetOurTeamComponent.meetOurTeam {
+    padding: vars.$spacing-xl 0;
+  }
+
+  #meetOurTeamComponent .meetOurTeamHeader {
+    margin-bottom: vars.$spacing-lg;
+  }
+
+  #meetOurTeamComponent .teamGrid {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-base;
+    margin-bottom: vars.$spacing-lg;
+  }
+
+  #meetOurTeamComponent .teamMemberCard {
+    padding: vars.$spacing-base;
+    min-height: 220px;
+  }
+
+  #meetOurTeamComponent .memberImageContainer {
+    width: 80px;
+    height: 80px;
+    margin-bottom: vars.$spacing-sm;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #meetOurTeamComponent .teamMemberCard {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .teamMemberCard:hover {
+    transform: none;
+  }
+
+  #meetOurTeamComponent .memberImage {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .teamMemberCard:hover .memberImage {
+    transform: none;
+  }
+
+  #meetOurTeamComponent .joinTeamLink {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .linkArrow {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .joinTeamLink:hover .linkArrow {
+    transform: none;
+  }
+}

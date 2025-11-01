@@ -1,0 +1,205 @@
+@use '../../utils/styles/variables' as vars;
+
+#successStoriesComponent.successStories {
+  padding: vars.$spacing-xxl 0;
+}
+
+#successStoriesComponent .successStoriesHeader {
+  text-align: center;
+  margin-bottom: vars.$spacing-xl;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#successStoriesComponent .successStoriesTitle {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-base;
+  line-height: 1.2;
+}
+
+#successStoriesComponent .successStoriesSubtitle {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.2rem);
+  font-weight: vars.$font-weight-normal;
+  color: vars.$text-light;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#successStoriesComponent .successStoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vars.$spacing-lg;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+#successStoriesComponent .successStoryCard {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 350px;
+}
+
+#successStoriesComponent .storyContent {
+  padding: vars.$spacing-lg;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-base;
+  flex-grow: 1;
+}
+
+#successStoriesComponent .storyTitle {
+  font-size: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+  line-height: 1.3;
+}
+
+#successStoriesComponent .storyDescription {
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+#successStoriesComponent .storyMetrics {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+  padding: vars.$spacing-sm;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: vars.$border-radius-base;
+  border-left: 4px solid vars.$primary-color;
+  backdrop-filter: blur(5px);
+}
+
+#successStoriesComponent .metricsLabel {
+  font-size: vars.$font-size-xs;
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-light;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#successStoriesComponent .metricsValue {
+  font-size: clamp(vars.$font-size-base, 2vw + 0.2rem, vars.$font-size-lg);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-color;
+}
+
+#successStoriesComponent .storyAction {
+  margin-top: vars.$spacing-base;
+}
+
+#successStoriesComponent .viewCaseStudiesLink {
+  display: flex;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  color: vars.$primary-color;
+  text-decoration: none;
+  font-weight: vars.$font-weight-medium;
+  font-size: vars.$font-size-sm;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+#successStoriesComponent .viewCaseStudiesLink:hover {
+  color: vars.$accent-color;
+  gap: vars.$spacing-sm;
+}
+
+#successStoriesComponent .linkText {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s ease;
+}
+
+#successStoriesComponent .viewCaseStudiesLink:hover .linkText {
+  border-bottom-color: vars.$accent-color;
+}
+
+#successStoriesComponent .linkArrow {
+  font-size: vars.$font-size-base;
+  transition: transform 0.3s ease;
+}
+
+#successStoriesComponent .viewCaseStudiesLink:hover .linkArrow {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  #successStoriesComponent .successStoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: vars.$spacing-base;
+  }
+  
+  #successStoriesComponent .successStoryCard:nth-child(3) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #successStoriesComponent.successStories {
+    padding: vars.$spacing-xl 0;
+  }
+  
+  #successStoriesComponent .successStoriesHeader {
+    margin-bottom: vars.$spacing-lg;
+  }
+  
+  #successStoriesComponent .successStoriesGrid {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-base;
+  }
+  
+  #successStoriesComponent .successStoryCard {
+    min-height: 300px;
+  }
+  
+  #successStoriesComponent .successStoryCard:nth-child(3) {
+    grid-column: auto;
+    max-width: none;
+    justify-self: auto;
+  }
+  
+  #successStoriesComponent .storyContent {
+    padding: vars.$spacing-base;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #successStoriesComponent .successStoryCard {
+    transition: none;
+  }
+  
+  #successStoriesComponent .successStoryCard:hover {
+    transform: none;
+  }
+  
+  #successStoriesComponent .storyImage {
+    transition: none;
+  }
+  
+  #successStoriesComponent .successStoryCard:hover .storyImage {
+    transform: none;
+  }
+  
+  #successStoriesComponent .viewCaseStudiesLink {
+    transition: none;
+  }
+  
+  #successStoriesComponent .linkArrow {
+    transition: none;
+  }
+  
+  #successStoriesComponent .viewCaseStudiesLink:hover .linkArrow {
+    transform: none;
+  }
+}

@@ -1,0 +1,95 @@
+@use '../../utils/styles/variables' as vars;
+
+.dropDownItem {
+  background: vars.$background-color;
+  border-radius: 12px;
+  border: 1px solid vars.$border-color;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropDownItem:hover {
+  border-color: vars.$primary-color;
+  box-shadow: 0 4px 12px vars.$shadow-color;
+}
+
+.dropDownItem.open {
+  border-color: vars.$primary-color;
+  box-shadow: 0 4px 12px vars.$shadow-color;
+}
+
+.dropDownItem.open .dropDownAnswer {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.dropDownItem.open .dropDownIcon {
+  transform: rotate(180deg);
+}
+
+.dropDownQuestion {
+  width: 100%;
+  padding: vars.$spacing-lg;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$text-color;
+  transition: color 0.3s ease;
+}
+
+.dropDownQuestion:hover {
+  color: vars.$primary-color;
+}
+
+.dropDownQuestion:focus {
+  outline: 2px solid vars.$primary-color;
+  outline-offset: -2px;
+}
+
+.dropDownQuestion span:first-child {
+  flex: 1;
+  margin-right: vars.$spacing-base;
+}
+
+.dropDownIcon {
+  font-size: 1.5rem;
+  font-weight: vars.$font-weight-light;
+  color: vars.$primary-color;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dropDownAnswer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.dropDownContent {
+  padding: 0 vars.$spacing-lg vars.$spacing-lg;
+}
+
+.dropDownContent p {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dropDownQuestion {
+    padding: vars.$spacing-base;
+  }
+
+  .dropDownContent {
+    padding: 0 vars.$spacing-base vars.$spacing-base;
+  }
+}

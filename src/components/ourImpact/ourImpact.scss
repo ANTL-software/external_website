@@ -1,0 +1,113 @@
+@use '../../utils/styles/variables' as vars;
+
+#ourImpactComponent.ourImpact {
+  padding: vars.$spacing-xxl 0;
+  text-align: center;
+}
+
+#ourImpactComponent .impactHeader {
+  margin-bottom: vars.$spacing-xl;
+}
+
+#ourImpactComponent .impactTitle {
+  font-size: clamp(vars.$font-size-xxl, 4vw, vars.$font-size-title);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-base;
+  line-height: 1.2;
+}
+
+#ourImpactComponent .impactSubtitle {
+  font-size: vars.$font-size-lg;
+  color: vars.$text-light;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+#ourImpactComponent .impactStats {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: vars.$spacing-lg;
+  margin-bottom: vars.$spacing-xl;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ourImpactComponent .statItem {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  min-width: 200px;
+  flex: 1;
+}
+
+#ourImpactComponent .statValue {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-sm;
+  line-height: 1;
+}
+
+#ourImpactComponent .statLabel {
+  font-size: vars.$font-size-base;
+  color: vars.$text-light;
+  line-height: 1.4;
+  max-width: 180px;
+}
+
+#ourImpactComponent .highlightStat {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
+  padding: vars.$spacing-lg;
+  background: linear-gradient(135deg, vars.$primary-color 0%, vars.$accent-color 100%);
+  border-radius: vars.$border-radius-lg;
+  box-shadow: vars.$shadow-lg;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#ourImpactComponent .highlightValue {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$background-color;
+  margin-bottom: vars.$spacing-sm;
+  line-height: 1;
+}
+
+#ourImpactComponent .highlightLabel {
+  font-size: vars.$font-size-lg;
+  color: vars.$background-color;
+  font-weight: vars.$font-weight-medium;
+  line-height: 1.3;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  #ourImpactComponent .impactStats {
+    flex-flow: column nowrap;
+    gap: vars.$spacing-lg;
+  }
+  
+  #ourImpactComponent .statItem {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  #ourImpactComponent .highlightStat {
+    margin-top: vars.$spacing-lg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #ourImpactComponent .statItem,
+  #ourImpactComponent .highlightStat {
+    animation: none;
+  }
+}
