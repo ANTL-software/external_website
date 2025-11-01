@@ -9,6 +9,8 @@
   align-items: center;
   border-radius: 16px;
   margin: vars.$spacing-xxl 0;
+  position: relative;
+  z-index: 2;
 }
 
 #faqComponent .faqHeader {

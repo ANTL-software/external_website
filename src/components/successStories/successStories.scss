@@ -2,6 +2,8 @@
 
 #successStoriesComponent.successStories {
   padding: vars.$spacing-xxl 0;
+  position: relative;
+  z-index: 2;
 }
 
 #successStoriesComponent .successStoriesHeader {
@@ -77,6 +79,8 @@
   border-radius: vars.$border-radius-base;
   border-left: 4px solid vars.$primary-color;
   backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 10;
 }
 
 #successStoriesComponent .metricsLabel {

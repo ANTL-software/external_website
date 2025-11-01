@@ -2,6 +2,8 @@
 
 #whatWeStandForComponent.whatWeStandFor {
   padding: vars.$spacing-xxl 0;
+  position: relative;
+  z-index: 2;
 }
 
 #whatWeStandForComponent .whatWeStandForHeader {
@@ -49,6 +51,8 @@
   text-align: center;
   min-height: 320px;
   border: 1px solid rgba(37, 99, 235, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
 #whatWeStandForComponent .valueCard:hover {

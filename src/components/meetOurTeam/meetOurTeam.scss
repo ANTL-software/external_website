@@ -2,6 +2,8 @@
 
 #meetOurTeamComponent.meetOurTeam {
   padding: vars.$spacing-xxl 0;
+  position: relative;
+  z-index: 2;
 }
 
 #meetOurTeamComponent .meetOurTeamHeader {
@@ -49,6 +51,8 @@
   text-align: center;
   min-height: 280px;
   border: 1px solid rgba(37, 99, 235, 0.1);
+  position: relative;
+  z-index: 10;
 }
 
 #meetOurTeamComponent .teamMemberCard:hover {

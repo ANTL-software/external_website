@@ -6,6 +6,8 @@
   border: 1px solid vars.$border-color;
   overflow: hidden;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
 }
 
 .dropDownItem:hover {

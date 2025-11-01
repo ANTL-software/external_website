@@ -2,6 +2,8 @@
 
 #joinUsComponent.joinUs {
   padding: vars.$spacing-xxl 0;
+  position: relative;
+  z-index: 2;
 }
 
 #joinUsComponent .joinUsHeader {
@@ -55,6 +57,8 @@
   box-shadow: vars.$shadow-base;
   background: linear-gradient(135deg, vars.$primary-color, vars.$accent-color);
   padding: 4px;
+  position: relative;
+  z-index: 10;
 }
 
 #joinUsComponent .benefitImage {
