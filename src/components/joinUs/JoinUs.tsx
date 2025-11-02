@@ -3,9 +3,9 @@ import "./joinUs.scss";
 import type { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.jpg";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.jpg";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.jpg";
+import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
+import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
+import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
 
 export default function JoinUs(): ReactElement {
   const benefits = [
@@ -54,10 +54,11 @@ export default function JoinUs(): ReactElement {
               data-aos-delay={delay}
             >
               <div className="benefitImageContainer">
-                <img 
-                  src={benefit.image} 
+                <img
+                  src={benefit.image}
                   alt={benefit.imageAlt}
                   className="benefitImage"
+                  loading="lazy"
                 />
               </div>
               

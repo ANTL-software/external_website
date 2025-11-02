@@ -1,7 +1,5 @@
 import "./aboutUs.scss";
 
-import backgroundImage from "../../assets/images/background.png";
-
 import type { ReactElement } from "react";
 
 import Header from "../../components/header/Header";
@@ -20,13 +18,6 @@ import Footer from "../../components/footer/Footer";
 export default function AboutUs(): ReactElement {
   return (
     <div id="aboutUs">
-      <figure className="backgroundContainer">
-        <img
-          src={backgroundImage}
-          alt="A beautiful background"
-          className="backgroundImage"
-        />
-      </figure>
       <BackgroundCircle />
       <BackgroundGrid />
       <Header />

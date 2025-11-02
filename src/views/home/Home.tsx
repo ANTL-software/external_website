@@ -1,7 +1,5 @@
 import "./home.scss";
 
-import backgroundImage from "../../assets/images/background.png";
-
 import type { ReactElement } from "react";
 
 
@@ -22,13 +20,6 @@ import Footer from "../../components/footer/Footer";
 export default function Home(): ReactElement {
   return (
     <div id="home">
-      <figure className="backgroundContainer">
-        <img
-          src={backgroundImage}
-          alt="A beautiful background"
-          className="backgroundImage"
-        />
-      </figure>
       <BackgroundCircle />
       <BackgroundGrid />
       <Header />

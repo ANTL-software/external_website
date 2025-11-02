@@ -1,10 +1,10 @@
 import "./ourExpertise.scss";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.jpg";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.jpg";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.jpg";
-import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.jpg";
-import mockup5 from "../../assets/images/mockup/Stationery_Mockup_5.jpg";
+import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
+import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
+import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
+import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
+import mockup5 from "../../assets/images/mockup/Stationery_Mockup_5.webp";
 
 import type { ReactElement } from "react";
 

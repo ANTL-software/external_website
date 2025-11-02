@@ -3,12 +3,12 @@ import "./meetOurTeam.scss";
 import type { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import pp1 from "../../assets/images/mockup/pp/1.jpg";
-import pp2 from "../../assets/images/mockup/pp/2.jpg";
-import pp3 from "../../assets/images/mockup/pp/3.jpg";
-import pp4 from "../../assets/images/mockup/pp/4.jpg";
-import pp5 from "../../assets/images/mockup/pp/5.jpg";
-import pp6 from "../../assets/images/mockup/pp/6.jpg";
+import pp1 from "../../assets/images/mockup/pp/1.webp";
+import pp2 from "../../assets/images/mockup/pp/2.webp";
+import pp3 from "../../assets/images/mockup/pp/3.webp";
+import pp4 from "../../assets/images/mockup/pp/4.webp";
+import pp5 from "../../assets/images/mockup/pp/5.webp";
+import pp6 from "../../assets/images/mockup/pp/6.webp";
 
 export default function MeetOurTeam(): ReactElement {
   const teamMembers = [
@@ -75,10 +75,11 @@ export default function MeetOurTeam(): ReactElement {
               data-aos-delay={delay}
             >
               <div className="memberImageContainer">
-                <img 
-                  src={member.image} 
+                <img
+                  src={member.image}
                   alt={member.imageAlt}
                   className="memberImage"
+                  loading="lazy"
                 />
               </div>
               

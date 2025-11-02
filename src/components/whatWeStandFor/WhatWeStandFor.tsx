@@ -2,10 +2,10 @@ import "./whatWeStandFor.scss";
 
 import type { ReactElement } from "react";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.jpg";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.jpg";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.jpg";
-import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.jpg";
+import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
+import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
+import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
+import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
 
 export default function WhatWeStandFor(): ReactElement {
   const values = [
@@ -60,10 +60,11 @@ export default function WhatWeStandFor(): ReactElement {
               data-aos-delay={delay}
             >
               <div className="valueImageContainer">
-                <img 
-                  src={value.image} 
+                <img
+                  src={value.image}
                   alt={value.imageAlt}
                   className="valueImage"
+                  loading="lazy"
                 />
               </div>
               

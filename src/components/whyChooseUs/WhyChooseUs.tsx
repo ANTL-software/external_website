@@ -1,8 +1,8 @@
 import "./whyChooseUs.scss";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.jpg";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.jpg";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.jpg";
+import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
+import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
+import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
 
 import type { ReactElement } from "react";
 
@@ -56,10 +56,11 @@ export default function WhyChooseUs(): ReactElement {
               data-aos-delay={600 + (index * 150)}
             >
               <div className="cardImageContainer">
-                <img 
-                  src={item.image} 
-                  alt={item.imageAlt} 
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
                   className="cardImage"
+                  loading="lazy"
                 />
               </div>
               
