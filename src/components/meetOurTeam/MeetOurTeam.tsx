@@ -14,37 +14,37 @@ export default function MeetOurTeam(): ReactElement {
   const teamMembers = [
     {
       name: "Timothy Franey",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp1,
       imageAlt: "Timothy Franey portrait"
     },
     {
       name: "Carroll Keeling",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp2,
       imageAlt: "Carroll Keeling portrait"
     },
     {
       name: "Johanna Kassulke",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp3,
       imageAlt: "Johanna Kassulke portrait"
     },
     {
       name: "Leslie Willms",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp4,
       imageAlt: "Leslie Willms portrait"
     },
     {
       name: "Frances Smith",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp5,
       imageAlt: "Frances Smith portrait"
     },
     {
       name: "Roderick Gutgowski",
-      position: "Co-Founder, ABC Company",
+      position: "Co-Founder, ANTEL",
       image: pp6,
       imageAlt: "Roderick Gutgowski portrait"
     }
@@ -57,7 +57,7 @@ export default function MeetOurTeam(): ReactElement {
           Meet Our Team
         </h2>
         <p className="meetOurTeamSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Our global team of experienced engineers, consultants, and project managers is the backbone of ABC Company. With a shared passion for problem-solving and innovation, we're dedicated to delivering exceptional results for every client.
+          Our global team of experienced engineers, consultants, and project managers is the backbone of ANTEL. With a shared passion for problem-solving and innovation, we're dedicated to delivering exceptional results for every client.
         </p>
       </header>
 

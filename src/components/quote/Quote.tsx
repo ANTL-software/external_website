@@ -13,7 +13,7 @@ export default function Quote(): ReactElement {
         <footer className="quoteFooter">
           <cite className="quoteAuthor">
             <span className="authorName">Randalle Wortranders</span>
-            <span className="authorTitle">Co-Founder - ABC Company</span>
+            <span className="authorTitle">Co-Founder - ANTEL</span>
           </cite>
         </footer>
       </div>

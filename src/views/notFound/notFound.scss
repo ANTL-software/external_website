@@ -1,0 +1,103 @@
+@use '../../utils/styles/mixins' as mixins;
+@use '../../utils/styles/variables' as vars;
+
+#notFound {
+  @include mixins.viewBackground;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: vars.$spacing-xl;
+}
+
+#notFound .notFoundContainer {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+#notFound .notFoundContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: vars.$spacing-lg;
+}
+
+#notFound .notFoundTitle {
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$primary-color;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(135deg, vars.$primary-color, vars.$accent-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#notFound .notFoundSubtitle {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#notFound .notFoundDescription {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 500px;
+}
+
+#notFound .homeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: vars.$spacing-sm;
+  padding: vars.$spacing-base vars.$spacing-xl;
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  text-decoration: none;
+  font-weight: vars.$font-weight-semibold;
+  font-size: vars.$font-size-base;
+  border-radius: vars.$border-radius-base;
+  transition: all 0.3s ease;
+  margin-top: vars.$spacing-base;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+#notFound .homeButton:hover {
+  background: vars.$accent-color;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  gap: vars.$spacing-base;
+}
+
+#notFound .homeButton:focus {
+  outline: 2px solid vars.$primary-color;
+  outline-offset: 2px;
+}
+
+#notFound .buttonArrow {
+  font-size: vars.$font-size-lg;
+  transition: transform 0.3s ease;
+}
+
+#notFound .homeButton:hover .buttonArrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  #notFound {
+    padding: vars.$spacing-lg;
+  }
+
+  #notFound .notFoundContent {
+    gap: vars.$spacing-base;
+  }
+
+  #notFound .homeButton {
+    padding: vars.$spacing-sm vars.$spacing-lg;
+  }
+}

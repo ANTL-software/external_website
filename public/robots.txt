@@ -1,0 +1,6 @@
+# robots.txt for ANTEL
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://your-domain.com/sitemap.xml

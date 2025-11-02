@@ -9,8 +9,8 @@ export default function Footer(): ReactElement {
         <div className="footerContent">
           <section className="footerSection companySection" aria-labelledby="company-heading">
             <header className="companyLogo">
-              <div className="logoIcon" role="img" aria-label="ABC Company logo"></div>
-              <h3 id="company-heading">ABC Company</h3>
+              <div className="logoIcon" role="img" aria-label="ANTEL logo"></div>
+              <h3 id="company-heading">ANTEL</h3>
             </header>
             <p>We offer a comprehensive suite of digital marketing services that cover all aspects of our online presence. From SEO and social media marketing to content creation and PPC advertising, they have the expertise and resources to handle our diverse marketing needs.</p>
             <nav className="socialIcons" aria-label="Social media links">
@@ -59,7 +59,7 @@ export default function Footer(): ReactElement {
         </div>
         
         <div className="footerBottom">
-          <p><small>© ABC Company 2025 | All Rights Reserved</small></p>
+          <p><small>© ANTEL 2025 | All Rights Reserved</small></p>
         </div>
       </div>
     </footer>

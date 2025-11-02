@@ -36,7 +36,7 @@ export default function JoinUs(): ReactElement {
           Join Us
         </h2>
         <p className="joinUsSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Looking for a career where you can innovate and make an impact? ABC Company is always on the lookout for passionate individuals to join our growing team.
+          Looking for a career where you can innovate and make an impact? ANTEL is always on the lookout for passionate individuals to join our growing team.
         </p>
       </header>
 

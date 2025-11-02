@@ -37,7 +37,7 @@ export default function WhyChooseUs(): ReactElement {
     <section id="whyChooseUsComponent" className="whyChooseUs container">
       <header className="whyChooseUsHeader">
         <h2 className="whyChooseUsTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Why Choose ABC Company?
+          Why Choose ANTEL?
         </h2>
         <p className="whyChooseUsSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
           We provide end-to-end solutions to help businesses achieve scalable systems, innovative solutions, and more.
