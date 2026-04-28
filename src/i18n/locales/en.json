@@ -1,0 +1,353 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "join": "Join Us",
+    "consultation": "Contact Us"
+  },
+  "footer": {
+    "description": "Customer experience and business development experts. We support companies in customer acquisition, loyalty, and retention through customized solutions and a human approach.",
+    "navigation": "Navigation",
+    "expertises": "Our Expertises",
+    "about": "About",
+    "team": "Our Team",
+    "contact": "Contact",
+    "join": "Join Us",
+    "legal": "Legal",
+    "services": "Our Services",
+    "conquest": "Acquisition",
+    "loyalty": "Loyalty",
+    "retention": "Retention",
+    "conception": "Design & Tools",
+    "branding": "Branding",
+    "consulting": "Consulting",
+    "copyright": "© antl 2026 | All rights reserved"
+  },
+  "hero": {
+    "title": "Customer Experience Expert",
+    "firstLine": "Your partner in optimizing your sales performance,",
+    "secondLine": "and improving your customer relationship.",
+    "aboutTitle": "About Us",
+    "aboutFirstLine": "Driving Innovation, Empowering Businesses Worldwide",
+    "aboutSecondLine": null
+  },
+  "callToAction": {
+    "home": "Boost your sales performance with customized solutions. From acquisition to loyalty, we transform customer experience into a growth lever.",
+    "about": "At antl, we are more than a service provider—your strategic partner. With a human-centered approach and innovative digital solutions, we support companies in their business development."
+  },
+  "ourExpertise": {
+    "title": "Our Expertise",
+    "subtitle": "Customized solutions to meet your specific needs",
+    "conquest": {
+      "title": "Acquisition",
+      "description": "Prospecting, appointment setting, and lead generation."
+    },
+    "loyalty": {
+      "title": "Loyalty",
+      "description": "Personalized customer follow-up, proximity through human contact, quality of discourse."
+    },
+    "retention": {
+      "title": "Retention",
+      "description": "Customer recovery and retention, conflict management."
+    },
+    "conception": {
+      "title": "Design",
+      "description": "Generation of administrative tools, CRM, AI integration."
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Online visibility (Showcase website, social networks...)."
+    },
+    "consulting": {
+      "title": "Consulting",
+      "description": "Communication, marketing repositioning, brand image optimization."
+    }
+  },
+  "ourStory": {
+    "title": "Who we are",
+    "subtitle": "We develop a flexible approach to improve sales performance and deliver optimal customer experience.",
+    "mission": "Our Mission",
+    "missionDesc": "Our mission is to create a meaningful connection for our partners' brands, establishing original proximity with their key stakeholders. Thus, we include our partners' message and image in our commercial strategy.",
+    "approach": "Our Approach",
+    "approachDesc": "We develop a flexible approach to improve sales performance and deliver optimal customer experience through operational solutions.",
+    "commitment": "Our Commitment",
+    "commitmentDesc": "We are a business development accelerator for our partners, guaranteeing personalized support with engaged teams at all levels of the company.",
+    "vision": "Our Vision",
+    "visionDesc": "We operate with a value creation approach through innovation.",
+    "action": "Our Action",
+    "actionDesc": "We intervene at every stage of the customer lifecycle to sustainably generate engagement and value (acquisition-development-loyalty-retention)."
+  },
+  "whatWeStandFor": {
+    "title": "Our Strengths",
+    "value1": {
+      "title": "Prospecting Specialists",
+      "description": "With strong understanding of sector-specific needs: sales representatives are immersed with clients, trained by antl and informed by regular updates on market and product evolution."
+    },
+    "value2": {
+      "title": "Personalization Strategy",
+      "description": "To meet partner expectations: the management team ensures daily follow-up through statistical analysis of call production and quality, with regular feedback."
+    },
+    "value3": {
+      "title": "Rapid Adaptation Capacity",
+      "description": "Recruitment, reinforcement, and team training are dedicated to each project, and the possibility to change missions is offered to sales representatives based on their skills. Remote work allows antl to have a national and international network."
+    },
+    "value4": {
+      "title": "Choosing antl means...",
+      "description": "...redefining their communication strategy, outsourcing sales force, reducing operational costs, improving customer experience quality and loyalty through advanced technologies."
+    }
+  },
+  "meetOurTeam": {
+    "title": "The meeting of 6 talents who share the same vision",
+    "subtitle": "Meet our team",
+    "cta": "Join our team",
+    "members": [
+      {
+        "role": "CEO, Founder",
+        "role_fr": "Présidente, Fondatrice"
+      },
+      {
+        "role": "Sales Manager",
+        "role_fr": "Responsable Commerciale"
+      },
+      {
+        "role": "QA Manager",
+        "role_fr": "Responsable Qualité et formation"
+      },
+      {
+        "role": "Business Developer",
+        "role_fr": "Développeur Business"
+      },
+      {
+        "role": "Office Manager",
+        "role_fr": "Responsable Administratif"
+      },
+      {
+        "role": "CTO",
+        "role_fr": "Directeur Technique"
+      }
+    ]
+  },
+  "quote": {
+    "text": "If you want to go fast, go alone. If you want to go far, go together.",
+    "author": "African Proverb"
+  },
+  "joinUs": {
+    "title": "Join Us!"
+  },
+  "getInTouch": {
+    "title": "Contact Us",
+    "subtitle": "We are here to answer all your questions.",
+    "form": {
+      "company": "Company Name",
+      "email": "Business Email",
+      "phone": "Phone",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending. Please try again.",
+      "placeholderCompany": "Your company",
+      "placeholderEmail": "contact@company.com",
+      "placeholderPhone": "+33 1 23 45 67 89",
+      "placeholderMessage": "Describe your need and we will get back to you..."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "addressLabel": "Address",
+      "email": "contact@antl.fr",
+      "phone": "+33 1 23 45 67 89",
+      "address": "48b avenue Charles De Gaulle, 17300 Rochefort"
+    }
+  },
+  "jobApplication": {
+    "title": "Join Our Team",
+    "subtitle": "Discover our opportunities and join a growing team",
+    "offer": {
+      "title": "Sales Representative",
+      "type": "28 hours/week",
+      "location": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. You want to join a dynamic team and participate in the commercial development of our clients? This offer is for you! We are looking for motivated and curious profiles.",
+      "missions": {
+        "title": "Key Missions:",
+        "items": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+          "Duis aute irure dolor in reprehenderit in voluptate velit"
+        ]
+      },
+      "profile": {
+        "title": "Sought Profile:",
+        "items": [
+          "Excepteur sint occaecat cupidatat non proident",
+          "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+          "Sed ut perspiciatis unde omnis iste natus error sit",
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
+        ]
+      },
+      "benefits": {
+        "title": "We offer a stimulating work environment, opportunities for advancement and continuous training. Don't hesitate to send us your application!"
+      }
+    },
+    "form": {
+      "title": "Your Application",
+      "civility": "Title",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone",
+      "email": "Email",
+      "cv": "CV",
+      "coverLetter": "Cover Letter",
+      "selectPlaceholder": "Select...",
+      "cvText": "Drop your CV or click to select",
+      "coverLetterText": "Drop your letter or click to select",
+      "fileFormats": "PDF, DOC, DOCX",
+      "submit": "Send Your Application",
+      "placeholderFirstName": "John",
+      "placeholderLastName": "Doe",
+      "placeholderPhone": "+33 6 12 34 56 78",
+      "placeholderEmail": "john.doe@email.com"
+    },
+    "apply": "Apply!"
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "description": "A question? A project? Feel free to contact us, our team will answer you as soon as possible.",
+    "form": {
+      "company": "Company Name",
+      "email": "Business Email",
+      "message": "Your Message",
+      "submit": "Send",
+      "sending": "Sending..."
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "contact@antl.fr",
+      "phone": "+33 5 46 68 00 00",
+      "address": "48b avenue Charles de Gaulle, 17300 Rochefort"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or is not yet available.",
+    "back": "Back to Home"
+  },
+  "meta": {
+    "title": "antl – Customer Experience Expert",
+    "description": "antl - Customer Experience Expert. Digital solutions and consulting to develop your sales performance.",
+    "keywords": "antl, customer experience, call center, contact center, customer relationship, sales performance, digital solutions, telephony, sales prospecting, customer relationship management"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "openLanguage": "Change language"
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Find clear, concise answers about our services, processes, and how we help businesses achieve their goals.",
+    "items": [
+      {
+        "question": "What industries do you serve?",
+        "answer": "We serve clients across industries, including technology, healthcare, finance, retail, and more."
+      },
+      {
+        "question": "Can your solutions scale with my business?",
+        "answer": "Yes, our solutions are designed to grow with your business and adapt to changing needs."
+      },
+      {
+        "question": "How do you ensure security and reliability?",
+        "answer": "We implement industry-standard security measures and conduct regular reliability assessments."
+      },
+      {
+        "question": "Do you offer dedicated teams for ongoing projects?",
+        "answer": "Absolutely! We provide dedicated teams that work exclusively on your projects for consistent results."
+      }
+    ]
+  },
+  "ourImpact": {
+    "title": "Our Impact",
+    "subtitle": "Delivering measurable results that stimulate real business growth",
+    "stat1": {
+      "label": "Customer satisfaction rate",
+      "ariaLabel": "95 percent customer satisfaction rate"
+    },
+    "stat2": {
+      "label": "Successful projects delivered",
+      "ariaLabel": "Over 300 successful projects delivered"
+    },
+    "stat3": {
+      "label": "Average ROI for our customers",
+      "ariaLabel": "40 percent average return on investment for our customers"
+    },
+    "stat4": {
+      "label": "Years of experience in the industry",
+      "ariaLabel": "Over 10 years of experience in the industry"
+    },
+    "highlightLabel": "Service reliability"
+  },
+  "whyChooseUs": {
+    "title": "Why choose antl?",
+    "subtitle": "We provide end-to-end solutions to help businesses achieve scalable systems, innovative solutions, and more.",
+    "cards": [
+      {
+        "imageAlt": "Global reach services",
+        "title": "Global reach",
+        "description": "Serving customers worldwide, from startups to Fortune 500 companies across all time zones and markets.",
+        "features": ["24/7 global support", "Multi-timezone coverage", "International standards"]
+      },
+      {
+        "imageAlt": "Scalable solutions architecture",
+        "title": "Scalable solutions",
+        "description": "Flexible services tailored to businesses of all sizes with proven scalability frameworks.",
+        "features": ["Enterprise ready", "Flexible architecture", "Growth-oriented"]
+      },
+      {
+        "imageAlt": "Expert team and quality assurance",
+        "title": "Expertise you can trust",
+        "description": "Decades of experience delivering quality solutions with transparent communication.",
+        "features": ["Proven track record", "Expert team", "Quality assurance"]
+      }
+    ]
+  },
+  "clientReviews": {
+    "title": "Customer testimonials",
+    "subtitle": "Discover what our customers say about their collaboration with us. Real experiences from real companies that have transformed their operations.",
+    "metricsLabel": "Key result:",
+    "viewCaseStudies": "View case studies",
+    "items": [
+      {
+        "title": "Streamlined operations with a custom ERP",
+        "description": "Their complete ERP solution helped us streamline our operations. Our team's productivity increased by 40% in just 6 months, revolutionizing our workflow and improving efficiency.",
+        "metrics": "40% productivity increase"
+      },
+      {
+        "title": "MVP delivered ahead of schedule",
+        "description": "We were looking for a partner able to deliver a complete MVP quickly. antl's expert team delivered a fully functional minimum viable product 2 weeks before the schedule.",
+        "metrics": "Delivery 2 weeks before the schedule"
+      },
+      {
+        "title": "Seamless legacy system migration",
+        "description": "The legacy system migration we needed was carried out without any interruption. Their meticulous planning and execution ensured zero business interruption throughout the process.",
+        "metrics": "Migration without interruption"
+      }
+    ]
+  },
+  "clientLogos": {
+    "title": "Join our ever-growing customer list",
+    "boltshift": "Boltshift",
+    "lightbox": "Lightbox",
+    "featherdev": "FeatherDev",
+    "spherule": "Spherule",
+    "globalbank": "GlobalBank",
+    "nietzsche": "Nietzsche"
+  },
+  "backToTop": {
+    "ariaLabel": "Back to top of page",
+    "title": "Back to top"
+  }
+}

@@ -2,8 +2,10 @@ import "./getInTouch.scss";
 
 import type { ReactElement } from "react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function GetInTouch(): ReactElement {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     companyName: "",
     email: "",
@@ -39,14 +41,14 @@ export default function GetInTouch(): ReactElement {
   return (
     <section id="getInTouchComponent" data-aos="fade-up" data-aos-duration="800" aria-labelledby="contact-heading">
       <header className="getInTouchHeader">
-        <h2 id="contact-heading">Demande de devis</h2>
-        <p>Remplissez le formulaire ci-dessous et notre équipe vous recontactera dans les plus brefs délais.</p>
+        <h2 id="contact-heading">{t("getInTouch.title")}</h2>
+        <p>{t("getInTouch.subtitle")}</p>
       </header>
 
       <div className="getInTouchContent">
         <form className="contactForm" onSubmit={handleSubmit}>
           <div className="formGroup">
-            <label htmlFor="companyName">Nom de l'entreprise *</label>
+            <label htmlFor="companyName">{t("getInTouch.form.company")}</label>
             <input
               type="text"
               id="companyName"
@@ -54,12 +56,12 @@ export default function GetInTouch(): ReactElement {
               value={formData.companyName}
               onChange={handleInputChange}
               required
-              placeholder="Votre entreprise"
+              placeholder={t("getInTouch.form.placeholderCompany")}
             />
           </div>
 
           <div className="formGroup">
-            <label htmlFor="email">Email professionnel *</label>
+            <label htmlFor="email">{t("getInTouch.form.email")}</label>
             <input
               type="email"
               id="email"
@@ -67,24 +69,24 @@ export default function GetInTouch(): ReactElement {
               value={formData.email}
               onChange={handleInputChange}
               required
-              placeholder="contact@entreprise.com"
+              placeholder={t("getInTouch.form.placeholderEmail")}
             />
           </div>
 
           <div className="formGroup">
-            <label htmlFor="phone">Téléphone</label>
+            <label htmlFor="phone">{t("getInTouch.form.phone")}</label>
             <input
               type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
               onChange={handleInputChange}
-              placeholder="+33 1 23 45 67 89"
+              placeholder={t("getInTouch.form.placeholderPhone")}
             />
           </div>
 
           <div className="formGroup">
-            <label htmlFor="message">Message *</label>
+            <label htmlFor="message">{t("getInTouch.form.message")}</label>
             <textarea
               id="message"
               name="message"
@@ -92,40 +94,39 @@ export default function GetInTouch(): ReactElement {
               onChange={handleInputChange}
               required
               rows={6}
-              placeholder="Décrivez votre besoin et nous vous recontacterons..."
+              placeholder={t("getInTouch.form.placeholderMessage")}
             />
           </div>
 
           <button type="submit" className="submitButton" disabled={!isFormValid()}>
-            <span>Envoyer ma demande</span>
+            <span>{t("getInTouch.form.submit")}</span>
             <span className="buttonArrow">→</span>
           </button>
         </form>
 
         <aside className="contactCard">
           <div className="cardContent">
-            <h3>Nos coordonnées</h3>
+            <h3>{t("getInTouch.contactInfo.title")}</h3>
 
             <div className="contactInfo">
               <div className="contactItem">
-                <h4>Email</h4>
-                <a href="mailto:contact@antl.fr" aria-label="Envoyer un email à contact@antl.fr">
-                  contact@antl.fr
+                <h4>{t("getInTouch.contactInfo.emailLabel")}</h4>
+                <a href={`mailto:${t("getInTouch.contactInfo.email")}`} aria-label={`Envoyer un email à ${t("getInTouch.contactInfo.email")}`}>
+                  {t("getInTouch.contactInfo.email")}
                 </a>
               </div>
 
               <div className="contactItem">
-                <h4>Téléphone</h4>
-                <a href="tel:+33123456789" aria-label="Appeler le +33 1 23 45 67 89">
-                  +33 1 23 45 67 89
+                <h4>{t("getInTouch.contactInfo.phoneLabel")}</h4>
+                <a href={`tel:${t("getInTouch.contactInfo.phone")}`} aria-label={`Appeler le ${t("getInTouch.contactInfo.phone")}`}>
+                  {t("getInTouch.contactInfo.phone")}
                 </a>
               </div>
 
               <div className="contactItem">
-                <h4>Adresse</h4>
+                <h4>{t("getInTouch.contactInfo.addressLabel")}</h4>
                 <address>
-                  48b avenue Charles De Gaulle<br />
-                  17300 ROCHEFORT
+                  {t("getInTouch.contactInfo.address")}
                 </address>
                 <div className="mapLinks">
                   <a

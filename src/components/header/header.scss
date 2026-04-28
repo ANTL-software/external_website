@@ -27,6 +27,13 @@
     justify-content: center;
     gap: vars.$spacing-xs;
     width: 20%;
+    min-width: 150px;
+}
+
+#header.header .brandLink .brandLogo img {
+    max-width: 120px;
+    width: auto;
+    height: auto;
 }
 
 #header.header .brandLink .brandLogo figcaption {
@@ -134,11 +141,16 @@
     padding-bottom: calc(vars.$spacing-lg + env(safe-area-inset-bottom, 20px));
 }
 
+.mobileLanguageSelector {
+    display: none;
+}
+
 .mobileNav {
     display: flex;
     flex-flow: column nowrap;
-    height: 100%;
+    flex-grow: 1;
     gap: vars.$spacing-xl;
+    overflow-y: auto;
 }
 
 .mobileNavList {
@@ -175,7 +187,9 @@
 }
 
 .desktopOnly {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-base;
 }
 
 .headerActions {
@@ -185,7 +199,7 @@
 }
 
 /* Mobile breakpoint */
-@media (max-width: 1100px) {
+@media (max-width: 1220px) {
     .desktopNav {
         display: none;
     }
@@ -196,6 +210,11 @@
 
     .desktopOnly {
         display: none;
+    }
+
+    .mobileLanguageSelector {
+        display: flex;
+        align-items: center;
     }
 }
 

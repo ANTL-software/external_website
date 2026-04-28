@@ -1,0 +1,353 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Nous contacter",
+    "join": "Nous rejoindre",
+    "consultation": "Contactez-nous"
+  },
+  "footer": {
+    "description": "Expert de l'expérience client et du développement commercial. Nous accompagnons les entreprises dans la conquête, la fidélisation et la rétention de leur clientèle grâce à des solutions sur mesure et une approche humaine.",
+    "navigation": "Navigation",
+    "expertises": "Nos expertises",
+    "about": "À propos",
+    "team": "Notre équipe",
+    "contact": "Nous contacter",
+    "join": "Nous rejoindre",
+    "legal": "Mentions légales",
+    "services": "Nos services",
+    "conquest": "Conquête",
+    "loyalty": "Fidélisation",
+    "retention": "Rétention",
+    "conception": "Conception & Outils",
+    "branding": "Branding",
+    "consulting": "Conseil",
+    "copyright": "© antl 2026 | Tous droits réservés"
+  },
+  "hero": {
+    "title": "Expert de l'experience client",
+    "firstLine": "Votre partenaire dans l'optimisation de vos performances commerciales,",
+    "secondLine": "et l'amélioration de votre relation client.",
+    "aboutTitle": "About Us",
+    "aboutFirstLine": "Driving Innovation, Empowering Businesses Worldwide",
+    "aboutSecondLine": null
+  },
+  "callToAction": {
+    "home": "Boostez votre performance commerciale avec des solutions sur mesure. De la conquête à la fidélisation, nous transformons l'expérience client en levier de croissance.",
+    "about": "Chez antl, nous sommes plus qu'un prestataire—votre partenaire stratégique. Avec une approche centrée sur l'humain et des solutions digitales innovantes, nous accompagnons les entreprises dans leur développement commercial."
+  },
+  "ourExpertise": {
+    "title": "Notre Expertise",
+    "subtitle": "Solutions sur mesure afin de répondre à vos besoins spécifiques",
+    "conquest": {
+      "title": "Conquête",
+      "description": "Prospection, prise de rendez-vous et génération de leads."
+    },
+    "loyalty": {
+      "title": "Fidélisation",
+      "description": "Suivi personnalisé des clients, proximité par le contact humain, qualité du discours."
+    },
+    "retention": {
+      "title": "Rétention",
+      "description": "Récupération et maintien de la clientèle, gestion de conflits."
+    },
+    "conception": {
+      "title": "Conception",
+      "description": "Génération d'outils administratifs, CRM, intégration IA."
+    },
+    "branding": {
+      "title": "Branding",
+      "description": "Visibilité Online (Site vitrine, réseau sociaux...)."
+    },
+    "consulting": {
+      "title": "Conseil",
+      "description": "Communication, repositionnement marketing, optimisation image de marque."
+    }
+  },
+  "ourStory": {
+    "title": "Qui sommes nous",
+    "subtitle": "Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une expérience client optimale.",
+    "mission": "Notre mission",
+    "missionDesc": "Notre mission est de créer un lien qui a du sens pour la marque de nos partenaires, en établissant une proximité originale avec leurs interlocuteurs privilégiés. Ainsi, nous incluons dans notre stratégie commerciale le message et l'image de nos partenaires.",
+    "approach": "Notre approche",
+    "approachDesc": "Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une expérience client optimale grâce à des solutions opérationnelles.",
+    "commitment": "Notre engagement",
+    "commitmentDesc": "Nous sommes un accélérateur du développement commercial pour nos partenaires et garantissons un accompagnement personnalisé avec des équipes engagées à tous les niveaux de l'entreprise.",
+    "vision": "Notre vision",
+    "visionDesc": "Nous opérons avec une démarche de création de valeur par l'innovation.",
+    "action": "Notre action",
+    "actionDesc": "Nous intervenons à chaque étape du cycle de vie du client pour générer durablement de l'engagement et de la valeur (conquête-développement-fidélisation-rétention)."
+  },
+  "whatWeStandFor": {
+    "title": "Nos atouts",
+    "value1": {
+      "title": "Spécialistes de la prospection",
+      "description": "Avec une forte compréhension des besoins spécifiques du secteur et des besoins de ses clients : les commerciaux sont immergés chez le client, formés par antl et informés par des mises à jour régulières de l'évolution du marché et des produits des clients."
+    },
+    "value2": {
+      "title": "Stratégie de personnalisation",
+      "description": "Pour répondre aux attentes de ses partenaires : l'équipe managériale d'antl assure un suivi quotidien de la relation client par des analyses statistiques de la production et de la qualité des appels, ainsi qu'un feed-back régulier avec les commerciaux."
+    },
+    "value3": {
+      "title": "Capacité d'adaptation rapide",
+      "description": "Le recrutement, le renforcement et la formation des équipes sont dédiés à chaque projet, et la possibilité de changer de mission est proposée aux commerciaux selon leurs compétences. Le télétravail permet à antl de disposer d'un réseau de commerciaux à l'échelle nationale et internationale."
+    },
+    "value4": {
+      "title": "Faire appel à antl c'est...",
+      "description": "...redéfinir leur stratégie de communication, externaliser la force de vente, réduire les coûts opérationnels, améliorer la qualité de l'expérience client et la fidéliser grâce à des technologies avancées."
+    }
+  },
+  "meetOurTeam": {
+    "title": "La rencontre de 6 talents qui partagent la même vision",
+    "subtitle": "Rencontrer notre équipe",
+    "cta": "Rejoignez notre équipe",
+    "members": [
+      {
+        "role": "CEO, Founder",
+        "role_fr": "Présidente, Fondatrice"
+      },
+      {
+        "role": "Sales Manager",
+        "role_fr": "Responsable Commerciale"
+      },
+      {
+        "role": "QA Manager",
+        "role_fr": "Responsable Qualité et formation"
+      },
+      {
+        "role": "Business Developer",
+        "role_fr": "Développeur Business"
+      },
+      {
+        "role": "Office Manager",
+        "role_fr": "Responsable Administratif"
+      },
+      {
+        "role": "CTO",
+        "role_fr": "Directeur Technique"
+      }
+    ]
+  },
+  "quote": {
+    "text": "Tout seul on va plus vite, mais ensemble on va plus loin.",
+    "author": "Proverbe africain"
+  },
+  "joinUs": {
+    "title": "Rejoignez-nous !"
+  },
+  "getInTouch": {
+    "title": "Demande de devis",
+    "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous recontactera dans les plus brefs délais.",
+    "form": {
+      "company": "Nom de l'entreprise",
+      "email": "Email professionnel",
+      "phone": "Téléphone",
+      "message": "Message",
+      "submit": "Envoyer ma demande",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+      "placeholderCompany": "Votre entreprise",
+      "placeholderEmail": "contact@entreprise.com",
+      "placeholderPhone": "+33 1 23 45 67 89",
+      "placeholderMessage": "Décrivez votre besoin et nous vous recontacterons..."
+    },
+    "contactInfo": {
+      "title": "Nos coordonnées",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "addressLabel": "Adresse",
+      "email": "contact@antl.fr",
+      "phone": "+33 1 23 45 67 89",
+      "address": "48b avenue Charles De Gaulle, 17300 ROCHEFORT"
+    }
+  },
+  "jobApplication": {
+    "title": "Rejoignez notre équipe",
+    "subtitle": "Découvrez nos opportunités et rejoignez une équipe en pleine croissance",
+    "offer": {
+      "title": "Commercial",
+      "type": "28 heures/semaine",
+      "location": "",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Vous souhaitez rejoindre une équipe dynamique et participer au développement commercial de nos clients ? Cette offre est faite pour vous ! Nous recherchons des profils motivés et curieux.",
+      "missions": {
+        "title": "Missions principales :",
+        "items": [
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+          "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+          "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+          "Duis aute irure dolor in reprehenderit in voluptate velit"
+        ]
+      },
+      "profile": {
+        "title": "Profil recherché :",
+        "items": [
+          "Excepteur sint occaecat cupidatat non proident",
+          "Sunt in culpa qui officia deserunt mollit anim id est laborum",
+          "Sed ut perspiciatis unde omnis iste natus error sit",
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
+        ]
+      },
+      "benefits": {
+        "title": "Nous offrons un environnement de travail stimulant, des possibilités d'évolution et une formation continue. N'hésitez pas à nous envoyer votre candidature !"
+      }
+    },
+    "form": {
+      "title": "Votre candidature",
+      "civility": "Civilité",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "phone": "Téléphone",
+      "email": "Email",
+      "cv": "CV",
+      "coverLetter": "Lettre de motivation",
+      "selectPlaceholder": "Sélectionnez...",
+      "cvText": "Glissez votre CV ou cliquez pour sélectionner",
+      "coverLetterText": "Glissez votre lettre ou cliquez pour sélectionner",
+      "fileFormats": "PDF, DOC, DOCX",
+      "submit": "Envoyer ma candidature",
+      "placeholderFirstName": "Jean",
+      "placeholderLastName": "Dupont",
+      "placeholderPhone": "+33 6 12 34 56 78",
+      "placeholderEmail": "jean.dupont@email.com"
+    },
+    "apply": "Postuler !"
+  },
+  "contactUs": {
+    "title": "Nous contacter",
+    "description": "Une question ? Un projet ? N'hésitez pas à nous contacter, notre équipe vous répondra dans les plus brefs délais.",
+    "form": {
+      "company": "Nom de l'entreprise",
+      "email": "Email professionnel",
+      "message": "Votre message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours..."
+    },
+    "info": {
+      "title": "Nos coordonnées",
+      "email": "contact@antl.fr",
+      "phone": "+33 5 46 68 00 00",
+      "address": "48b avenue Charles de Gaulle, 17300 Rochefort"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page non trouvée",
+    "description": "Désolé, la page que vous recherchez n'existe pas ou n'est pas encore disponible.",
+    "back": "Retour à l'accueil"
+  },
+  "meta": {
+    "title": "antl – Expert de l'expérience client",
+    "description": "antl - Expert de l'expérience client. Solutions digitales et conseil pour développer votre performance commerciale.",
+    "keywords": "antl, expérience client, call center, centre d'appels, relation client, performance commerciale, solutions digitales, téléphonie, prospection commerciale, gestion de la relation client"
+  },
+  "a11y": {
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "openLanguage": "Changer de langue"
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Trouvez des réponses claires et concises sur nos services, nos processus et comment nous aidons les entreprises à atteindre leurs objectifs.",
+    "items": [
+      {
+        "question": "Quelles industries servez-vous ?",
+        "answer": "Nous servons des clients dans divers secteurs, notamment la technologie, la santé, la finance, le commerce et plus encore."
+      },
+      {
+        "question": "Vos solutions peuvent-elles évoluer avec mon entreprise ?",
+        "answer": "Oui, nos solutions sont conçues pour évoluer avec votre entreprise et s'adapter aux besoins changeants."
+      },
+      {
+        "question": "Comment assurez-vous la sécurité et la fiabilité ?",
+        "answer": "Nous mettons en œuvre des mesures de sécurité standard de l'industrie et menons régulièrement des évaluations de fiabilité."
+      },
+      {
+        "question": "Offrez-vous des équipes dédiées pour les projets en cours ?",
+        "answer": "Absolument ! Nous fournissons des équipes dédiées qui travaillent exclusivement sur vos projets pour des résultats cohérents."
+      }
+    ]
+  },
+  "ourImpact": {
+    "title": "Notre Impact",
+    "subtitle": "Délivrer des résultats mesurables qui stimulent une véritable croissance commerciale",
+    "stat1": {
+      "label": "Taux de satisfaction client",
+      "ariaLabel": "95 pour cent de taux de satisfaction client"
+    },
+    "stat2": {
+      "label": "Projets réussis livrés",
+      "ariaLabel": "Plus de 300 projets réussis livrés"
+    },
+    "stat3": {
+      "label": "ROI moyen pour nos clients",
+      "ariaLabel": "40 pour cent de retour sur investissement moyen pour nos clients"
+    },
+    "stat4": {
+      "label": "Années d'expérience dans l'industrie",
+      "ariaLabel": "Plus de 10 ans d'expérience dans l'industrie"
+    },
+    "highlightLabel": "Fiabilité du service"
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi choisir antl ?",
+    "subtitle": "Nous fournissons des solutions de bout en bout pour aider les entreprises à atteindre des systèmes évolutifs, des solutions innovantes, et plus encore.",
+    "cards": [
+      {
+        "imageAlt": "Services de portée mondiale",
+        "title": "Portée mondiale",
+        "description": "Servir des clients dans le monde entier, des startups aux entreprises Fortune 500 sur tous les fuseaux horaires et marchés.",
+        "features": ["Support mondial 24/7", "Couverture multi-fuseaux horaires", "Standards internationaux"]
+      },
+      {
+        "imageAlt": "Architecture de solutions évolutives",
+        "title": "Solutions évolutives",
+        "description": "Services flexibles adaptés aux entreprises de toutes tailles avec des cadres d'évolutivité prouvés.",
+        "features": ["Prêt pour l'entreprise", "Architecture flexible", "Orienté croissance"]
+      },
+      {
+        "imageAlt": "Équipe d'experts et assurance qualité",
+        "title": "Expertise en laquelle vous pouvez avoir confiance",
+        "description": "Décennies d'expérience dans la livraison de solutions de qualité avec une communication transparente.",
+        "features": ["Parcours prouvé", "Équipe d'experts", "Assurance qualité"]
+      }
+    ]
+  },
+  "clientReviews": {
+    "title": "Témoignages clients",
+    "subtitle": "Découvrez ce que nos clients disent de leur collaboration avec nous. Expériences réelles d'entreprises réelles qui ont transformé leurs opérations.",
+    "metricsLabel": "Résultat clé :",
+    "viewCaseStudies": "Voir les études de cas",
+    "items": [
+      {
+        "title": "Opérations rationalisées avec un ERP personnalisé",
+        "description": "Leur solution ERP complète nous a aidés à rationaliser nos opérations. La productivité de notre équipe a augmenté de 40 % en seulement 6 mois, révolutionnant notre flux de travail et améliorant l'efficacité.",
+        "metrics": "Augmentation de productivité de 40 %"
+      },
+      {
+        "title": "MVP livré avant le calendrier",
+        "description": "Nous cherchions un partenaire capable de livrer un MVP complet rapidement. L'équipe d'experts d'antl a livré un produit minimum viable entièrement fonctionnel 2 semaines avant le calendrier.",
+        "metrics": "Livraison 2 semaines avant le calendrier"
+      },
+      {
+        "title": "Migration transparente de système legacy",
+        "description": "La migration du système legacy dont nous avions besoin a été effectuée sans aucune interruption. Leur planification et leur exécution méticuleuses ont assuré une interruption commerciale zéro tout au long du processus.",
+        "metrics": "Migration sans interruption"
+      }
+    ]
+  },
+  "clientLogos": {
+    "title": "Rejoignez notre liste de clients en pleine expansion",
+    "boltshift": "Boltshift",
+    "lightbox": "Lightbox",
+    "featherdev": "FeatherDev",
+    "spherule": "Spherule",
+    "globalbank": "GlobalBank",
+    "nietzsche": "Nietzsche"
+  },
+  "backToTop": {
+    "ariaLabel": "Retour en haut de la page",
+    "title": "Retour en haut"
+  }
+}

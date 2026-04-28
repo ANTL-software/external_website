@@ -1,39 +1,29 @@
 import "./callToAction.scss";
 
 import type { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import GoToConsultationLink from "../goToConsultationLink/GoToConsultationLink";
 
 export default function CallToAction(): ReactElement {
-  const pathname = window.location.pathname;
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
 
-  const getContent = () => {
+  const getDescription = () => {
     switch (pathname) {
       case "/":
-        return {
-          paragraph:
-            "Boostez votre performance commerciale avec des solutions sur mesure. De la conquête à la fidélisation, nous transformons l’expérience client en levier de croissance.",
-        };
-
+        return t("callToAction.home");
       case "/about_us":
-        return {
-          paragraph:
-            "Chez antl, nous sommes plus qu’un prestataire—votre partenaire stratégique. Avec une approche centrée sur l’humain et des solutions digitales innovantes, nous accompagnons les entreprises dans leur développement commercial.",
-        };
-
+        return t("callToAction.about");
       default:
-        return {
-          paragraph:
-            "Boostez votre performance commerciale avec des solutions sur mesure. De la conquête à la fidélisation, nous transformons l’expérience client en levier de croissance.",
-        };
+        return t("callToAction.home");
     }
   };
 
-  const content = getContent();
-
   return (
     <section id="callToActionComponent" className="callToActionSection">
-      <p>{content.paragraph}</p>
+      <p>{getDescription()}</p>
       <div className="buttonContainer">
         <GoToConsultationLink />
       </div>

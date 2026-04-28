@@ -6,10 +6,12 @@ import ContactUs from "./views/contactUs/ContactUs";
 import JoinUs from "./views/joinUs/JoinUs";
 import NotFound from "./views/notFound/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import MetaTags from "./components/metaTags/MetaTags";
 
 function App() {
   return (
     <Router>
+      <MetaTags />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

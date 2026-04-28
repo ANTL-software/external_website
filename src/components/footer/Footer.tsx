@@ -1,11 +1,16 @@
 import "./footer.scss";
 import type { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import antlLogo from "../../assets/brand/antlLogo.png";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
+import LanguageSelector from "../languageSelector/LanguageSelector";
+
 export default function Footer(): ReactElement {
+  const { t } = useTranslation();
+
   return (
     <footer id="footerComponent" role="contentinfo">
       <div className="container">
@@ -16,7 +21,7 @@ export default function Footer(): ReactElement {
                 <img src={antlLogo} alt="antl logo" />
               </figure>
             </header>
-            <p>Expert de l'expérience client et du développement commercial. Nous accompagnons les entreprises dans la conquête, la fidélisation et la rétention de leur clientèle grâce à des solutions sur mesure et une approche humaine.</p>
+            <p>{t("footer.description")}</p>
             <nav className="socialIcons" aria-label="Social media links">
               <a href="#" aria-label="Follow us on Facebook" rel="noopener noreferrer">
                 <FaFacebookF aria-hidden="true" />
@@ -35,38 +40,43 @@ export default function Footer(): ReactElement {
               </a>
             </nav>
           </section>
-          
+
           <section className="footerSection" aria-labelledby="navigation-heading">
-            <h4 id="navigation-heading">Navigation</h4>
+            <h4 id="navigation-heading">{t("footer.navigation")}</h4>
             <nav aria-label="Footer navigation">
               <ul>
-                <li><Link to="/#ourExpertiseComponent">Nos expertises</Link></li>
-                <li><Link to="/about_us">À propos</Link></li>
-                <li><Link to="/about_us#meetOurTeamComponent">Notre équipe</Link></li>
-                <li><Link to="/about_us#getInTouchComponent">Nous contacter</Link></li>
-                <li><Link to="/join_us">Nous rejoindre</Link></li>
-                <li><Link to="/legal">Mentions légales</Link></li>
+                <li><Link to="/#ourExpertiseComponent">{t("footer.expertises")}</Link></li>
+                <li><Link to="/about_us">{t("footer.about")}</Link></li>
+                <li><Link to="/about_us#meetOurTeamComponent">{t("footer.team")}</Link></li>
+                <li><Link to="/about_us#getInTouchComponent">{t("footer.contact")}</Link></li>
+                <li><Link to="/join_us">{t("footer.join")}</Link></li>
+                <li><Link to="/legal">{t("footer.legal")}</Link></li>
               </ul>
             </nav>
           </section>
 
           <section className="footerSection" aria-labelledby="services-heading">
-            <h4 id="services-heading">Nos services</h4>
+            <h4 id="services-heading">{t("footer.services")}</h4>
             <nav aria-label="Services navigation">
               <ul>
-                <li><Link to="/#conquete">Conquête</Link></li>
-                <li><Link to="/#fidelisation">Fidélisation</Link></li>
-                <li><Link to="/#retention">Rétention</Link></li>
-                <li><Link to="/#conception">Conception & Outils</Link></li>
-                <li><Link to="/#branding">Branding</Link></li>
-                <li><Link to="/#conseil">Conseil</Link></li>
+                <li><Link to="/#conquete">{t("footer.conquest")}</Link></li>
+                <li><Link to="/#fidelisation">{t("footer.loyalty")}</Link></li>
+                <li><Link to="/#retention">{t("footer.retention")}</Link></li>
+                <li><Link to="/#conception">{t("footer.conception")}</Link></li>
+                <li><Link to="/#branding">{t("footer.branding")}</Link></li>
+                <li><Link to="/#conseil">{t("footer.consulting")}</Link></li>
               </ul>
             </nav>
           </section>
         </div>
-        
+
         <div className="footerBottom">
-          <p><small>© antl 2026 | All Rights Reserved</small></p>
+          <div className="footerBottomLeft">
+            <p><small>{t("footer.copyright")}</small></p>
+          </div>
+          <div className="footerBottomRight">
+            <LanguageSelector />
+          </div>
         </div>
       </div>
     </footer>

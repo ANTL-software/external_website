@@ -104,13 +104,26 @@
 #footerComponent .footerBottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: vars.$spacing-lg;
-  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: vars.$spacing-base;
+}
+
+#footerComponent .footerBottomLeft {
+  flex: 1;
 }
 
 #footerComponent .footerBottom p {
   font-size: clamp(0.875rem, 1.5vw, 1rem);
   color: vars.$text-muted;
   margin: 0;
+}
+
+#footerComponent .footerBottomRight {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -128,6 +141,17 @@
   }
 
   #footerComponent .socialIcons {
+    justify-content: center;
+  }
+
+  #footerComponent .footerBottom {
+    flex-flow: column nowrap;
+    text-align: center;
+    gap: vars.$spacing-base;
+  }
+
+  #footerComponent .footerBottomRight {
+    width: 100%;
     justify-content: center;
   }
 }

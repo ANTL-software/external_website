@@ -7,18 +7,21 @@ import { useEffect, useRef, useState } from "react";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 import type { ReactElement } from "react";
 
 import GoToConsultationLink from "../goToConsultationLink/GoToConsultationLink";
+import LanguageSelector from "../languageSelector/LanguageSelector";
 
 export default function Header(): ReactElement {
+  const { t } = useTranslation();
   const headerRef = useRef<HTMLElement>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(function() {
     // Offset adaptatif selon la taille d'écran
-    const isMobile = window.innerWidth <= 1100;
+    const isMobile = window.innerWidth <= 1220;
     const offset = isMobile ? 50 : 100;
 
     AOS.init({
@@ -30,7 +33,7 @@ export default function Header(): ReactElement {
 
     // Réinitialiser AOS lors du redimensionnement
     function handleResize() {
-      const newIsMobile = window.innerWidth <= 1100;
+      const newIsMobile = window.innerWidth <= 1220;
       const newOffset = newIsMobile ? 50 : 100;
 
       AOS.init({
@@ -116,31 +119,23 @@ export default function Header(): ReactElement {
       <nav className="headerNav desktopNav">
         <ul className="navList">
           <li className="navItem">
-            <NavLink to={"/"} className="navLink" aria-label="Accueil">
-              <span className="navLinkText">Accueil</span>
+            <NavLink to={"/"} className="navLink" aria-label={t("header.home")}>
+              <span className="navLinkText">{t("header.home")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/about_us"} className="navLink" aria-label="À propos">
-              <span className="navLinkText">À propos</span>
+            <NavLink to={"/about_us"} className="navLink" aria-label={t("header.about")}>
+              <span className="navLinkText">{t("header.about")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink
-              to={"/contact_us"}
-              className="navLink"
-              aria-label="Contact"
-            >
-              <span className="navLinkText">Nous contacter</span>
+            <NavLink to={"/contact_us"} className="navLink" aria-label={t("header.contact")}>
+              <span className="navLinkText">{t("header.contact")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink
-              to={"/join_us"}
-              className="navLink"
-              aria-label="Rejoindre l'équipe"
-            >
-              <span className="navLinkText">Nous rejoindre</span>
+            <NavLink to={"/join_us"} className="navLink" aria-label={t("header.join")}>
+              <span className="navLinkText">{t("header.join")}</span>
             </NavLink>
           </li>
         </ul>
@@ -149,7 +144,15 @@ export default function Header(): ReactElement {
       <div className="headerActions">
         <div className="desktopOnly">
           <GoToConsultationLink />
+          <LanguageSelector />
         </div>
+
+        {/* Mobile Language Selector - visible only when menu is open */}
+        {isMobileMenuOpen && (
+          <div className="mobileLanguageSelector">
+            <LanguageSelector />
+          </div>
+        )}
 
         {/* Mobile Menu Button */}
         <button
@@ -178,7 +181,7 @@ export default function Header(): ReactElement {
                   className="mobileNavLink"
                   onClick={closeMobileMenu}
                 >
-                  Accueil
+                  {t("header.home")}
                 </NavLink>
               </li>
               <li className="mobileNavItem">
@@ -187,7 +190,7 @@ export default function Header(): ReactElement {
                   className="mobileNavLink"
                   onClick={closeMobileMenu}
                 >
-                  À propos
+                  {t("header.about")}
                 </NavLink>
               </li>
               <li className="mobileNavItem">
@@ -196,7 +199,7 @@ export default function Header(): ReactElement {
                   className="mobileNavLink"
                   onClick={closeMobileMenu}
                 >
-                  Nous contacter
+                  {t("header.contact")}
                 </NavLink>
               </li>
               <li className="mobileNavItem">
@@ -205,7 +208,7 @@ export default function Header(): ReactElement {
                   className="mobileNavLink"
                   onClick={closeMobileMenu}
                 >
-                  Nous rejoindre
+                  {t("header.join")}
                 </NavLink>
               </li>
             </ul>

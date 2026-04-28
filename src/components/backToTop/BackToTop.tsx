@@ -3,8 +3,10 @@ import "./backToTop.scss";
 import type { ReactElement } from "react";
 import { useEffect, useState } from "react";
 import { IoArrowUp } from "react-icons/io5";
+import { useTranslation } from "react-i18next";
 
 export default function BackToTop(): ReactElement {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(function() {
@@ -41,8 +43,8 @@ export default function BackToTop(): ReactElement {
     <button
       className={`backToTopButton ${isVisible ? "visible" : ""}`}
       onClick={scrollToTop}
-      aria-label="Retour en haut de la page"
-      title="Retour en haut"
+      aria-label={t("backToTop.ariaLabel")}
+      title={t("backToTop.title")}
     >
       <IoArrowUp className="backToTopIcon" />
     </button>

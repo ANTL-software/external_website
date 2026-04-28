@@ -1,6 +1,7 @@
 import "./meetOurTeam.scss";
 
 import type { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 // import ppNA from "../../assets/images/pp/ppNA.webp";
@@ -11,49 +12,51 @@ import { Link } from "react-router-dom";
 import ppND from "../../assets/images/pp/ppND.webp";
 
 export default function MeetOurTeam(): ReactElement {
+  const { t } = useTranslation();
+
   const teamMembers = [
     {
-      name: "Nelly Ahobaut",
-      position: "Chief Executive Officer, Founder",
-      positionFr: "Directrice Générale, Fondatrice",
-      image: 'ppNA',
-      imageAlt: "Nelly Ahobaut portrait"
-    },
-    {
-      name: "Sonia Hadid",
-      position: "Sales Manager",
-      positionFr: "Responsable Commerciale",
-      image: 'ppSH',
-      imageAlt: "Sonia Hadid portrait"
-    },
-    {
-      name: "Laëtitia Castanet",
-      position: "QA Manager",
-      positionFr: "Responsable Qualité et formation",
-      image: 'ppLC',
-      imageAlt: "Laëtitia Castanet portrait"
+      name: "Mehdi Saad Allah",
+      position: t("meetOurTeam.members.4.role"),
+      positionFr: t("meetOurTeam.members.4.role_fr"),
+      image: "ppMS",
+      imageAlt: "Mehdi Saad Allah portrait",
     },
     {
       name: "Théo Becquet",
-      position: "Business Developer",
-      positionFr: "Développeur Business",
-      image: 'ppTB',
-      imageAlt: "Théo Becquet portrait"
+      position: t("meetOurTeam.members.3.role"),
+      positionFr: t("meetOurTeam.members.3.role_fr"),
+      image: "ppTB",
+      imageAlt: "Théo Becquet portrait",
     },
     {
-      name: "Mehdi Saad Allah",
-      position: "Office Manager",
-      positionFr: "Responsable Administrative",
-      image: 'ppMS',
-      imageAlt: "Mehdi Saad Allah portrait"
+      name: "Laëtitia Castanet",
+      position: t("meetOurTeam.members.2.role"),
+      positionFr: t("meetOurTeam.members.2.role_fr"),
+      image: "ppLC",
+      imageAlt: "Laëtitia Castanet portrait",
+    },
+    {
+      name: "Sonia Hadid",
+      position: t("meetOurTeam.members.1.role"),
+      positionFr: t("meetOurTeam.members.1.role_fr"),
+      image: "ppSH",
+      imageAlt: "Sonia Hadid portrait",
     },
     {
       name: "Nicolas Decressac",
-      position: "Chief Technology Officer",
-      positionFr: "Directeur Technique",
+      position: t("meetOurTeam.members.5.role"),
+      positionFr: t("meetOurTeam.members.5.role_fr"),
       image: ppND,
-      imageAlt: "Nicolas Decressac portrait"
-    }
+      imageAlt: "Nicolas Decressac portrait",
+    },
+    {
+      name: "Nelly Ahobaut",
+      position: t("meetOurTeam.members.0.role"),
+      positionFr: t("meetOurTeam.members.0.role_fr"),
+      image: "ppNA",
+      imageAlt: "Nelly Ahobaut portrait",
+    },
   ];
 
   return (
@@ -66,7 +69,7 @@ export default function MeetOurTeam(): ReactElement {
           data-aos-easing="ease-out-back"
           data-aos-delay="200"
         >
-          Rencontrer notre équipe
+          {t("meetOurTeam.title")}
         </h2>
         <p
           className="meetOurTeamSubtitle"
@@ -74,9 +77,7 @@ export default function MeetOurTeam(): ReactElement {
           data-aos-duration="800"
           data-aos-easing="ease-out-back"
           data-aos-delay="400"
-        >
-          La rencontre de 6 talents qui partagent la même vision.
-        </p>
+        >{t("meetOurTeam.subtitle")}</p>
       </header>
 
       <div className="teamGrid">
@@ -119,7 +120,7 @@ export default function MeetOurTeam(): ReactElement {
         data-aos-delay="1200"
       >
         <Link to="/contact_us" className="joinTeamLink">
-          <span className="linkText">Rejoingez notre équipe</span>
+          <span className="linkText">{t("meetOurTeam.cta")}</span>
           <span className="linkArrow">→</span>
         </Link>
       </div>

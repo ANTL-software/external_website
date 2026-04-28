@@ -1,39 +1,42 @@
 import "./ourImpact.scss";
 import type { ReactElement } from 'react';
+import { useTranslation } from "react-i18next";
 
 export default function OurImpact(): ReactElement {
+  const { t } = useTranslation();
+
   const impactData = [
     {
       value: "95%",
-      label: "Client Satisfaction Rate",
-      ariaLabel: "95 percent client satisfaction rate"
+      label: t("ourImpact.stat1.label"),
+      ariaLabel: t("ourImpact.stat1.ariaLabel")
     },
     {
       value: "300+",
-      label: "Successful Projects Delivered",
-      ariaLabel: "Over 300 successful projects delivered"
+      label: t("ourImpact.stat2.label"),
+      ariaLabel: t("ourImpact.stat2.ariaLabel")
     },
     {
       value: "40%",
-      label: "Average ROI for our Clients",
-      ariaLabel: "40 percent average return on investment for our clients"
+      label: t("ourImpact.stat3.label"),
+      ariaLabel: t("ourImpact.stat3.ariaLabel")
     },
     {
       value: "10+",
-      label: "Years of Industry Experience",
-      ariaLabel: "Over 10 years of industry experience"
+      label: t("ourImpact.stat4.label"),
+      ariaLabel: t("ourImpact.stat4.ariaLabel")
     }
   ];
 
   return (
     <section id="ourImpactComponent" className="ourImpact container" aria-labelledby="impactTitle">
       <header className="impactHeader">
-        <h2 id="impactTitle" className="impactTitle">Our Impact</h2>
+        <h2 id="impactTitle" className="impactTitle">{t("ourImpact.title")}</h2>
         <p className="impactSubtitle">
-          Delivering measurable results that drive real business growth
+          {t("ourImpact.subtitle")}
         </p>
       </header>
-      
+
       <dl className="impactStats" role="list" aria-label="Company performance statistics">
         {impactData.map(function(stat, index) {
           return (
@@ -47,7 +50,7 @@ export default function OurImpact(): ReactElement {
 
       <div className="highlightStat" data-aos="fade-up" data-aos-delay="400" role="banner" aria-label="99.9 percent service reliability highlight">
         <div className="highlightValue" aria-label="99.9 percent service reliability">99.9%</div>
-        <div className="highlightLabel">Service Reliability</div>
+        <div className="highlightLabel">{t("ourImpact.highlightLabel")}</div>
       </div>
     </section>
   );

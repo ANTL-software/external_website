@@ -1,35 +1,34 @@
 import "./heroSection.scss";
 
 import type { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 export default function HeroSection(): ReactElement {
-  const pathname = window.location.pathname;
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
 
   const getContent = () => {
     switch (pathname) {
       case "/":
         return {
-          title: "Expert de l'experience client",
-          firstLine:
-            "Votre partenaire pour optimiser vos performances commerciales,",
-          secondLine:
-            "et améliorer votre relation client.",
+          title: t("hero.title"),
+          firstLine: t("hero.firstLine"),
+          secondLine: t("hero.secondLine"),
         };
 
       case "/about_us":
         return {
-          title: "About Us",
-          firstLine: "Driving Innovation, Empowering Businesses Worldwide",
-          secondLine: null,
+          title: t("hero.aboutTitle"),
+          firstLine: t("hero.aboutFirstLine"),
+          secondLine: t("hero.aboutSecondLine"),
         };
 
       default:
         return {
-          title: "Empowering Global Businesses",
-          firstLine:
-            "From startups to multinational corporations, we deliver scalable,",
-          secondLine:
-            "reliable, and cost-effective services to address your unique challenges.",
+          title: t("hero.title"),
+          firstLine: t("hero.firstLine"),
+          secondLine: t("hero.secondLine"),
         };
     }
   };
@@ -41,9 +40,7 @@ export default function HeroSection(): ReactElement {
       <h1>{content.title}</h1>
       <blockquote>
         <span className="firstLine">{content.firstLine}</span>
-        {content.secondLine && (
-          <span className="secondLine">{content.secondLine}</span>
-        )}
+        {content.secondLine && <span className="secondLine">{content.secondLine}</span>}
       </blockquote>
     </section>
   );

@@ -2,6 +2,7 @@ import "./jobApplication.scss";
 
 import type { ReactElement } from "react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Select from "react-select";
 
 interface CivilityOption {
@@ -10,6 +11,7 @@ interface CivilityOption {
 }
 
 export default function JobApplication(): ReactElement {
+  const { t } = useTranslation();
   const [showForm, setShowForm] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -89,58 +91,41 @@ export default function JobApplication(): ReactElement {
   return (
     <section id="jobApplicationComponent" data-aos="fade-up" data-aos-duration="800" aria-labelledby="job-heading">
       <header className="jobHeader">
-        <h2 id="job-heading">Rejoignez notre équipe</h2>
-        <p className="jobSubtitle">Découvrez nos opportunités et rejoignez une équipe en pleine croissance</p>
+        <h2 id="job-heading">{t("jobApplication.title")}</h2>
+        <p className="jobSubtitle">{t("jobApplication.subtitle")}</p>
       </header>
 
       <div className={`jobContent ${showForm ? "formVisible" : ""}`}>
         <article className="jobOffer">
-          <h3>Commercial</h3>
+          <h3>{t("jobApplication.offer.title")}</h3>
           <div className="jobMeta">
-            <span className="jobLocation"></span>
-            <span className="jobType">28 heures/semaine</span>
+            <span className="jobLocation">{t("jobApplication.offer.location")}</span>
+            <span className="jobType">{t("jobApplication.offer.type")}</span>
           </div>
 
           <div className="jobDescription">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Vous souhaitez rejoindre une équipe dynamique et participer au développement commercial de nos clients ?
-              Cette offre est faite pour vous ! Nous recherchons des profils motivés et curieux.
-            </p>
-            <h4>Missions principales :</h4>
+            <p>{t("jobApplication.offer.description")}</p>
+
+            <h4>{t("jobApplication.offer.missions.title")}</h4>
             <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-              <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco</li>
-              <li>Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              {t("jobApplication.offer.missions.items", { returnObjects: true }) as Array<string>}
             </ul>
-            <h4>Profil recherché :</h4>
+
+            <h4>{t("jobApplication.offer.profile.title")}</h4>
             <ul>
-              <li>Excepteur sint occaecat cupidatat non proident</li>
-              <li>Sunt in culpa qui officia deserunt mollit anim id est laborum</li>
-              <li>Sed ut perspiciatis unde omnis iste natus error sit</li>
-              <li>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</li>
+              {t("jobApplication.offer.profile.items", { returnObjects: true }) as Array<string>}
             </ul>
-            <p>
-              Nous offrons un environnement de travail stimulant, des possibilités d'évolution et une formation continue.
-              N'hésitez pas à nous envoyer votre candidature !
-            </p>
+
+            <p>{t("jobApplication.offer.benefits.title")}</p>
           </div>
 
           {!showForm && (
             <button
               className="applyButton"
               onClick={function() { setShowForm(true); }}
-              aria-label="Postuler à cette offre"
+              aria-label={t("jobApplication.apply")}
             >
-              <span>Postuler !</span>
+              <span>{t("jobApplication.apply")}</span>
               <span className="buttonArrow">→</span>
             </button>
           )}
@@ -149,17 +134,17 @@ export default function JobApplication(): ReactElement {
         {showForm && (
           <aside className="applicationFormWrapper">
             <form className="applicationForm" onSubmit={handleSubmit}>
-              <h3>Votre candidature</h3>
+              <h3>{t("jobApplication.form.title")}</h3>
 
               <div className="formRow">
                 <div className="formGroup">
-                  <label htmlFor="civility">Civilité *</label>
+                  <label htmlFor="civility">{t("jobApplication.form.civility")}</label>
                   <Select
                     id="civility"
                     options={civilityOptions}
                     value={formData.civility}
                     onChange={handleCivilityChange}
-                    placeholder="Sélectionnez..."
+                    placeholder={t("jobApplication.form.selectPlaceholder")}
                     className="reactSelect"
                     classNamePrefix="reactSelect"
                     isClearable={false}
@@ -169,7 +154,7 @@ export default function JobApplication(): ReactElement {
 
               <div className="formRow">
                 <div className="formGroup">
-                  <label htmlFor="firstName">Prénom *</label>
+                  <label htmlFor="firstName">{t("jobApplication.form.firstName")}</label>
                   <input
                     type="text"
                     id="firstName"
@@ -177,12 +162,12 @@ export default function JobApplication(): ReactElement {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
-                    placeholder="Jean"
+                    placeholder={t("jobApplication.form.placeholderFirstName")}
                   />
                 </div>
 
                 <div className="formGroup">
-                  <label htmlFor="lastName">Nom *</label>
+                  <label htmlFor="lastName">{t("jobApplication.form.lastName")}</label>
                   <input
                     type="text"
                     id="lastName"
@@ -190,14 +175,14 @@ export default function JobApplication(): ReactElement {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required
-                    placeholder="Dupont"
+                    placeholder={t("jobApplication.form.placeholderLastName")}
                   />
                 </div>
               </div>
 
               <div className="formRow">
                 <div className="formGroup">
-                  <label htmlFor="phone">Téléphone *</label>
+                  <label htmlFor="phone">{t("jobApplication.form.phone")}</label>
                   <input
                     type="tel"
                     id="phone"
@@ -205,12 +190,12 @@ export default function JobApplication(): ReactElement {
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
-                    placeholder="+33 6 12 34 56 78"
+                    placeholder={t("jobApplication.form.placeholderPhone")}
                   />
                 </div>
 
                 <div className="formGroup">
-                  <label htmlFor="email">Email *</label>
+                  <label htmlFor="email">{t("jobApplication.form.email")}</label>
                   <input
                     type="email"
                     id="email"
@@ -218,14 +203,14 @@ export default function JobApplication(): ReactElement {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    placeholder="jean.dupont@email.com"
+                    placeholder={t("jobApplication.form.placeholderEmail")}
                   />
                 </div>
               </div>
 
               <div className="formRow">
                 <div className="formGroup">
-                  <label>CV *</label>
+                  <label>{t("jobApplication.form.cv")} *</label>
                   <div
                     className="fileUpload"
                     onDrop={function(e) { handleDrop(e, "cv"); }}
@@ -243,8 +228,8 @@ export default function JobApplication(): ReactElement {
                       ) : (
                         <>
                           <span className="uploadIcon">📄</span>
-                          <span>Glissez votre CV ou cliquez pour sélectionner</span>
-                          <span className="fileFormats">PDF, DOC, DOCX</span>
+                          <span>{t("jobApplication.form.cvText")}</span>
+                          <span className="fileFormats">{t("jobApplication.form.fileFormats")}</span>
                         </>
                       )}
                     </div>
@@ -252,7 +237,7 @@ export default function JobApplication(): ReactElement {
                 </div>
 
                 <div className="formGroup">
-                  <label>Lettre de motivation *</label>
+                  <label>{t("jobApplication.form.coverLetter")} *</label>
                   <div
                     className="fileUpload"
                     onDrop={function(e) { handleDrop(e, "coverLetter"); }}
@@ -270,8 +255,8 @@ export default function JobApplication(): ReactElement {
                       ) : (
                         <>
                           <span className="uploadIcon">✉️</span>
-                          <span>Glissez votre lettre ou cliquez pour sélectionner</span>
-                          <span className="fileFormats">PDF, DOC, DOCX</span>
+                          <span>{t("jobApplication.form.coverLetterText")}</span>
+                          <span className="fileFormats">{t("jobApplication.form.fileFormats")}</span>
                         </>
                       )}
                     </div>
@@ -284,9 +269,9 @@ export default function JobApplication(): ReactElement {
                   type="submit"
                   className="submitButton"
                   disabled={!isFormValid()}
-                  aria-label="Envoyer ma candidature"
+                  aria-label={t("jobApplication.form.submit")}
                 >
-                  <span>Envoyer ma candidature</span>
+                  <span>{t("jobApplication.form.submit")}</span>
                   <span className="buttonArrow">→</span>
                 </button>
               </div>

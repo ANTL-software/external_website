@@ -168,6 +168,20 @@
   #ourStoryComponent .timelineContent {
     gap: vars.$spacing-lg;
   }
+
+  /* Prevent scroll horizontal on mobile */
+  #ourStoryComponent.ourStory {
+    overflow-x: hidden;
+  }
+
+  /* Override AOS fade-left to fade-right on mobile */
+  #ourStoryComponent [data-aos="fade-left"][data-aos][data-aos-offset] {
+    transform: translateX(-100px) !important;
+  }
+
+  #ourStoryComponent [data-aos="fade-left"].aos-animate {
+    transform: translateX(0) !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

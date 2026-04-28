@@ -7,54 +7,54 @@ import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
 import mockup5 from "../../assets/images/mockup/Stationery_Mockup_5.webp";
 
 import type { ReactElement } from "react";
+import { useTranslation } from "react-i18next";
 
 import ExpertiseCard from "../expertiseCard/ExpertiseCard";
 
 export default function OurExpertise(): ReactElement {
+  const { t } = useTranslation();
+
   const expertiseData = [
     {
       image: mockup1,
-      imageAlt: "Web Development Services",
-      subtitle: "Conquête",
-      description: "Prospection, prise de rendez-vous et génération de leads.",
+      imageAlt: t("ourExpertise.conquest.title"),
+      subtitle: t("ourExpertise.conquest.title"),
+      description: t("ourExpertise.conquest.description"),
       cardId: "conquete",
     },
     {
       image: mockup2,
-      imageAlt: "Mobile App Development",
-      subtitle: "Fidélisation",
-      description:
-        "Suivi personalisé des clients, proximité par le contact humain, qualité du discours.",
+      imageAlt: t("ourExpertise.loyalty.title"),
+      subtitle: t("ourExpertise.loyalty.title"),
+      description: t("ourExpertise.loyalty.description"),
       cardId: "fidelisation",
     },
     {
       image: mockup3,
-      imageAlt: "Cloud Solutions",
-      subtitle: "Rétention",
-      description:
-        "Récupération et maintient de la clientelle, gestion de conflits.",
+      imageAlt: t("ourExpertise.retention.title"),
+      subtitle: t("ourExpertise.retention.title"),
+      description: t("ourExpertise.retention.description"),
       cardId: "retention",
     },
     {
       image: mockup4,
-      imageAlt: "Conception & AI",
-      subtitle: "Conception",
-      description: "Generation d'outils administratifs, CRM, intégration IA.",
+      imageAlt: t("ourExpertise.conception.title"),
+      subtitle: t("ourExpertise.conception.title"),
+      description: t("ourExpertise.conception.description"),
       cardId: "conception",
     },
     {
       image: mockup5,
-      imageAlt: "Branding",
-      subtitle: "Branding",
-      description: "Visibilité Online (Site vitrine, réseau sociaux...)",
+      imageAlt: t("ourExpertise.branding.title"),
+      subtitle: t("ourExpertise.branding.title"),
+      description: t("ourExpertise.branding.description"),
       cardId: "branding",
     },
     {
       image: mockup1,
-      imageAlt: "Consulting Services",
-      subtitle: "Conseil",
-      description:
-        "Communication, repositionement marketing, optimisation image de marque.",
+      imageAlt: t("ourExpertise.consulting.title"),
+      subtitle: t("ourExpertise.consulting.title"),
+      description: t("ourExpertise.consulting.description"),
       cardId: "conseil",
     },
   ];
@@ -63,21 +63,19 @@ export default function OurExpertise(): ReactElement {
     <section id="ourExpertiseComponent" className="ourExpertise">
       <header className="expertiseHeader">
         <h2 className="expertiseTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Notre Expertise
+          {t("ourExpertise.title")}
         </h2>
         <p className="expertiseSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Solutions sur meusure afin de répondre à vos besoins spécifiques
+          {t("ourExpertise.subtitle")}
         </p>
       </header>
-      
+
       <div className="expertiseGrid">
         {expertiseData.map(function(expertise, index) {
-          // Animation différente selon la position pour forcer l'ordre
           const isFirstRow = index < 3;
           const animationType = isFirstRow ? "fade-right" : "fade-up";
-          // Deuxième ligne: toutes les cartes 4,5,6 arrivent ensemble
           const delay = isFirstRow ? 400 + (index * 100) : 650;
-          
+
           return (
             <div
               key={index}
