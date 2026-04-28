@@ -1,0 +1,13 @@
+@use '../../utils/styles/mixins' as mixins;
+@use '../../utils/styles/variables' as vars;
+
+#joinUs {
+  @include mixins.viewBackground;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#joinUs main {
+  flex-grow: 1;
+}

@@ -1,0 +1,417 @@
+@use '../../utils/styles/variables' as vars;
+
+#jobApplicationComponent {
+  width: 100%;
+  padding: vars.$spacing-xxl 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xl;
+  position: relative;
+  z-index: 2;
+}
+
+#jobApplicationComponent .jobHeader {
+  text-align: center;
+  max-width: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-base;
+  margin: 0 auto;
+}
+
+#jobApplicationComponent .jobHeader h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+}
+
+#jobApplicationComponent .jobSubtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#jobApplicationComponent .jobContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: vars.$spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+#jobApplicationComponent .jobContent.formVisible {
+  grid-template-columns: minmax(0, 500px) 1fr;
+  justify-content: start;
+}
+
+#jobApplicationComponent .jobOffer {
+  background: vars.$background-color;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-xl;
+  box-shadow: vars.$shadow-base;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  min-width: 0;
+}
+
+#jobApplicationComponent .jobOffer h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0 0 vars.$spacing-sm 0;
+}
+
+#jobApplicationComponent .jobMeta {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: vars.$spacing-base;
+  margin-bottom: vars.$spacing-lg;
+  font-size: vars.$font-size-sm;
+  color: vars.$text-light;
+}
+
+#jobApplicationComponent .jobDescription {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-base;
+}
+
+#jobApplicationComponent .jobDescription p {
+  font-size: vars.$font-size-base;
+  color: vars.$text-color;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#jobApplicationComponent .jobDescription h4 {
+  font-size: vars.$font-size-lg;
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$text-color;
+  margin: vars.$spacing-sm 0 vars.$spacing-xs 0;
+}
+
+#jobApplicationComponent .jobDescription ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+}
+
+#jobApplicationComponent .jobDescription ul li {
+  font-size: vars.$font-size-base;
+  color: vars.$text-color;
+  line-height: 1.5;
+  padding-left: vars.$spacing-base;
+  position: relative;
+}
+
+#jobApplicationComponent .jobDescription ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-bold;
+}
+
+#jobApplicationComponent .jobOffer .applyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: vars.$spacing-xs;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  border: none;
+  border-radius: vars.$border-radius-base;
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-semibold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  margin-top: vars.$spacing-lg;
+}
+
+#jobApplicationComponent .jobOffer .applyButton:hover {
+  background: vars.$accent-color;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  gap: vars.$spacing-base;
+}
+
+#jobApplicationComponent .buttonArrow {
+  font-size: vars.$font-size-base;
+  transition: transform 0.3s ease;
+}
+
+#jobApplicationComponent .jobOffer .applyButton:hover .buttonArrow {
+  transform: translateX(4px);
+}
+
+#jobApplicationComponent .applicationFormWrapper {
+  position: sticky;
+  top: calc(10dvh + vars.$spacing-base);
+  height: fit-content;
+}
+
+#jobApplicationComponent .applicationForm {
+  background: vars.$background-color;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-xl;
+  box-shadow: vars.$shadow-base;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
+}
+
+#jobApplicationComponent .applicationForm h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin: 0;
+}
+
+#jobApplicationComponent .formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: vars.$spacing-base;
+}
+
+#jobApplicationComponent .formGroup {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+}
+
+#jobApplicationComponent .formGroup label {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+}
+
+#jobApplicationComponent .formGroup input {
+  padding: vars.$spacing-sm vars.$spacing-base;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: vars.$border-radius-base;
+  font-size: vars.$font-size-base;
+  color: vars.$text-color;
+  background: rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+#jobApplicationComponent .formGroup input:focus {
+  outline: none;
+  border-color: vars.$primary-color;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#jobApplicationComponent .formGroup input::placeholder {
+  color: vars.$text-light;
+  opacity: 0.6;
+}
+
+#jobApplicationComponent .reactSelect {
+  font-size: vars.$font-size-base;
+}
+
+#jobApplicationComponent .reactSelect__control {
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: vars.$border-radius-base;
+  background: rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#jobApplicationComponent .reactSelect__control:focus-within {
+  border-color: vars.$primary-color;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#jobApplicationComponent .reactSelect__placeholder {
+  color: vars.$text-light;
+  opacity: 0.6;
+}
+
+#jobApplicationComponent .reactSelect__single-value {
+  color: vars.$text-color;
+}
+
+#jobApplicationComponent .reactSelect__menu {
+  background: vars.$background-color;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: vars.$border-radius-base;
+  box-shadow: vars.$shadow-base;
+}
+
+#jobApplicationComponent .reactSelect__option {
+  background: vars.$background-color;
+  color: vars.$text-color;
+}
+
+#jobApplicationComponent .reactSelect__option:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+#jobApplicationComponent .reactSelect__option--is-selected {
+  background: vars.$primary-color;
+  color: vars.$background-color;
+}
+
+#jobApplicationComponent .fileUpload {
+  position: relative;
+  border: 2px dashed rgba(37, 99, 235, 0.3);
+  border-radius: vars.$border-radius-base;
+  padding: vars.$spacing-lg;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#jobApplicationComponent .fileUpload:hover {
+  border-color: vars.$primary-color;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+#jobApplicationComponent .fileUpload input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#jobApplicationComponent .fileUploadContent {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: vars.$spacing-xs;
+}
+
+#jobApplicationComponent .uploadIcon {
+  font-size: 2rem;
+}
+
+#jobApplicationComponent .fileUploadContent > span:nth-child(2) {
+  font-size: vars.$font-size-sm;
+  color: vars.$text-color;
+}
+
+#jobApplicationComponent .fileFormats {
+  font-size: vars.$font-size-xs;
+  color: vars.$text-light;
+  opacity: 0.8;
+}
+
+#jobApplicationComponent .fileName {
+  font-size: vars.$font-size-sm;
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-medium;
+}
+
+#jobApplicationComponent .formActions {
+  display: flex;
+  justify-content: center;
+  margin-top: vars.$spacing-base;
+}
+
+#jobApplicationComponent .submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: vars.$spacing-xs;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  border: none;
+  border-radius: vars.$border-radius-base;
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-semibold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+#jobApplicationComponent .submitButton:disabled {
+  background: vars.$text-light;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+#jobApplicationComponent .submitButton:not(:disabled):hover {
+  background: vars.$accent-color;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  gap: vars.$spacing-base;
+}
+
+@media (max-width: 1024px) {
+  #jobApplicationComponent .jobContent {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+
+  #jobApplicationComponent .jobContent.formVisible {
+    grid-template-columns: 1fr;
+  }
+
+  #jobApplicationComponent .applicationFormWrapper {
+    position: static;
+    order: 2;
+  }
+
+  #jobApplicationComponent .jobOffer {
+    order: 1;
+  }
+
+  #jobApplicationComponent .formRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  #jobApplicationComponent {
+    padding: vars.$spacing-xl vars.$spacing-base;
+  }
+
+  #jobApplicationComponent .jobOffer {
+    padding: vars.$spacing-lg;
+  }
+
+  #jobApplicationComponent .applicationForm {
+    padding: vars.$spacing-lg;
+  }
+
+  #jobApplicationComponent .applyButton {
+    padding: vars.$spacing-lg vars.$spacing-base;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #jobApplicationComponent .applyButton,
+  #jobApplicationComponent .submitButton {
+    transition: none;
+  }
+
+  #jobApplicationComponent .applyButton:hover,
+  #jobApplicationComponent .submitButton:not(:disabled):hover {
+    transform: none;
+  }
+
+  #jobApplicationComponent .buttonArrow {
+    transition: none;
+  }
+
+  #jobApplicationComponent .applyButton:hover .buttonArrow,
+  #jobApplicationComponent .submitButton:not(:disabled):hover .buttonArrow {
+    transform: none;
+  }
+}

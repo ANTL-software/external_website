@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# antl - Site Web Externe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine de l'entreprise antl, spécialisée dans l'expérience client et les services de call center.
 
-Currently, two official plugins are available:
+## 🚀 Stack Technique
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend** : React 19 + TypeScript + Vite
+- **Styling** : SCSS avec variables et mixins
+- **Routing** : React Router DOM v6
+- **Animations** : AOS (Animate On Scroll)
+- **Icônes** : React Icons
+- **HTTP** : Axios
+- **Déploiement** : Netlify
 
-## Expanding the ESLint configuration
+## 📁 Structure du Projet
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/       # Composants UI réutilisables
+├── views/           # Pages de l'application
+├── context/         # React Context providers
+├── utils/           # Utilitaires et styles globaux
+├── assets/          # Assets statiques
+├── App.tsx          # Composant principal avec routing
+└── main.tsx         # Point d'entrée
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Commandes de Développement
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Serveur de développement
+npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build de production
+npm run build
+
+# Linter
+npm run lint
+
+# Preview du build
+npm run preview
 ```
+
+## 📄 Pages
+
+- **Accueil** (`/`) - Page d'accueil avec présentation des services
+- **À propos** (`/about_us`) - Histoire et valeurs de l'entreprise
+- **Contact** (`/contact_us`) - Formulaire de contact
+- **Recrutement** (`/join_us`) - Offres d'emploi et candidatures
+
+## 🎨 Composants Principaux
+
+### Navigation
+- **Header** - Navigation sticky avec menu mobile
+- **Footer** - Pied de page avec liens et réseaux sociaux
+
+### Accueil
+- **HeroSection** - Section hero avec CTA
+- **CallToAction** - Appel à l'action
+- **OurExpertise** - Présentation des domaines d'expertise
+- **ClientReviews** - Témoignages clients
+
+### À Propos
+- **OurStory** - Timeline de l'histoire de l'entreprise
+- **WhatWeStandFor** - Valeurs et principes
+- **MeetOurTeam** - Présentation de l'équipe
+- **Quote** - Citation mise en avant
+- **JoinUs** - Section recrutement
+
+### Contact
+- **GetInTouch** - Formulaire de contact + coordonnées
+
+### Recrutement
+- **JobApplication** - Offres d'emploi + formulaire de candidature
+
+## 👥 Équipe
+
+Projet développé pour antl - Experts de l'expérience client.
+
+---
+
+**Version** : 1.0
+**Dernière mise à jour** : 2026-04-28

@@ -1,6 +1,6 @@
 import "./header.scss";
 
-import logo from "../../assets/brand/logo.svg";
+import antlLogo from "../../assets/brand/antlLogo.png";
 
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
@@ -18,21 +18,21 @@ export default function Header(): ReactElement {
 
   useEffect(function() {
     // Offset adaptatif selon la taille d'écran
-    const isMobile = window.innerWidth <= 768;
-    const offset = isMobile ? 50 : 100; // Réduit aussi en desktop
-    
+    const isMobile = window.innerWidth <= 1100;
+    const offset = isMobile ? 50 : 100;
+
     AOS.init({
       duration: 800,
       easing: 'ease-out-back',
       offset: offset,
       once: true
     });
-    
+
     // Réinitialiser AOS lors du redimensionnement
     function handleResize() {
-      const newIsMobile = window.innerWidth <= 768;
+      const newIsMobile = window.innerWidth <= 1100;
       const newOffset = newIsMobile ? 50 : 100;
-      
+
       AOS.init({
         duration: 800,
         easing: 'ease-out-back',
@@ -40,7 +40,7 @@ export default function Header(): ReactElement {
         once: true
       });
     }
-    
+
     window.addEventListener('resize', handleResize);
     return function() {
       window.removeEventListener('resize', handleResize);
@@ -108,36 +108,21 @@ export default function Header(): ReactElement {
     <header ref={headerRef} id="header" className="header container">
       <Link to={"/"} className="brandLink" aria-label="Page d'accueil">
         <figure className="brandLogo" aria-label="Logo de l'application">
-          <img src={logo} alt="Logo de l'application" />
-          <figcaption>ANT📞L</figcaption>
+          <img src={antlLogo} alt="Logo de l'entreprise" />
         </figure>
       </Link>
-      
+
       {/* Desktop Navigation */}
       <nav className="headerNav desktopNav">
         <ul className="navList">
           <li className="navItem">
             <NavLink to={"/"} className="navLink" aria-label="Accueil">
-              <span className="navLinkText">Home</span>
+              <span className="navLinkText">Accueil</span>
             </NavLink>
           </li>
           <li className="navItem">
             <NavLink to={"/about_us"} className="navLink" aria-label="À propos">
-              <span className="navLinkText">About us</span>
-            </NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink
-              to={"/case_studies"}
-              className="navLink"
-              aria-label="Études de cas"
-            >
-              <span className="navLinkText">Case studies</span>
-            </NavLink>
-          </li>
-          <li className="navItem">
-            <NavLink to={"/services"} className="navLink" aria-label="Services">
-              <span className="navLinkText">Services</span>
+              <span className="navLinkText">À propos</span>
             </NavLink>
           </li>
           <li className="navItem">
@@ -146,7 +131,16 @@ export default function Header(): ReactElement {
               className="navLink"
               aria-label="Contact"
             >
-              <span className="navLinkText">Contact us</span>
+              <span className="navLinkText">Nous contacter</span>
+            </NavLink>
+          </li>
+          <li className="navItem">
+            <NavLink
+              to={"/join_us"}
+              className="navLink"
+              aria-label="Rejoindre l'équipe"
+            >
+              <span className="navLinkText">Nous rejoindre</span>
             </NavLink>
           </li>
         </ul>
@@ -156,14 +150,14 @@ export default function Header(): ReactElement {
         <div className="desktopOnly">
           <GoToConsultationLink />
         </div>
-        
+
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="mobileMenuButton"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          <div className={`hamburgerIcon ${isMobileMenuOpen ? 'open' : ''}`}>
+          <div className={`hamburgerIcon ${isMobileMenuOpen ? "open" : ""}`}>
             {isMobileMenuOpen ? <RiCloseLine /> : <RiMenuLine />}
           </div>
         </button>
@@ -171,7 +165,7 @@ export default function Header(): ReactElement {
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div 
+        <div
           className="mobileMenuOverlay"
           data-aos="slide-left"
           data-aos-duration="300"
@@ -179,28 +173,39 @@ export default function Header(): ReactElement {
           <nav className="mobileNav">
             <ul className="mobileNavList">
               <li className="mobileNavItem">
-                <NavLink to={"/"} className="mobileNavLink" onClick={closeMobileMenu}>
-                  Home
+                <NavLink
+                  to={"/"}
+                  className="mobileNavLink"
+                  onClick={closeMobileMenu}
+                >
+                  Accueil
                 </NavLink>
               </li>
               <li className="mobileNavItem">
-                <NavLink to={"/about_us"} className="mobileNavLink" onClick={closeMobileMenu}>
-                  About us
+                <NavLink
+                  to={"/about_us"}
+                  className="mobileNavLink"
+                  onClick={closeMobileMenu}
+                >
+                  À propos
                 </NavLink>
               </li>
               <li className="mobileNavItem">
-                <NavLink to={"/case_studies"} className="mobileNavLink" onClick={closeMobileMenu}>
-                  Case studies
+                <NavLink
+                  to={"/contact_us"}
+                  className="mobileNavLink"
+                  onClick={closeMobileMenu}
+                >
+                  Nous contacter
                 </NavLink>
               </li>
               <li className="mobileNavItem">
-                <NavLink to={"/services"} className="mobileNavLink" onClick={closeMobileMenu}>
-                  Services
-                </NavLink>
-              </li>
-              <li className="mobileNavItem">
-                <NavLink to={"/contact_us"} className="mobileNavLink" onClick={closeMobileMenu}>
-                  Contact us
+                <NavLink
+                  to={"/join_us"}
+                  className="mobileNavLink"
+                  onClick={closeMobileMenu}
+                >
+                  Nous rejoindre
                 </NavLink>
               </li>
             </ul>

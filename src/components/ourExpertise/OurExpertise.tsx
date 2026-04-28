@@ -17,17 +17,15 @@ export default function OurExpertise(): ReactElement {
       imageAlt: "Web Development Services",
       subtitle: "Conquête",
       description: "Prospection, prise de rendez-vous et génération de leads.",
-      linkTo: "/services/web-development",
-      linkText: "Learn More",
+      cardId: "conquete",
     },
     {
       image: mockup2,
       imageAlt: "Mobile App Development",
-      subtitle: "Fidelisation",
+      subtitle: "Fidélisation",
       description:
         "Suivi personalisé des clients, proximité par le contact humain, qualité du discours.",
-      linkTo: "/services/mobile-apps",
-      linkText: "Discover",
+      cardId: "fidelisation",
     },
     {
       image: mockup3,
@@ -35,24 +33,21 @@ export default function OurExpertise(): ReactElement {
       subtitle: "Rétention",
       description:
         "Récupération et maintient de la clientelle, gestion de conflits.",
-      linkTo: "/services/cloud",
-      linkText: "Explore",
+      cardId: "retention",
     },
     {
       image: mockup4,
       imageAlt: "Conception & AI",
       subtitle: "Conception",
       description: "Generation d'outils administratifs, CRM, intégration IA.",
-      linkTo: "/services/ai-ml",
-      linkText: "Learn More",
+      cardId: "conception",
     },
     {
       image: mockup5,
       imageAlt: "Branding",
       subtitle: "Branding",
       description: "Visibilité Online (Site vitrine, réseau sociaux...)",
-      linkTo: "/services/devops",
-      linkText: "View Details",
+      cardId: "branding",
     },
     {
       image: mockup1,
@@ -60,8 +55,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: "Conseil",
       description:
         "Communication, repositionement marketing, optimisation image de marque.",
-      linkTo: "/services/consulting",
-      linkText: "Get Started",
+      cardId: "conseil",
     },
   ];
 
@@ -69,10 +63,10 @@ export default function OurExpertise(): ReactElement {
     <section id="ourExpertiseComponent" className="ourExpertise">
       <header className="expertiseHeader">
         <h2 className="expertiseTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Our Expertise
+          Notre Expertise
         </h2>
         <p className="expertiseSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Comprehensive solutions tailored to your business needs
+          Solutions sur meusure afin de répondre à vos besoins spécifiques
         </p>
       </header>
       
@@ -85,14 +79,19 @@ export default function OurExpertise(): ReactElement {
           const delay = isFirstRow ? 400 + (index * 100) : 650;
           
           return (
-            <div key={index} data-aos={animationType} data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay={delay}>
+            <div
+              key={index}
+              id={expertise.cardId}
+              data-aos={animationType}
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+              data-aos-delay={delay}
+            >
               <ExpertiseCard
                 image={expertise.image}
                 imageAlt={expertise.imageAlt}
                 subtitle={expertise.subtitle}
                 description={expertise.description}
-                linkTo={expertise.linkTo}
-                linkText={expertise.linkText}
               />
             </div>
           );

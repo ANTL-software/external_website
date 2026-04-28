@@ -3,70 +3,88 @@ import "./meetOurTeam.scss";
 import type { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-import pp1 from "../../assets/images/mockup/pp/1.webp";
-import pp2 from "../../assets/images/mockup/pp/2.webp";
-import pp3 from "../../assets/images/mockup/pp/3.webp";
-import pp4 from "../../assets/images/mockup/pp/4.webp";
-import pp5 from "../../assets/images/mockup/pp/5.webp";
-import pp6 from "../../assets/images/mockup/pp/6.webp";
+// import ppNA from "../../assets/images/pp/ppNA.webp";
+// import ppSH from "../../assets/images/pp/ppSH.webp";
+// import ppLC from "../../assets/images/pp/ppLC.webp";
+// import ppTB from "../../assets/images/pp/ppTB.webp";
+// import ppMS from "../../assets/images/pp/ppMS.webp";
+import ppND from "../../assets/images/pp/ppND.webp";
 
 export default function MeetOurTeam(): ReactElement {
   const teamMembers = [
     {
-      name: "Timothy Franey",
-      position: "Co-Founder, ANTEL",
-      image: pp1,
-      imageAlt: "Timothy Franey portrait"
+      name: "Nelly Ahobaut",
+      position: "Chief Executive Officer, Founder",
+      positionFr: "Directrice Générale, Fondatrice",
+      image: 'ppNA',
+      imageAlt: "Nelly Ahobaut portrait"
     },
     {
-      name: "Carroll Keeling",
-      position: "Co-Founder, ANTEL",
-      image: pp2,
-      imageAlt: "Carroll Keeling portrait"
+      name: "Sonia Hadid",
+      position: "Sales Manager",
+      positionFr: "Responsable Commerciale",
+      image: 'ppSH',
+      imageAlt: "Sonia Hadid portrait"
     },
     {
-      name: "Johanna Kassulke",
-      position: "Co-Founder, ANTEL",
-      image: pp3,
-      imageAlt: "Johanna Kassulke portrait"
+      name: "Laëtitia Castanet",
+      position: "QA Manager",
+      positionFr: "Responsable Qualité et formation",
+      image: 'ppLC',
+      imageAlt: "Laëtitia Castanet portrait"
     },
     {
-      name: "Leslie Willms",
-      position: "Co-Founder, ANTEL",
-      image: pp4,
-      imageAlt: "Leslie Willms portrait"
+      name: "Théo Becquet",
+      position: "Business Developer",
+      positionFr: "Développeur Business",
+      image: 'ppTB',
+      imageAlt: "Théo Becquet portrait"
     },
     {
-      name: "Frances Smith",
-      position: "Co-Founder, ANTEL",
-      image: pp5,
-      imageAlt: "Frances Smith portrait"
+      name: "Mehdi Saad Allah",
+      position: "Office Manager",
+      positionFr: "Responsable Administrative",
+      image: 'ppMS',
+      imageAlt: "Mehdi Saad Allah portrait"
     },
     {
-      name: "Roderick Gutgowski",
-      position: "Co-Founder, ANTEL",
-      image: pp6,
-      imageAlt: "Roderick Gutgowski portrait"
+      name: "Nicolas Decressac",
+      position: "Chief Technology Officer",
+      positionFr: "Directeur Technique",
+      image: ppND,
+      imageAlt: "Nicolas Decressac portrait"
     }
   ];
 
   return (
     <section id="meetOurTeamComponent" className="meetOurTeam container">
       <header className="meetOurTeamHeader">
-        <h2 className="meetOurTeamTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Meet Our Team
+        <h2
+          className="meetOurTeamTitle"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-easing="ease-out-back"
+          data-aos-delay="200"
+        >
+          Rencontrer notre équipe
         </h2>
-        {/* <p className="meetOurTeamSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Our global team of experienced engineers, consultants, and project managers is the backbone of ANTEL. With a shared passion for problem-solving and innovation, we're dedicated to delivering exceptional results for every client.
-        </p> */}
+        <p
+          className="meetOurTeamSubtitle"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-easing="ease-out-back"
+          data-aos-delay="400"
+        >
+          La rencontre de 6 talents qui partagent la même vision.
+        </p>
       </header>
 
       <div className="teamGrid">
-        {teamMembers.map(function(member, index) {
-          const delay = 600 + (index * 100);
-          
+        {teamMembers.map(function (member, index) {
+          const delay = 600 + index * 100;
+
           return (
-            <article 
+            <article
               key={index}
               className="teamMemberCard"
               data-aos="fade-up"
@@ -82,19 +100,26 @@ export default function MeetOurTeam(): ReactElement {
                   loading="lazy"
                 />
               </div>
-              
+
               <div className="memberContent">
                 <h3 className="memberName">{member.name}</h3>
                 <p className="memberPosition">{member.position}</p>
+                <p className="memberPositionFr">{member.positionFr}</p>
               </div>
             </article>
           );
         })}
       </div>
 
-      <div className="teamAction" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="1200">
+      <div
+        className="teamAction"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-easing="ease-out-back"
+        data-aos-delay="1200"
+      >
         <Link to="/contact_us" className="joinTeamLink">
-          <span className="linkText">Join our team</span>
+          <span className="linkText">Rejoingez notre équipe</span>
           <span className="linkArrow">→</span>
         </Link>
       </div>

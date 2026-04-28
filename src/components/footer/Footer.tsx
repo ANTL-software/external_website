@@ -1,6 +1,8 @@
 import "./footer.scss";
 import type { ReactElement } from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import antlLogo from "../../assets/brand/antlLogo.png";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer(): ReactElement {
   return (
@@ -9,16 +11,20 @@ export default function Footer(): ReactElement {
         <div className="footerContent">
           <section className="footerSection companySection" aria-labelledby="company-heading">
             <header className="companyLogo">
-              <div className="logoIcon" role="img" aria-label="ANTEL logo"></div>
-              <h3 id="company-heading">ANTEL</h3>
+              <figure className="logoIcon" role="img" aria-label="antl logo">
+                <img src={antlLogo} alt="antl logo" />
+              </figure>
             </header>
-            <p>We offer a comprehensive suite of digital marketing services that cover all aspects of our online presence. From SEO and social media marketing to content creation and PPC advertising, they have the expertise and resources to handle our diverse marketing needs.</p>
+            <p>Expert de l'expérience client et du développement commercial. Nous accompagnons les entreprises dans la conquête, la fidélisation et la rétention de leur clientèle grâce à des solutions sur mesure et une approche humaine.</p>
             <nav className="socialIcons" aria-label="Social media links">
               <a href="#" aria-label="Follow us on Facebook" rel="noopener noreferrer">
                 <FaFacebookF aria-hidden="true" />
               </a>
-              <a href="#" aria-label="Follow us on Twitter" rel="noopener noreferrer">
-                <FaTwitter aria-hidden="true" />
+              <a href="#" aria-label="Follow us on X" rel="noopener noreferrer">
+                <FaXTwitter aria-hidden="true" />
+              </a>
+              <a href="#" aria-label="Follow us on TikTok" rel="noopener noreferrer">
+                <FaTiktok aria-hidden="true" />
               </a>
               <a href="#" aria-label="Connect with us on LinkedIn" rel="noopener noreferrer">
                 <FaLinkedinIn aria-hidden="true" />
@@ -33,33 +39,33 @@ export default function Footer(): ReactElement {
             <h4 id="navigation-heading">Navigation</h4>
             <nav aria-label="Footer navigation">
               <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="/#ourExpertiseComponent">Nos expertises</a></li>
+                <li><a href="/about_us">À propos</a></li>
+                <li><a href="/about_us#meetOurTeamComponent">Notre équipe</a></li>
+                <li><a href="/about_us#getInTouchComponent">Nous contacter</a></li>
+                <li><a href="/join_us">Nous rejoindre</a></li>
+                <li><a href="/legal">Mentions légales</a></li>
               </ul>
             </nav>
           </section>
-          
+
           <section className="footerSection" aria-labelledby="services-heading">
-            <h4 id="services-heading">Services</h4>
+            <h4 id="services-heading">Nos services</h4>
             <nav aria-label="Services navigation">
               <ul>
-                <li><a href="#">Legacy System Migration</a></li>
-                <li><a href="#">ERP Implementation</a></li>
-                <li><a href="#">Engineering Consulting</a></li>
-                <li><a href="#">Product Consulting</a></li>
-                <li><a href="#">Automated Teams</a></li>
-                <li><a href="#">Cybersecurity Services</a></li>
+                <li><a href="/#conquete">Conquête</a></li>
+                <li><a href="/#fidelisation">Fidélisation</a></li>
+                <li><a href="/#retention">Rétention</a></li>
+                <li><a href="/#conception">Conception & Outils</a></li>
+                <li><a href="/#branding">Branding</a></li>
+                <li><a href="/#conseil">Conseil</a></li>
               </ul>
             </nav>
           </section>
         </div>
         
         <div className="footerBottom">
-          <p><small>© ANTEL 2025 | All Rights Reserved</small></p>
+          <p><small>© antl 2026 | All Rights Reserved</small></p>
         </div>
       </div>
     </footer>

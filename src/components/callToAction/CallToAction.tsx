@@ -1,7 +1,6 @@
 import "./callToAction.scss";
 
 import type { ReactElement } from "react";
-import { Link } from "react-router-dom";
 
 import GoToConsultationLink from "../goToConsultationLink/GoToConsultationLink";
 
@@ -13,19 +12,19 @@ export default function CallToAction(): ReactElement {
       case "/":
         return {
           paragraph:
-            "Transform your business with expert engineering, seamless migrations, and innovative digital solutions, no matter where you are.",
+            "Boostez votre performance commerciale avec des solutions sur mesure. De la conquête à la fidélisation, nous transformons l’expérience client en levier de croissance.",
         };
 
       case "/about_us":
         return {
           paragraph:
-            "At ABC Company, we are more than just a service provider—we’re your trusted partner in engineering success. With decades of experience and a commitment to excellence, we deliver tailored solutions that help businesses, from startups to global enterprises, achieve their goals.",
+            "Chez antl, nous sommes plus qu’un prestataire—votre partenaire stratégique. Avec une approche centrée sur l’humain et des solutions digitales innovantes, nous accompagnons les entreprises dans leur développement commercial.",
         };
 
       default:
         return {
           paragraph:
-            "Transform your business with expert engineering, seamless migrations, and innovative digital solutions, no matter where you are.",
+            "Boostez votre performance commerciale avec des solutions sur mesure. De la conquête à la fidélisation, nous transformons l’expérience client en levier de croissance.",
         };
     }
   };
@@ -37,9 +36,6 @@ export default function CallToAction(): ReactElement {
       <p>{content.paragraph}</p>
       <div className="buttonContainer">
         <GoToConsultationLink />
-        <Link to="/contact" className="button">
-          View Case Studies
-        </Link>
       </div>
     </section>
   );

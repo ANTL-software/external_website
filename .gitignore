@@ -24,3 +24,5 @@ package-lock.json
 *.sln
 *.sw?
 claude_files/
+CLAUDE.md
+.claude

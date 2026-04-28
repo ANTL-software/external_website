@@ -6,7 +6,6 @@
   display: flex;
   flex-flow: column nowrap;
   gap: vars.$spacing-xl;
-  align-items: center;
   position: relative;
   z-index: 2;
 }
@@ -17,6 +16,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: vars.$spacing-base;
+  margin: 0 auto;
 }
 
 #getInTouchComponent .getInTouchHeader h2 {
@@ -33,74 +33,224 @@
   margin: 0;
 }
 
-#getInTouchComponent .contactCards {
-  width: 100%;
-  max-width: 1000px;
+#getInTouchComponent .getInTouchContent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 400px;
   gap: vars.$spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: start;
+}
+
+#getInTouchComponent .contactForm {
+  background: vars.$background-color;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-xl;
+  box-shadow: vars.$shadow-base;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+#getInTouchComponent .formGroup {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+}
+
+#getInTouchComponent .formGroup label {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+}
+
+#getInTouchComponent .formGroup input,
+#getInTouchComponent .formGroup textarea {
+  padding: vars.$spacing-sm vars.$spacing-base;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: vars.$border-radius-base;
+  font-size: vars.$font-size-base;
+  color: vars.$text-color;
+  background: rgba(255, 255, 255, 0.5);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+#getInTouchComponent .formGroup input:focus,
+#getInTouchComponent .formGroup textarea:focus {
+  outline: none;
+  border-color: vars.$primary-color;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#getInTouchComponent .formGroup input::placeholder,
+#getInTouchComponent .formGroup textarea::placeholder {
+  color: vars.$text-light;
+  opacity: 0.6;
+}
+
+#getInTouchComponent .formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+#getInTouchComponent .submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: vars.$spacing-sm;
+  padding: vars.$spacing-base vars.$spacing-xl;
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  border: none;
+  border-radius: vars.$border-radius-base;
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-semibold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  margin-top: vars.$spacing-sm;
+}
+
+#getInTouchComponent .submitButton:disabled {
+  background: vars.$text-light;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+#getInTouchComponent .submitButton:not(:disabled):hover {
+  background: vars.$accent-color;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+  gap: vars.$spacing-base;
+}
+
+#getInTouchComponent .submitButton:focus {
+  outline: 2px solid vars.$primary-color;
+  outline-offset: 2px;
+}
+
+#getInTouchComponent .buttonArrow {
+  font-size: vars.$font-size-lg;
+  transition: transform 0.3s ease;
+}
+
+#getInTouchComponent .submitButton:hover .buttonArrow {
+  transform: translateX(4px);
 }
 
 #getInTouchComponent .contactCard {
   background: vars.$background-color;
-  border-radius: 16px;
+  border-radius: vars.$border-radius-lg;
   padding: vars.$spacing-xl;
-  text-align: center;
+  box-shadow: vars.$shadow-base;
   display: flex;
   flex-flow: column nowrap;
   gap: vars.$spacing-lg;
-  align-items: center;
-  box-shadow: 0 4px 12px vars.$shadow-color;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  z-index: 10;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  position: sticky;
+  top: calc(10dvh + vars.$spacing-base);
 }
 
-#getInTouchComponent .contactCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(45, 55, 72, 0.15);
-}
-
-#getInTouchComponent .cardImage {
-  width: 120px;
-  height: 120px;
-  border-radius: 12px;
-  overflow: hidden;
+#getInTouchComponent .cardContent {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
 }
 
-#getInTouchComponent .cardImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#getInTouchComponent .contactCard h3 {
+#getInTouchComponent .cardContent h3 {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: vars.$font-weight-semibold;
+  font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin: 0;
 }
 
-#getInTouchComponent .contactCard address {
-  font-size: clamp(1rem, 1.5vw, 1.125rem);
-  color: vars.$primary-color;
-  font-weight: vars.$font-weight-medium;
-  margin: 0;
-  font-style: normal;
+#getInTouchComponent .contactInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
 }
 
-#getInTouchComponent .contactCard address a {
-  color: inherit;
+#getInTouchComponent .contactItem {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+}
+
+#getInTouchComponent .contactItem h4 {
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$text-light;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+#getInTouchComponent .contactItem address {
+  font-size: vars.$font-size-base;
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-medium;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#getInTouchComponent .contactItem a {
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-medium;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-#getInTouchComponent .contactCard address a:hover {
+#getInTouchComponent .contactItem a:hover {
   color: vars.$accent-color;
   text-decoration: underline;
+}
+
+#getInTouchComponent .mapLinks {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: vars.$spacing-xs;
+  margin-top: vars.$spacing-xs;
+}
+
+#getInTouchComponent .mapLinks a {
+  font-size: vars.$font-size-sm;
+  color: vars.$primary-color;
+  text-decoration: none;
+  font-weight: vars.$font-weight-medium;
+  transition: color 0.2s ease;
+}
+
+#getInTouchComponent .mapLinks a:hover {
+  color: vars.$accent-color;
+  text-decoration: underline;
+}
+
+#getInTouchComponent .separator {
+  color: vars.$text-light;
+  opacity: 0.5;
+  font-size: vars.$font-size-sm;
+}
+
+@media (max-width: 1024px) {
+  #getInTouchComponent .getInTouchContent {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+
+  #getInTouchComponent .contactCard {
+    position: static;
+    order: 2;
+  }
+
+  #getInTouchComponent .contactForm {
+    order: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -108,18 +258,34 @@
     padding: vars.$spacing-xl vars.$spacing-base;
   }
 
-  #getInTouchComponent .contactCards {
-    grid-template-columns: 1fr;
+  #getInTouchComponent .getInTouchContent {
     gap: vars.$spacing-lg;
   }
 
-  #getInTouchComponent .contactCard {
+  #getInTouchComponent .contactForm {
     padding: vars.$spacing-lg;
     gap: vars.$spacing-base;
   }
 
-  #getInTouchComponent .cardImage {
-    width: 100px;
-    height: 100px;
+  #getInTouchComponent .contactCard {
+    padding: vars.$spacing-lg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #getInTouchComponent .submitButton {
+    transition: none;
+  }
+
+  #getInTouchComponent .submitButton:hover {
+    transform: none;
+  }
+
+  #getInTouchComponent .buttonArrow {
+    transition: none;
+  }
+
+  #getInTouchComponent .submitButton:hover .buttonArrow {
+    transform: none;
   }
 }

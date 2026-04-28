@@ -108,6 +108,15 @@
   margin: 0;
 }
 
+#meetOurTeamComponent .memberPositionFr {
+  font-size: vars.$font-size-sm;
+  font-style: italic;
+  color: vars.$text-light;
+  line-height: 1.4;
+  margin: 0;
+  opacity: 0.8;
+}
+
 #meetOurTeamComponent .teamAction {
   text-align: center;
   margin-top: vars.$spacing-lg;

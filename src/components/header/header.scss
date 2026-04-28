@@ -26,12 +26,18 @@
     align-items: center;
     justify-content: center;
     gap: vars.$spacing-xs;
-    width: 100%;
+    width: 20%;
 }
 
 #header.header .brandLink .brandLogo figcaption {
     font-weight: vars.$font-weight-bold;
     font-size: clamp(1.1rem, 2vw + 0.4rem, 1.6rem);
+}
+
+#header.header .headerNav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #header.header .headerNav .navList {
@@ -93,7 +99,7 @@
 
 /* Responsive Styles */
 .desktopNav {
-    display: flex;
+    flex-grow: 1;
 }
 
 .mobileMenuButton {
@@ -179,15 +185,15 @@
 }
 
 /* Mobile breakpoint */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .desktopNav {
         display: none;
     }
-    
+
     .mobileMenuButton {
         display: block;
     }
-    
+
     .desktopOnly {
         display: none;
     }

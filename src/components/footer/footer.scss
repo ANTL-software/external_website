@@ -16,21 +16,24 @@
 
 #footerComponent .companySection {
   max-width: 400px;
+  text-align: left;
 }
 
 #footerComponent .companyLogo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: flex-start;
   gap: vars.$spacing-base;
   margin-bottom: vars.$spacing-lg;
 }
 
 #footerComponent .logoIcon {
-  width: 32px;
-  height: 32px;
-  background-color: vars.$background-color;
-  border-radius: 4px;
+  width: 150px;
+}
+
+#footerComponent .logoIcon img {
+  width: 100%;
 }
 
 #footerComponent .companyLogo h3 {
@@ -126,9 +129,5 @@
 
   #footerComponent .socialIcons {
     justify-content: center;
-  }
-
-  #footerComponent .footerSection {
-    text-align: center;
   }
 }

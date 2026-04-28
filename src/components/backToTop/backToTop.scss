@@ -1,0 +1,80 @@
+@use '../../utils/styles/variables' as vars;
+
+.backToTopButton {
+  position: fixed;
+  bottom: vars.$spacing-xl;
+  right: vars.$spacing-xl;
+  width: 50px;
+  height: 50px;
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.backToTopButton.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.backToTopButton:hover {
+  background: vars.$accent-color;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.backToTopButton:focus {
+  outline: 2px solid vars.$primary-color;
+  outline-offset: 2px;
+}
+
+.backToTopButton .backToTopIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.backToTopButton:hover .backToTopIcon {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .backToTopButton {
+    bottom: vars.$spacing-lg;
+    right: vars.$spacing-lg;
+    width: 45px;
+    height: 45px;
+  }
+
+  .backToTopButton .backToTopIcon {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backToTopButton {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .backToTopButton:hover {
+    transform: translateY(0);
+  }
+
+  .backToTopButton .backToTopIcon {
+    transition: none;
+  }
+
+  .backToTopButton:hover .backToTopIcon {
+    transform: none;
+  }
+}

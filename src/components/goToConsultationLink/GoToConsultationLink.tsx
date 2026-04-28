@@ -9,11 +9,11 @@ export default function GoToConsultationLink(): ReactElement {
   return (
     <div id="goToConsultationLink">
       <Link
-        to={"/"}
+        to={"/contact_us"}
         className="consultationLink"
-        aria-label="Obtenir une consultation"
+        aria-label="Nous contacter"
       >
-        <span className="consultationLinkText">Get a consultation</span>
+        <span className="consultationLinkText">Contactez-nous</span>
         <div className="chevronContainer">
           <IoChevronForward className="chevronBack" />
           <IoChevronForward className="chevronFront" />
