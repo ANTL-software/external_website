@@ -10,40 +10,45 @@ import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
 export default function WhatWeStandFor(): ReactElement {
   const values = [
     {
-      title: "Innovation",
-      description: "Pioneering cutting-edge solutions tailored to your unique needs.",
+      title: "Spécialistes de la prospection",
+      description:
+        "Avec une forte compréhension des besoins spécifiques du secteur et des besoins de ses clients : les commerciaux sont immergés chez le client, formés par antl et informés par des mises à jour régulières de l’évolution du marché et des produits des clients.",
       image: mockup1,
-      imageAlt: "Innovation concept illustration"
+      imageAlt: "Innovation concept illustration",
     },
     {
-      title: "Reliability",
-      description: "Delivering consistent, dependable, and trustworthy excellence.",
+      title: " Stratégie de personnalisation",
+      description:
+        "Pour répondre aux attentes de ses partenaires : l’équipe managériale d’antl assure un suivi quotidien de la relation client par des analyses statistiques de la production et de la qualité des appels, ainsi qu’un feed-back régulier avec les commerciaux.",
       image: mockup2,
-      imageAlt: "Reliability concept illustration"
+      imageAlt: "Reliability concept illustration",
     },
     {
-      title: "Collaboration",
-      description: "Partnering with clients to achieve shared success.",
+      title: "Capacité d’adaptation rapide",
+      description:
+        "Le recrutement, le renforcement et la formation des équipes sont dédiés à chaque projet, et la possibilité de changer de mission est proposée aux commerciaux selon leurs compétences et leurs appétences. Le télétravail permet à antl de disposer d’un réseau de commerciaux à l’échelle nationale et internationale.",
       image: mockup3,
-      imageAlt: "Collaboration concept illustration"
+      imageAlt: "Collaboration concept illustration",
     },
+
     {
-      title: "Integrity",
-      description: "Building trust through transparency and accountability.",
+      title: "Faire appel à antl c'est...",
+      description:
+        "...redéfinir leur stratégie de communication, externaliser la force de vente, réduire les coûts opérationnels, améliorer la qualité de l’expérience client et le fidéliser grace à des technologies avancées.",
       image: mockup4,
-      imageAlt: "Integrity concept illustration"
-    }
+      imageAlt: "Collaboration concept illustration",
+    },
   ];
 
   return (
     <section id="whatWeStandForComponent" className="whatWeStandFor container">
       <header className="whatWeStandForHeader">
         <h2 className="whatWeStandForTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          What We Stand For
+          Nos atouts
         </h2>
-        <p className="whatWeStandForSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
+        {/* <p className="whatWeStandForSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
           Our unwavering values shape our approach to delivering impactful solutions.
-        </p>
+        </p> */}
       </header>
 
       <div className="valuesGrid">

@@ -5,45 +5,45 @@ import type { ReactElement } from "react";
 export default function OurStory(): ReactElement {
   const storyMilestones = [
     {
-      year: "2013",
-      title: "Expanding Expertise",
-      description: "Started expanding our technical expertise and building a strong foundation for future growth. Our team began specializing in cutting-edge technologies and modern development practices."
+      year: "",
+      title: "Notre mission",
+      description:
+        "Notre mission est de créer un lien qui a du sens pour la marque de nos partenaires, en établissant une proximité originale avec leurs interlocuteurs privilégiés. Ainsi, nous incluons dans notre stratégie commerciale le message et l’image de nos partenaires.",
     },
     {
-      year: "2015", 
-      title: "Going Global",
-      description: "Extended our services globally to meet the growing demand for quality software solutions. We established partnerships with international clients and expanded our market reach."
+      year: "",
+      title: "Notre approche",
+      description:
+        "Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une expérience client optimale grâce à des solutions opérationnelles.",
     },
     {
-      year: "2017",
-      title: "Building Advanced Digital Experience",
-      description: "Focused on creating advanced digital experiences for our clients. We invested in emerging technologies and developed innovative solutions that set new industry standards."
+      year: "",
+      title: "Notre engagement",
+      description:
+        "Nous sommes un accélérateur du développement commercial  pour nos partenaires et garantissons un accompagnement personnalisé avec des équipes engagées à tous les niveaux de l’entreprise.",
     },
     {
-      year: "2019",
-      title: "500+ Projects Completed",
-      description: "Reached a significant milestone by completing over 500 successful projects. Our portfolio grew to include diverse industries and complex technical challenges."
+      year: "",
+      title: "Notre vision",
+      description:
+        "Nous opérons avec une démarche de création de valeur par l’innovation.",
     },
     {
-      year: "2021",
-      title: "Embracing Innovation",
-      description: "Embraced cutting-edge innovations and modern development methodologies. We adopted AI, cloud technologies, and agile practices to deliver superior results."
+      year: "",
+      title: "Notre action",
+      description:
+        "Nous intervenons à chaque étape du cycle de vie du client pour générer durablement de l’engagement et de la valeur (conquête-développement-fidélisation-rétention).",
     },
-    {
-      year: "2023",
-      title: "Industry Leadership",
-      description: "Established ourselves as industry leaders in software development and digital transformation. We continue to push boundaries and set new benchmarks for excellence."
-    }
   ];
 
   return (
     <section id="ourStoryComponent" className="ourStory container">
       <header className="ourStoryHeader">
         <h2 className="ourStoryTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Our Story
+          Qui sommes nous
         </h2>
         <p className="ourStorySubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
-          Discover our journey from a small startup to a leading software development company. Learn about the milestones, challenges, and achievements that have shaped our growth and success over the years.
+         Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une experience client optimale.
         </p>
       </header>
 

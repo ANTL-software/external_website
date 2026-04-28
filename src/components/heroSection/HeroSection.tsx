@@ -9,11 +9,11 @@ export default function HeroSection(): ReactElement {
     switch (pathname) {
       case "/":
         return {
-          title: "Empowering Global Businesses",
+          title: "Expert de l'experience client",
           firstLine:
-            "From startups to multinational corporations, we deliver scalable,",
+            "Votre partenaire pour optimiser vos performances commerciales,",
           secondLine:
-            "reliable, and cost-effective services to address your unique challenges.",
+            "et améliorer votre relation client.",
         };
 
       case "/about_us":

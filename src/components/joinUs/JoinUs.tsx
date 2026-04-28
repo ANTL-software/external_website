@@ -33,11 +33,11 @@ export default function JoinUs(): ReactElement {
     <section id="joinUsComponent" className="joinUs container">
       <header className="joinUsHeader">
         <h2 className="joinUsTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          Join Us
+          Join Us !
         </h2>
-        <p className="joinUsSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
+        {/* <p className="joinUsSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
           Looking for a career where you can innovate and make an impact? ANTEL is always on the lookout for passionate individuals to join our growing team.
-        </p>
+        </p> */}
       </header>
 
       <div className="benefitsGrid">
@@ -53,14 +53,14 @@ export default function JoinUs(): ReactElement {
               data-aos-easing="ease-out-back"
               data-aos-delay={delay}
             >
-              <div className="benefitImageContainer">
+              {/* <div className="benefitImageContainer">
                 <img
                   src={benefit.image}
                   alt={benefit.imageAlt}
                   className="benefitImage"
                   loading="lazy"
                 />
-              </div>
+              </div> */}
               
               <div className="benefitContent">
                 <h3 className="benefitTitle">{benefit.title}</h3>

@@ -10,7 +10,7 @@ import BackgroundGrid from "../../components/backgroundGrid/BackgroundGrid";
 import CallToAction from "../../components/callToAction/CallToAction";
 import ClientLogos from "../../components/clientLogos/ClientLogos";
 import OurExpertise from "../../components/ourExpertise/OurExpertise";
-import OurImpact from "../../components/ourImpact/OurImpact";
+// import OurImpact from "../../components/ourImpact/OurImpact";
 import WhyChooseUs from "../../components/whyChooseUs/WhyChooseUs";
 import SuccessStories from "../../components/successStories/SuccessStories";
 import FAQ from "../../components/faq/FAQ";
@@ -28,7 +28,7 @@ export default function Home(): ReactElement {
         <CallToAction />
         <ClientLogos />
         <OurExpertise />
-        <OurImpact />
+        {/* <OurImpact /> */}
         <WhyChooseUs />
         <SuccessStories />
         <FAQ />

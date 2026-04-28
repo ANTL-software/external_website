@@ -15,51 +15,54 @@ export default function OurExpertise(): ReactElement {
     {
       image: mockup1,
       imageAlt: "Web Development Services",
-      subtitle: "Web Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      subtitle: "Conquête",
+      description: "Prospection, prise de rendez-vous et génération de leads.",
       linkTo: "/services/web-development",
-      linkText: "Learn More"
+      linkText: "Learn More",
     },
     {
       image: mockup2,
       imageAlt: "Mobile App Development",
-      subtitle: "Mobile Apps",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      subtitle: "Fidelisation",
+      description:
+        "Suivi personalisé des clients, proximité par le contact humain, qualité du discours.",
       linkTo: "/services/mobile-apps",
-      linkText: "Discover"
+      linkText: "Discover",
     },
     {
       image: mockup3,
       imageAlt: "Cloud Solutions",
-      subtitle: "Cloud Solutions",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      subtitle: "Rétention",
+      description:
+        "Récupération et maintient de la clientelle, gestion de conflits.",
       linkTo: "/services/cloud",
-      linkText: "Explore"
+      linkText: "Explore",
     },
     {
       image: mockup4,
-      imageAlt: "AI & Machine Learning",
-      subtitle: "AI & Machine Learning",
-      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      imageAlt: "Conception & AI",
+      subtitle: "Conception",
+      description: "Generation d'outils administratifs, CRM, intégration IA.",
       linkTo: "/services/ai-ml",
-      linkText: "Learn More"
+      linkText: "Learn More",
     },
     {
       image: mockup5,
-      imageAlt: "DevOps Services",
-      subtitle: "DevOps & Infrastructure",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+      imageAlt: "Branding",
+      subtitle: "Branding",
+      description: "Visibilité Online (Site vitrine, réseau sociaux...)",
       linkTo: "/services/devops",
-      linkText: "View Details"
+      linkText: "View Details",
     },
     {
       image: mockup1,
       imageAlt: "Consulting Services",
-      subtitle: "Digital Consulting",
-      description: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.",
+      subtitle: "Conseil",
+      description:
+        "Communication, repositionement marketing, optimisation image de marque.",
       linkTo: "/services/consulting",
-      linkText: "Get Started"
-    }
+      linkText: "Get Started",
+    },
   ];
 
   return (

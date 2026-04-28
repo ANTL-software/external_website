@@ -56,9 +56,9 @@ export default function MeetOurTeam(): ReactElement {
         <h2 className="meetOurTeamTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
           Meet Our Team
         </h2>
-        <p className="meetOurTeamSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
+        {/* <p className="meetOurTeamSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
           Our global team of experienced engineers, consultants, and project managers is the backbone of ANTEL. With a shared passion for problem-solving and innovation, we're dedicated to delivering exceptional results for every client.
-        </p>
+        </p> */}
       </header>
 
       <div className="teamGrid">

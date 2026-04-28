@@ -3,10 +3,10 @@ import "./aboutUs.scss";
 import type { ReactElement } from "react";
 
 import Header from "../../components/header/Header";
-import HeroSection from "../../components/heroSection/HeroSection";
+// import HeroSection from "../../components/heroSection/HeroSection";
 import BackgroundCircle from "../../components/backgroundCircle/BackgroundCircle";
 import BackgroundGrid from "../../components/backgroundGrid/BackgroundGrid";
-import CallToAction from "../../components/callToAction/CallToAction";
+// import CallToAction from "../../components/callToAction/CallToAction";
 import OurStory from "../../components/ourStory/OurStory";
 import WhatWeStandFor from "../../components/whatWeStandFor/WhatWeStandFor";
 import MeetOurTeam from "../../components/meetOurTeam/MeetOurTeam";
@@ -22,8 +22,8 @@ export default function AboutUs(): ReactElement {
       <BackgroundGrid />
       <Header />
       <main className="container">
-        <HeroSection />
-        <CallToAction />
+        {/* <HeroSection /> */}
+        {/* <CallToAction /> */}
         <OurStory />
         <WhatWeStandFor />
         <MeetOurTeam />
