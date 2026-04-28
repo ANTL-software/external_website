@@ -5,15 +5,16 @@
   @include mixins.viewBackground;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: vars.$spacing-xl;
+  flex-flow: column nowrap;
 }
 
-#notFound .notFoundContainer {
-  max-width: 800px;
-  width: 100%;
-  text-align: center;
+#notFound main.container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 #notFound .notFoundContent {
@@ -21,6 +22,9 @@
   flex-flow: column nowrap;
   align-items: center;
   gap: vars.$spacing-lg;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
 }
 
 #notFound .notFoundTitle {

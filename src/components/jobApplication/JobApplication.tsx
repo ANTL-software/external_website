@@ -23,8 +23,8 @@ export default function JobApplication(): ReactElement {
   });
 
   const civilityOptions: CivilityOption[] = [
-    { value: "monsieur", label: "Monsieur" },
-    { value: "madame", label: "Madame" }
+    { value: "madame", label: "Madame" },
+    { value: "monsieur", label: "Monsieur" }
   ];
 
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {

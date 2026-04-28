@@ -1,5 +1,6 @@
 import "./footer.scss";
 import type { ReactElement } from "react";
+import { Link } from "react-router-dom";
 import antlLogo from "../../assets/brand/antlLogo.png";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -39,12 +40,12 @@ export default function Footer(): ReactElement {
             <h4 id="navigation-heading">Navigation</h4>
             <nav aria-label="Footer navigation">
               <ul>
-                <li><a href="/#ourExpertiseComponent">Nos expertises</a></li>
-                <li><a href="/about_us">À propos</a></li>
-                <li><a href="/about_us#meetOurTeamComponent">Notre équipe</a></li>
-                <li><a href="/about_us#getInTouchComponent">Nous contacter</a></li>
-                <li><a href="/join_us">Nous rejoindre</a></li>
-                <li><a href="/legal">Mentions légales</a></li>
+                <li><Link to="/#ourExpertiseComponent">Nos expertises</Link></li>
+                <li><Link to="/about_us">À propos</Link></li>
+                <li><Link to="/about_us#meetOurTeamComponent">Notre équipe</Link></li>
+                <li><Link to="/about_us#getInTouchComponent">Nous contacter</Link></li>
+                <li><Link to="/join_us">Nous rejoindre</Link></li>
+                <li><Link to="/legal">Mentions légales</Link></li>
               </ul>
             </nav>
           </section>
@@ -53,12 +54,12 @@ export default function Footer(): ReactElement {
             <h4 id="services-heading">Nos services</h4>
             <nav aria-label="Services navigation">
               <ul>
-                <li><a href="/#conquete">Conquête</a></li>
-                <li><a href="/#fidelisation">Fidélisation</a></li>
-                <li><a href="/#retention">Rétention</a></li>
-                <li><a href="/#conception">Conception & Outils</a></li>
-                <li><a href="/#branding">Branding</a></li>
-                <li><a href="/#conseil">Conseil</a></li>
+                <li><Link to="/#conquete">Conquête</Link></li>
+                <li><Link to="/#fidelisation">Fidélisation</Link></li>
+                <li><Link to="/#retention">Rétention</Link></li>
+                <li><Link to="/#conception">Conception & Outils</Link></li>
+                <li><Link to="/#branding">Branding</Link></li>
+                <li><Link to="/#conseil">Conseil</Link></li>
               </ul>
             </nav>
           </section>
