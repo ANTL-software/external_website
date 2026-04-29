@@ -4,6 +4,7 @@ import type { ReactElement } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Select from "react-select";
+import { sendCandidatureEmail } from "../../services/emailjs.service";
 
 interface CivilityOption {
   value: string;
@@ -23,6 +24,8 @@ export default function JobApplication(): ReactElement {
     cv: null as File | null,
     coverLetter: null as File | null
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const civilityOptions: CivilityOption[] = [
     { value: "madame", label: "Madame" },
@@ -81,11 +84,42 @@ export default function JobApplication(): ReactElement {
     );
   }
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    if (isFormValid()) {
-      console.log("Application submitted:", formData);
+    if (!isFormValid() || !formData.cv || !formData.coverLetter || !formData.civility) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const success = await sendCandidatureEmail({
+      civility: formData.civility.value,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      phone: formData.phone,
+      email: formData.email,
+      cv: formData.cv,
+      coverLetter: formData.coverLetter
+    });
+
+    if (success) {
+      setSubmitStatus('success');
+      setFormData({
+        civility: null,
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        cv: null,
+        coverLetter: null
+      });
+      setShowForm(false);
+    } else {
+      setSubmitStatus('error');
     }
+
+    setIsSubmitting(false);
+
+    setTimeout(() => setSubmitStatus('idle'), 5000);
   }
 
   return (
@@ -254,12 +288,15 @@ export default function JobApplication(): ReactElement {
                 <button
                   type="submit"
                   className="submitButton"
-                  disabled={!isFormValid()}
+                  disabled={!isFormValid() || isSubmitting}
                   aria-label={t("jobApplication.form.submit")}
                 >
-                  <span>{t("jobApplication.form.submit")}</span>
+                  <span>{isSubmitting ? t("getInTouch.form.sending") : submitStatus === 'success' ? t("getInTouch.form.success") : submitStatus === 'error' ? t("getInTouch.form.error") : t("jobApplication.form.submit")}</span>
                   <span className="buttonArrow">→</span>
                 </button>
+                {submitStatus === 'error' && (
+                  <p className="errorMessage">{t("getInTouch.form.error")}</p>
+                )}
               </div>
             </form>
           </aside>

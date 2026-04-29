@@ -26,3 +26,4 @@ package-lock.json
 claude_files/
 CLAUDE.md
 .claude
+.env

@@ -368,8 +368,16 @@
 
 #jobApplicationComponent .formActions {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.$spacing-sm;
   margin-top: vars.$spacing-base;
+}
+
+#jobApplicationComponent .errorMessage {
+  color: #ef4444;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
 }
 
 #jobApplicationComponent .submitButton {

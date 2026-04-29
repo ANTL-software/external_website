@@ -3,6 +3,7 @@ import "./getInTouch.scss";
 import type { ReactElement } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { sendDevisEmail } from "../../services/emailjs.service";
 
 export default function GetInTouch(): ReactElement {
   const { t } = useTranslation();
@@ -12,6 +13,8 @@ export default function GetInTouch(): ReactElement {
     phone: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   function handleInputChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = event.target;
@@ -23,11 +26,35 @@ export default function GetInTouch(): ReactElement {
     });
   }
 
-  function handleSubmit(event: React.FormEvent) {
+  async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    if (isFormValid()) {
-      console.log("Form submitted:", formData);
+    if (!isFormValid()) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const success = await sendDevisEmail({
+      company: formData.companyName,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message
+    });
+
+    if (success) {
+      setSubmitStatus('success');
+      setFormData({
+        companyName: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+    } else {
+      setSubmitStatus('error');
     }
+
+    setIsSubmitting(false);
+
+    setTimeout(() => setSubmitStatus('idle'), 5000);
   }
 
   function isFormValid(): boolean {
@@ -98,10 +125,16 @@ export default function GetInTouch(): ReactElement {
             />
           </div>
 
-          <button type="submit" className="submitButton" disabled={!isFormValid()}>
-            <span>{t("getInTouch.form.submit")}</span>
+          <button type="submit" className="submitButton" disabled={!isFormValid() || isSubmitting}>
+            <span>{isSubmitting ? t("getInTouch.form.sending") : submitStatus === 'success' ? t("getInTouch.form.success") : submitStatus === 'error' ? t("getInTouch.form.error") : t("getInTouch.form.submit")}</span>
             <span className="buttonArrow">→</span>
           </button>
+          {submitStatus === 'success' && (
+            <p className="successMessage">{t("getInTouch.form.success")}</p>
+          )}
+          {submitStatus === 'error' && (
+            <p className="errorMessage">{t("getInTouch.form.error")}</p>
+          )}
         </form>
 
         <aside className="contactCard">

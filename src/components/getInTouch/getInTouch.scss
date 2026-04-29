@@ -291,3 +291,17 @@
     transform: none;
   }
 }
+
+#getInTouchComponent .successMessage {
+  color: #10b981;
+  font-size: vars.$font-size-sm;
+  margin-top: vars.$spacing-sm;
+  font-weight: vars.$font-weight-medium;
+}
+
+#getInTouchComponent .errorMessage {
+  color: #ef4444;
+  font-size: vars.$font-size-sm;
+  margin-top: vars.$spacing-sm;
+  font-weight: vars.$font-weight-medium;
+}
