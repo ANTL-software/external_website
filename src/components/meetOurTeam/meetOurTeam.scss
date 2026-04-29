@@ -32,9 +32,9 @@
 
 #meetOurTeamComponent .teamGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: vars.$spacing-lg;
-  max-width: 1000px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: vars.$spacing-base;
+  max-width: 1400px;
   margin: 0 auto vars.$spacing-xl auto;
   align-items: stretch;
 }
@@ -42,7 +42,7 @@
 #meetOurTeamComponent .teamMemberCard {
   background: vars.$background-color;
   border-radius: vars.$border-radius-lg;
-  padding: vars.$spacing-lg;
+  padding: vars.$spacing-base;
   box-shadow: vars.$shadow-base;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
@@ -68,8 +68,9 @@
   margin-bottom: vars.$spacing-base;
   flex-shrink: 0;
   box-shadow: vars.$shadow-sm;
-  background: linear-gradient(135deg, vars.$primary-color, vars.$accent-color);
+  background: linear-gradient(135deg, vars.$accent-color, vars.$primary-color);
   padding: 3px;
+  position: relative;
 }
 
 #meetOurTeamComponent .memberImage {
@@ -81,8 +82,57 @@
   transition: transform 0.3s ease;
 }
 
-#meetOurTeamComponent .teamMemberCard:hover .memberImage {
-  transform: scale(1.05);
+
+/* Nelly Ahobaut - Image qui sort du cercle */
+#meetOurTeamComponent .nellyImageContainer {
+  width: 120px;
+  height: 120px;
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+}
+
+#meetOurTeamComponent .nellyImage {
+  object-position: 0px 10px;
+  width: 150px;
+  height: 150px;
+  margin-top: -25px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* Nicolas Decressac - À ajuster selon placement */
+#meetOurTeamComponent .nicolasImageContainer {
+  width: 120px;
+  height: 120px;
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+}
+
+#meetOurTeamComponent .nicolasImage {
+  object-position: 2px 10px;
+  width: 160px;
+  height: 160px;
+  margin-top: -33px;
+  margin-left: 0px;
+  clip-path: circle(50% at 50% 50%);
+}
+
+/* Mehdi Saad Allah - À ajuster selon placement */
+#meetOurTeamComponent .mehdiImageContainer {
+  width: 120px;
+  height: 120px;
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+}
+
+#meetOurTeamComponent .mehdiImage {
+  object-position: 0px 20px;
+  width: 170px;
+  height: 170px;
+  margin-top: -41px;
+  clip-path: circle(50% at 50% 50%);
 }
 
 #meetOurTeamComponent .memberContent {
@@ -157,9 +207,9 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   #meetOurTeamComponent .teamGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: vars.$spacing-base;
   }
 
@@ -170,6 +220,44 @@
   #meetOurTeamComponent .memberImageContainer {
     width: 100px;
     height: 100px;
+  }
+
+  /* Placer Nicolas en position 4 et Nelly en position 6 */
+  #meetOurTeamComponent .nicolasCard {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #meetOurTeamComponent .nellyCard {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  /* Images spéciales - tablette */
+  #meetOurTeamComponent .nellyImageContainer,
+  #meetOurTeamComponent .nicolasImageContainer,
+  #meetOurTeamComponent .mehdiImageContainer {
+    width: 100px;
+    height: 100px;
+  }
+
+  #meetOurTeamComponent .nellyImage {
+    width: 130px;
+    height: 130px;
+    margin-top: -25px;
+  }
+
+  #meetOurTeamComponent .nicolasImage {
+    width: 140px;
+    height: 140px;
+    margin-top: -33px;
+  }
+
+  #meetOurTeamComponent .mehdiImage {
+    width: 145px;
+    height: 145px;
+    margin-top: -37px;
+    object-position: -5px 10px;
   }
 }
 
@@ -197,6 +285,73 @@
     width: 80px;
     height: 80px;
     margin-bottom: vars.$spacing-sm;
+  }
+
+  /* Réinitialiser le placement en colonne */
+  #meetOurTeamComponent .nicolasCard,
+  #meetOurTeamComponent .nellyCard {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  /* Images spéciales - mobile */
+  #meetOurTeamComponent .nellyImageContainer,
+  #meetOurTeamComponent .nicolasImageContainer,
+  #meetOurTeamComponent .mehdiImageContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  #meetOurTeamComponent .nellyImage {
+    width: 110px;
+    height: 105px;
+    margin-top: -22px;
+  }
+
+  #meetOurTeamComponent .nicolasImage {
+    width: 110px;
+    height: 110px;
+    margin-top: -25px;
+  }
+
+  #meetOurTeamComponent .mehdiImage {
+    width: 115px;
+    height: 115px;
+    margin-top: -30px;
+    object-position: -5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #meetOurTeamComponent .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Images spéciales - petit mobile */
+  #meetOurTeamComponent .nellyImageContainer,
+  #meetOurTeamComponent .nicolasImageContainer,
+  #meetOurTeamComponent .mehdiImageContainer {
+    width: 90px;
+    height: 90px;
+  }
+
+  #meetOurTeamComponent .nellyImage {
+    width: 110px;
+    height: 110px;
+    margin-top: -18px;
+  }
+
+  #meetOurTeamComponent .nicolasImage {
+    width: 120px;
+    height: 120px;
+    margin-top: -24px;
+  }
+
+  #meetOurTeamComponent .mehdiImage {
+    width: 125px;
+    height: 125px;
+    margin-top: -30px;
+    object-position: 0px 20px;
   }
 }
 

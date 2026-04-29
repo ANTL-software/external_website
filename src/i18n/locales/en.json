@@ -98,17 +98,17 @@
     }
   },
   "meetOurTeam": {
-    "title": "The meeting of 6 talents who share the same vision",
+    "title": "The meeting of 5 talents who share the same vision",
     "subtitle": "Meet our team",
     "cta": "Join our team",
     "members": [
       {
         "role": "CEO, Founder",
-        "role_fr": "Présidente, Fondatrice"
+        "role_fr": "Directrice, Fondatrice"
       },
       {
         "role": "Sales Manager",
-        "role_fr": "Responsable Commerciale"
+        "role_fr": "Responsable Commercial"
       },
       {
         "role": "QA Manager",
