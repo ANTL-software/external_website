@@ -24,6 +24,18 @@
     width: 27%;
 }
 
+@media (max-width: 1280px) {
+    #heroSectionComponent h1 {
+        width: 35%;
+    }
+}
+
+@media (max-width: 728px) {
+    #heroSectionComponent h1 {
+        width: 50%;
+    }
+}
+
 #heroSectionComponent blockquote {
     font-size: clamp(0.9rem, 3vw + 0.2rem, 1.4rem);
     font-weight: vars.$font-weight-medium;
