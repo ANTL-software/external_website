@@ -100,8 +100,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: vars.$spacing-sm;
-  padding: vars.$spacing-base vars.$spacing-xl;
+  gap: vars.$spacing-xs;
+  padding: vars.$spacing-xs vars.$spacing-sm;
   background: vars.$primary-color;
   color: vars.$background-color;
   border: none;
@@ -112,6 +112,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
   margin-top: vars.$spacing-sm;
+  width: fit-content;
+  max-width: 180px;
 }
 
 #getInTouchComponent .submitButton:disabled {

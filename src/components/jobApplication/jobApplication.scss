@@ -182,6 +182,8 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
   margin-top: vars.$spacing-lg;
+  width: fit-content;
+  max-width: 200px;
 }
 
 #jobApplicationComponent .jobOffer .applyButton:hover {
