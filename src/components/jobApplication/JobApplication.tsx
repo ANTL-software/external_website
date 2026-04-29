@@ -291,11 +291,14 @@ export default function JobApplication(): ReactElement {
                   disabled={!isFormValid() || isSubmitting}
                   aria-label={t("jobApplication.form.submit")}
                 >
-                  <span>{isSubmitting ? t("getInTouch.form.sending") : submitStatus === 'success' ? t("getInTouch.form.success") : submitStatus === 'error' ? t("getInTouch.form.error") : t("jobApplication.form.submit")}</span>
+                  <span>{t("jobApplication.form.submit")}</span>
                   <span className="buttonArrow">→</span>
                 </button>
                 {submitStatus === 'error' && (
                   <p className="errorMessage">{t("getInTouch.form.error")}</p>
+                )}
+                {submitStatus === 'success' && (
+                  <p className="successMessage">{t("getInTouch.form.success")}</p>
                 )}
               </div>
             </form>

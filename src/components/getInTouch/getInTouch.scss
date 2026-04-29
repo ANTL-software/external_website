@@ -144,6 +144,25 @@
   transform: translateX(4px);
 }
 
+#getInTouchComponent .formActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: vars.$spacing-base;
+  margin-top: vars.$spacing-sm;
+}
+
+@media (max-width: 768px) {
+  #getInTouchComponent .formActions {
+    flex-direction: column;
+    gap: vars.$spacing-sm;
+  }
+
+  #getInTouchComponent .formActions .submitButton {
+    width: 100%;
+  }
+}
+
 #getInTouchComponent .contactCard {
   background: vars.$background-color;
   border-radius: vars.$border-radius-lg;

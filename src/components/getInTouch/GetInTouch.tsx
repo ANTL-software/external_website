@@ -125,16 +125,18 @@ export default function GetInTouch(): ReactElement {
             />
           </div>
 
-          <button type="submit" className="submitButton" disabled={!isFormValid() || isSubmitting}>
-            <span>{isSubmitting ? t("getInTouch.form.sending") : submitStatus === 'success' ? t("getInTouch.form.success") : submitStatus === 'error' ? t("getInTouch.form.error") : t("getInTouch.form.submit")}</span>
-            <span className="buttonArrow">→</span>
-          </button>
-          {submitStatus === 'success' && (
-            <p className="successMessage">{t("getInTouch.form.success")}</p>
-          )}
-          {submitStatus === 'error' && (
-            <p className="errorMessage">{t("getInTouch.form.error")}</p>
-          )}
+          <div className="formActions">
+            <button type="submit" className="submitButton" disabled={!isFormValid() || isSubmitting}>
+              <span>{t("getInTouch.form.submit")}</span>
+              <span className="buttonArrow">→</span>
+            </button>
+            {submitStatus === 'success' && (
+              <p className="successMessage">{t("getInTouch.form.success")}</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="errorMessage">{t("getInTouch.form.error")}</p>
+            )}
+          </div>
         </form>
 
         <aside className="contactCard">

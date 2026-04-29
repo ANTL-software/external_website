@@ -368,16 +368,33 @@
 
 #jobApplicationComponent .formActions {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: vars.$spacing-sm;
+  justify-content: center;
+  gap: vars.$spacing-base;
   margin-top: vars.$spacing-base;
+}
+
+#jobApplicationComponent .successMessage {
+  color: #10b981;
+  font-size: vars.$font-size-sm;
+  font-weight: vars.$font-weight-medium;
 }
 
 #jobApplicationComponent .errorMessage {
   color: #ef4444;
   font-size: vars.$font-size-sm;
   font-weight: vars.$font-weight-medium;
+}
+
+@media (max-width: 768px) {
+  #jobApplicationComponent .formActions {
+    flex-direction: column;
+    gap: vars.$spacing-sm;
+  }
+
+  #jobApplicationComponent .formActions .submitButton {
+    width: 100%;
+  }
 }
 
 #jobApplicationComponent .submitButton {
