@@ -91,33 +91,19 @@ export default function JobApplication(): ReactElement {
   return (
     <section id="jobApplicationComponent" data-aos="fade-up" data-aos-duration="800" aria-labelledby="job-heading">
       <header className="jobHeader">
-        <h2 id="job-heading">{t("jobApplication.title")}</h2>
-        <p className="jobSubtitle">{t("jobApplication.subtitle")}</p>
+        <h2 id="job-heading">{t("joinUs.title")}</h2>
       </header>
 
       <div className={`jobContent ${showForm ? "formVisible" : ""}`}>
         <article className="jobOffer">
-          <h3>{t("jobApplication.offer.title")}</h3>
-          <div className="jobMeta">
-            <span className="jobLocation">{t("jobApplication.offer.location")}</span>
-            <span className="jobType">{t("jobApplication.offer.type")}</span>
-          </div>
-
-          <div className="jobDescription">
-            <p>{t("jobApplication.offer.description")}</p>
-
-            <h4>{t("jobApplication.offer.missions.title")}</h4>
-            <ul>
-              {t("jobApplication.offer.missions.items", { returnObjects: true }) as Array<string>}
-            </ul>
-
-            <h4>{t("jobApplication.offer.profile.title")}</h4>
-            <ul>
-              {t("jobApplication.offer.profile.items", { returnObjects: true }) as Array<string>}
-            </ul>
-
-            <p>{t("jobApplication.offer.benefits.title")}</p>
-          </div>
+          {/* NOUS REJOINDRE */}
+          <section className="contentSection">
+            <h3>{t("joinUs.nousRejoindre.title")}</h3>
+            <p>{t("joinUs.nousRejoindre.description")}</p>
+            <p><strong>{t("joinUs.nousRejoindre.question")}</strong></p>
+            <p><em>{t("joinUs.nousRejoindre.answer")}</em></p>
+            <p>{t("joinUs.nousRejoindre.details")}</p>
+          </section>
 
           {!showForm && (
             <button

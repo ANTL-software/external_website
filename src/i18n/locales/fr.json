@@ -68,33 +68,33 @@
     "title": "Qui sommes nous",
     "subtitle": "Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une expérience client optimale.",
     "mission": "Notre mission",
-    "missionDesc": "Notre mission est de créer un lien qui a du sens pour la marque de nos partenaires, en établissant une proximité originale avec leurs interlocuteurs privilégiés. Ainsi, nous incluons dans notre stratégie commerciale le message et l'image de nos partenaires.",
+    "missionDesc": "Créer un lien qui a du sens pour la marque de nos partenaires, en établissant une proximité originale avec leurs interlocuteurs privilégiés.",
     "approach": "Notre approche",
-    "approachDesc": "Nous développons une approche flexible pour améliorer la performance commerciale et délivrer une expérience client optimale grâce à des solutions opérationnelles.",
+    "approachDesc": "Une flexibilité permanente pour améliorer la performance commerciale grâce à des solutions opérationnelles.",
     "commitment": "Notre engagement",
-    "commitmentDesc": "Nous sommes un accélérateur du développement commercial pour nos partenaires et garantissons un accompagnement personnalisé avec des équipes engagées à tous les niveaux de l'entreprise.",
+    "commitmentDesc": "Des équipes engagées à tous les niveaux de l’entreprise pour accélérer le développement commercial de nos partenaires.",
     "vision": "Notre vision",
-    "visionDesc": "Nous opérons avec une démarche de création de valeur par l'innovation.",
+    "visionDesc": "La garantie d’un accompagnement personnalisé dans une démarche de création de valeur par l’innovation.",
     "action": "Notre action",
-    "actionDesc": "Nous intervenons à chaque étape du cycle de vie du client pour générer durablement de l'engagement et de la valeur (conquête-développement-fidélisation-rétention)."
+    "actionDesc": "Une intervention à chaque étape du cycle de vie du client pour générer durablement de l’engagement et de la valeur (conquête - développement - fidélisation – rétention)."
   },
   "whatWeStandFor": {
     "title": "Nos atouts",
     "value1": {
       "title": "Spécialistes de la prospection",
-      "description": "Avec une forte compréhension des besoins spécifiques du secteur et des besoins de ses clients : les commerciaux sont immergés chez le client, formés par antl et informés par des mises à jour régulières de l'évolution du marché et des produits des clients."
+      "description": "Avec une forte compréhension des besoins spécifiques du secteur de nos partenaires, nos commerciaux sont formés par nos soins, évalués et accompagnés avec des mises à jour régulières de l’évolution du marché."
     },
     "value2": {
       "title": "Stratégie de personnalisation",
-      "description": "Pour répondre aux attentes de ses partenaires : l'équipe managériale d'antl assure un suivi quotidien de la relation client par des analyses statistiques de la production et de la qualité des appels, ainsi qu'un feed-back régulier avec les commerciaux."
+      "description": "Pour répondre aux attentes de ses partenaires, antl assure un suivi quotidien de la relation client par des analyses statistiques de la production et de la qualité du discours, ainsi qu’un feed-back régulier auprès de ses partenaires."
     },
     "value3": {
       "title": "Capacité d'adaptation rapide",
-      "description": "Le recrutement, le renforcement et la formation des équipes sont dédiés à chaque projet, et la possibilité de changer de mission est proposée aux commerciaux selon leurs compétences. Le télétravail permet à antl de disposer d'un réseau de commerciaux à l'échelle nationale et internationale."
+      "description": "Le recrutement, le renforcement et la formation des équipes sont dédiés à chaque projet. Le télétravail permet à antl de disposer d’un réseau de commerciaux à l‘échelle nationale et internationale."
     },
     "value4": {
       "title": "Faire appel à antl c'est...",
-      "description": "...redéfinir leur stratégie de communication, externaliser la force de vente, réduire les coûts opérationnels, améliorer la qualité de l'expérience client et la fidéliser grâce à des technologies avancées."
+      "description": "…redéfinir votre stratégie de communication, externaliser votre force de vente, réduire vos coûts opérationnels, améliorer la qualité de l’expérience client et la fidéliser grâce à des technologies avancées."
     }
   },
   "meetOurTeam": {
@@ -133,7 +133,14 @@
     "author": "Proverbe africain"
   },
   "joinUs": {
-    "title": "Rejoignez-nous !"
+    "title": "Rejoignez-nous !",
+    "nousRejoindre": {
+      "title": "Nous rejoindre",
+      "description": "Nous sommes constamment à la recherche de talents qui souhaitent s'épanouir dans une équipe dynamique et s'ouvrir à de nouvelles opportunités.",
+      "question": "Vous avez suivi une formation commerciale et/ou vous possédez une expérience significative en vente B to B ? Vous avez une bonne écoute et une excellente élocution ; vous savez vous adapter, rebondir et trouver une solution à chaque défi ?",
+      "answer": "On mise sur votre potentiel et votre motivation !",
+      "details": "Nous proposons des contrats d'agent commercial et de commercial sédentaire en CDI, avec une rémunération au % et/ou à l'atteinte d'objectifs, dans une culture d'entreprise basée sur la Confiance, la Proximité et la Reconnaissance."
+    }
   },
   "getInTouch": {
     "title": "Demande de devis",

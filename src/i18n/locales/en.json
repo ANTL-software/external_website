@@ -68,33 +68,33 @@
     "title": "Who we are",
     "subtitle": "We develop a flexible approach to improve sales performance and deliver optimal customer experience.",
     "mission": "Our Mission",
-    "missionDesc": "Our mission is to create a meaningful connection for our partners' brands, establishing original proximity with their key stakeholders. Thus, we include our partners' message and image in our commercial strategy.",
+    "missionDesc": "To create a meaningful connection for our partners' brands, by establishing original proximity with their key stakeholders.",
     "approach": "Our Approach",
-    "approachDesc": "We develop a flexible approach to improve sales performance and deliver optimal customer experience through operational solutions.",
+    "approachDesc": "Permanent flexibility to improve sales performance through operational solutions.",
     "commitment": "Our Commitment",
-    "commitmentDesc": "We are a business development accelerator for our partners, guaranteeing personalized support with engaged teams at all levels of the company.",
+    "commitmentDesc": "Teams engaged at all levels of the company to accelerate our partners' business development.",
     "vision": "Our Vision",
-    "visionDesc": "We operate with a value creation approach through innovation.",
+    "visionDesc": "The guarantee of personalized support in a value creation approach through innovation.",
     "action": "Our Action",
-    "actionDesc": "We intervene at every stage of the customer lifecycle to sustainably generate engagement and value (acquisition-development-loyalty-retention)."
+    "actionDesc": "Intervention at every stage of the customer lifecycle to sustainably generate engagement and value (acquisition - development - loyalty – retention)."
   },
   "whatWeStandFor": {
     "title": "Our Strengths",
     "value1": {
       "title": "Prospecting Specialists",
-      "description": "With strong understanding of sector-specific needs: sales representatives are immersed with clients, trained by antl and informed by regular updates on market and product evolution."
+      "description": "With strong understanding of our partners' sector-specific needs, our sales representatives are trained by us, evaluated and supported with regular updates on market evolution."
     },
     "value2": {
       "title": "Personalization Strategy",
-      "description": "To meet partner expectations: the management team ensures daily follow-up through statistical analysis of call production and quality, with regular feedback."
+      "description": "To meet partner expectations, antl ensures daily customer relationship follow-up through statistical analysis of call production and quality, as well as regular feedback to its partners."
     },
     "value3": {
       "title": "Rapid Adaptation Capacity",
-      "description": "Recruitment, reinforcement, and team training are dedicated to each project, and the possibility to change missions is offered to sales representatives based on their skills. Remote work allows antl to have a national and international network."
+      "description": "Recruitment, reinforcement and team training are dedicated to each project. Remote work allows antl to have a national and international sales network."
     },
     "value4": {
       "title": "Choosing antl means...",
-      "description": "...redefining their communication strategy, outsourcing sales force, reducing operational costs, improving customer experience quality and loyalty through advanced technologies."
+      "description": "…redefining your communication strategy, outsourcing your sales force, reducing operational costs, improving customer experience quality and loyalty through advanced technologies."
     }
   },
   "meetOurTeam": {
@@ -133,7 +133,14 @@
     "author": "African Proverb"
   },
   "joinUs": {
-    "title": "Join Us!"
+    "title": "Join Us!",
+    "nousRejoindre": {
+      "title": "Join Us",
+      "description": "We are constantly looking for talents who wish to thrive in a dynamic team and open up to new opportunities.",
+      "question": "Have you completed sales training and/or have significant experience in B2B sales? Do you have good listening skills and excellent diction; do you know how to adapt, bounce back and find a solution to every challenge?",
+      "answer": "We bet on your potential and motivation!",
+      "details": "We offer commercial agent and sedentary sales representative contracts on permanent contracts, with commission-based and/or goal-achievement compensation, in a corporate culture based on Trust, Proximity and Recognition."
+    }
   },
   "getInTouch": {
     "title": "Contact Us",

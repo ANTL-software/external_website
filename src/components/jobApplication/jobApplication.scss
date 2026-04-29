@@ -55,13 +55,61 @@
   box-shadow: vars.$shadow-base;
   border: 1px solid rgba(37, 99, 235, 0.1);
   min-width: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xl;
 }
 
 #jobApplicationComponent .jobOffer h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
-  margin: 0 0 vars.$spacing-sm 0;
+  margin: 0;
+}
+
+/* Sections de contenu */
+#jobApplicationComponent .contentSection {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-lg;
+}
+
+#jobApplicationComponent .contentSection > h3 {
+  color: vars.$primary-color;
+  margin-bottom: vars.$spacing-xs;
+}
+
+#jobApplicationComponent .valuesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: vars.$spacing-base;
+}
+
+#jobApplicationComponent .valueItem {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: vars.$spacing-xs;
+}
+
+#jobApplicationComponent .valueItem h4 {
+  font-size: vars.$font-size-base;
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$text-color;
+  margin: 0;
+}
+
+#jobApplicationComponent .valueItem p {
+  font-size: vars.$font-size-sm;
+  color: vars.$text-light;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#jobApplicationComponent .contentSection > p {
+  font-size: vars.$font-size-base;
+  color: vars.$text-color;
+  line-height: 1.6;
+  margin: 0;
 }
 
 #jobApplicationComponent .jobMeta {
@@ -375,6 +423,10 @@
   #jobApplicationComponent .formRow {
     grid-template-columns: 1fr;
   }
+
+  #jobApplicationComponent .valuesList {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -392,6 +444,11 @@
 
   #jobApplicationComponent .applyButton {
     padding: vars.$spacing-lg vars.$spacing-base;
+  }
+
+  #jobApplicationComponent .valuesList {
+    grid-template-columns: 1fr;
+    gap: vars.$spacing-sm;
   }
 }
 
