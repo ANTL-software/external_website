@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import ppNA from "../../assets/images/pp/NA.png";
-// import ppSH from "../../assets/images/pp/ppSH.webp";
-// import ppLC from "../../assets/images/pp/ppLC.webp";
+import ppSH from "../../assets/images/pp/SH.png";
+import ppLC from "../../assets/images/pp/LC.png";
 // import ppTB from "../../assets/images/pp/ppTB.webp";
 import ppMS from "../../assets/images/pp/MS.png";
 import ppND from "../../assets/images/pp/ND.png";
@@ -33,14 +33,14 @@ export default function MeetOurTeam(): ReactElement {
       name: "Sonia Hadid",
       position: t("meetOurTeam.members.1.role"),
       positionFr: t("meetOurTeam.members.1.role_fr"),
-      image: "ppSH",
+      image: ppSH,
       imageAlt: "Sonia Hadid portrait",
     },
     {
       name: "Laëtitia Castanet",
       position: t("meetOurTeam.members.2.role"),
       positionFr: t("meetOurTeam.members.2.role_fr"),
-      image: "ppLC",
+      image: ppLC,
       imageAlt: "Laëtitia Castanet portrait",
     },
     {
@@ -71,22 +71,24 @@ export default function MeetOurTeam(): ReactElement {
           const delay = 600 + index * 100;
           const isNelly = member.name === "Nelly Ahobaut";
           const isNicolas = member.name === "Nicolas Decressac";
+          const isSonia = member.name === "Sonia Hadid";
+          const isLaetitia = member.name === "Laëtitia Castanet";
           const isMehdi = member.name === "Mehdi Saad Allah";
 
           return (
             <article
               key={index}
-              className={`teamMemberCard ${isNelly ? "nellyCard" : ""} ${isNicolas ? "nicolasCard" : ""} ${isMehdi ? "mehdiCard" : ""}`}
+              className={`teamMemberCard ${isNelly ? "nellyCard" : ""} ${isNicolas ? "nicolasCard" : ""} ${isSonia ? "soniaCard" : ""} ${isLaetitia ? "laetitiaCard" : ""} ${isMehdi ? "mehdiCard" : ""}`}
               data-aos="fade-up"
               data-aos-duration="800"
               data-aos-easing="ease-out-back"
               data-aos-delay={delay}
             >
-              <div className={`memberImageContainer ${isNelly ? "nellyImageContainer" : ""} ${isNicolas ? "nicolasImageContainer" : ""} ${isMehdi ? "mehdiImageContainer" : ""}`}>
+              <div className={`memberImageContainer ${isNelly ? "nellyImageContainer" : ""} ${isNicolas ? "nicolasImageContainer" : ""} ${isSonia ? "soniaImageContainer" : ""} ${isLaetitia ? "laetitiaImageContainer" : ""} ${isMehdi ? "mehdiImageContainer" : ""}`}>
                 <img
                   src={member.image}
                   alt={member.imageAlt}
-                  className={`memberImage ${isNelly ? "nellyImage" : ""} ${isNicolas ? "nicolasImage" : ""} ${isMehdi ? "mehdiImage" : ""}`}
+                  className={`memberImage ${isNelly ? "nellyImage" : ""} ${isNicolas ? "nicolasImage" : ""} ${isSonia ? "soniaImage" : ""} ${isLaetitia ? "laetitiaImage" : ""} ${isMehdi ? "mehdiImage" : ""}`}
                   loading="lazy"
                 />
               </div>
