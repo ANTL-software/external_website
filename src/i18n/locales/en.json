@@ -103,8 +103,8 @@
     "cta": "Join our team",
     "members": [
       {
-        "role": "CEO, Founder",
-        "role_fr": "Directrice, Fondatrice"
+        "role": "CEO",
+        "role_fr": "Présidente"
       },
       {
         "role": "Sales Manager",
@@ -112,7 +112,7 @@
       },
       {
         "role": "QA Manager",
-        "role_fr": "Responsable Qualité et formation"
+        "role_fr": "Responsable Qualité"
       },
       {
         "role": "Business Developer",

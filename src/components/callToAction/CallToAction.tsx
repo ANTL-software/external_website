@@ -4,8 +4,6 @@ import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
-import GoToConsultationLink from "../goToConsultationLink/GoToConsultationLink";
-
 export default function CallToAction(): ReactElement {
   const { t } = useTranslation();
   const { pathname } = useLocation();
@@ -23,10 +21,7 @@ export default function CallToAction(): ReactElement {
 
   return (
     <section id="callToActionComponent" className="callToActionSection">
-      <p>{getDescription()}</p>
-      <div className="buttonContainer">
-        <GoToConsultationLink />
-      </div>
+      <p>{ getDescription() }</p>
     </section>
   );
 }

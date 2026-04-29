@@ -16,32 +16,11 @@ export default function MeetOurTeam(): ReactElement {
 
   const teamMembers = [
     {
-      name: "Mehdi Saad Allah",
-      position: t("meetOurTeam.members.4.role"),
-      positionFr: t("meetOurTeam.members.4.role_fr"),
-      image: ppMS,
-      imageAlt: "Mehdi Saad Allah portrait",
-    },
-    // {
-    //   name: "Théo Becquet",
-    //   position: t("meetOurTeam.members.3.role"),
-    //   positionFr: t("meetOurTeam.members.3.role_fr"),
-    //   image: "ppTB",
-    //   imageAlt: "Théo Becquet portrait",
-    // },
-    {
-      name: "Laëtitia Castanet",
-      position: t("meetOurTeam.members.2.role"),
-      positionFr: t("meetOurTeam.members.2.role_fr"),
-      image: "ppLC",
-      imageAlt: "Laëtitia Castanet portrait",
-    },
-    {
-      name: "Sonia Hadid",
-      position: t("meetOurTeam.members.1.role"),
-      positionFr: t("meetOurTeam.members.1.role_fr"),
-      image: "ppSH",
-      imageAlt: "Sonia Hadid portrait",
+      name: "Nelly Ahobaut",
+      position: t("meetOurTeam.members.0.role"),
+      positionFr: t("meetOurTeam.members.0.role_fr"),
+      image: ppNA,
+      imageAlt: "Nelly Ahobaut portrait",
     },
     {
       name: "Nicolas Decressac",
@@ -51,11 +30,25 @@ export default function MeetOurTeam(): ReactElement {
       imageAlt: "Nicolas Decressac portrait",
     },
     {
-      name: "Nelly Ahobaut",
-      position: t("meetOurTeam.members.0.role"),
-      positionFr: t("meetOurTeam.members.0.role_fr"),
-      image: ppNA,
-      imageAlt: "Nelly Ahobaut portrait",
+      name: "Sonia Hadid",
+      position: t("meetOurTeam.members.1.role"),
+      positionFr: t("meetOurTeam.members.1.role_fr"),
+      image: "ppSH",
+      imageAlt: "Sonia Hadid portrait",
+    },
+    {
+      name: "Laëtitia Castanet",
+      position: t("meetOurTeam.members.2.role"),
+      positionFr: t("meetOurTeam.members.2.role_fr"),
+      image: "ppLC",
+      imageAlt: "Laëtitia Castanet portrait",
+    },
+    {
+      name: "Mehdi Saad Allah",
+      position: t("meetOurTeam.members.4.role"),
+      positionFr: t("meetOurTeam.members.4.role_fr"),
+      image: ppMS,
+      imageAlt: "Mehdi Saad Allah portrait",
     },
   ];
 
@@ -71,13 +64,6 @@ export default function MeetOurTeam(): ReactElement {
         >
           {t("meetOurTeam.title")}
         </h2>
-        <p
-          className="meetOurTeamSubtitle"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-out-back"
-          data-aos-delay="400"
-        >{t("meetOurTeam.subtitle")}</p>
       </header>
 
       <div className="teamGrid">

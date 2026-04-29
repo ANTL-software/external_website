@@ -144,7 +144,7 @@
 }
 
 #meetOurTeamComponent .memberName {
-  font-size: clamp(1.1rem, 2vw + 0.3rem, 1.3rem);
+  font-size: clamp(1.2rem, 2vw + 0.4rem, 1.5rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin: 0;
@@ -152,14 +152,14 @@
 }
 
 #meetOurTeamComponent .memberPosition {
-  font-size: vars.$font-size-sm;
+  font-size: vars.$font-size-base;
   color: vars.$text-light;
   line-height: 1.4;
   margin: 0;
 }
 
 #meetOurTeamComponent .memberPositionFr {
-  font-size: vars.$font-size-sm;
+  font-size: vars.$font-size-base;
   font-style: italic;
   color: vars.$text-light;
   line-height: 1.4;
@@ -222,13 +222,8 @@
     height: 100px;
   }
 
-  /* Placer Nicolas en position 4 et Nelly en position 6 */
-  #meetOurTeamComponent .nicolasCard {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  #meetOurTeamComponent .nellyCard {
+  /* Placer Mehdi en position 6 */
+  #meetOurTeamComponent .mehdiCard {
     grid-column: 3;
     grid-row: 2;
   }
@@ -288,8 +283,7 @@
   }
 
   /* Réinitialiser le placement en colonne */
-  #meetOurTeamComponent .nicolasCard,
-  #meetOurTeamComponent .nellyCard {
+  #meetOurTeamComponent .mehdiCard {
     grid-column: auto;
     grid-row: auto;
   }
