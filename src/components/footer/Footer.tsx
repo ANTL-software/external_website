@@ -29,14 +29,14 @@ export default function Footer(): ReactElement {
               <a href="#" aria-label="Follow us on X" rel="noopener noreferrer">
                 <FaXTwitter aria-hidden="true" />
               </a>
+              <a href="#" aria-label="Follow us on Instagram" rel="noopener noreferrer">
+                <FaInstagram aria-hidden="true" />
+              </a>
               <a href="#" aria-label="Follow us on TikTok" rel="noopener noreferrer">
                 <FaTiktok aria-hidden="true" />
               </a>
               <a href="#" aria-label="Connect with us on LinkedIn" rel="noopener noreferrer">
                 <FaLinkedinIn aria-hidden="true" />
-              </a>
-              <a href="#" aria-label="Follow us on Instagram" rel="noopener noreferrer">
-                <FaInstagram aria-hidden="true" />
               </a>
             </nav>
           </section>

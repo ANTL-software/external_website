@@ -147,13 +147,13 @@ export default function Header(): ReactElement {
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/contact_us"} className="navLink" aria-label={t("header.contact")}>
-              <span className="navLinkText">{t("header.contact")}</span>
+            <NavLink to={"/join_us"} className="navLink" aria-label={t("header.join")}>
+              <span className="navLinkText">{t("header.join")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/join_us"} className="navLink" aria-label={t("header.join")}>
-              <span className="navLinkText">{t("header.join")}</span>
+            <NavLink to={"/contact_us"} className="navLink" aria-label={t("header.contact")}>
+              <span className="navLinkText">{t("header.contact")}</span>
             </NavLink>
           </li>
         </ul>
@@ -176,16 +176,16 @@ export default function Header(): ReactElement {
             <span className="tabLabel">{t("header.about")}</span>
           </NavLink>
           <NavLink
-            to="/contact_us"
-            className="tabLink"
-          >
-            <span className="tabLabel">{t("header.contact")}</span>
-          </NavLink>
-          <NavLink
             to="/join_us"
             className="tabLink"
           >
             <span className="tabLabel">{t("header.join")}</span>
+          </NavLink>
+          <NavLink
+            to="/contact_us"
+            className="tabLink"
+          >
+            <span className="tabLabel">{t("header.contact")}</span>
           </NavLink>
         </div>
         {canScrollRight && <span className="ellipsis ellipsisRight">...</span>}

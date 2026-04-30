@@ -258,6 +258,32 @@
   font-size: vars.$font-size-sm;
 }
 
+#getInTouchComponent .socialIcons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: vars.$spacing-base;
+  margin-top: vars.$spacing-base;
+}
+
+#getInTouchComponent .socialIcons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(37, 99, 235, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$primary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#getInTouchComponent .socialIcons a:hover {
+  background-color: vars.$primary-color;
+  color: white;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 1024px) {
   #getInTouchComponent .getInTouchContent {
     grid-template-columns: 1fr;

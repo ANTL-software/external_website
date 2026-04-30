@@ -3,6 +3,8 @@ import "./getInTouch.scss";
 import type { ReactElement } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { sendDevisEmail } from "../../services/emailjs.service";
 
 export default function GetInTouch(): ReactElement {
@@ -189,6 +191,23 @@ export default function GetInTouch(): ReactElement {
                     aria-label="Ouvrir dans Waze"
                   >
                     Waze
+                  </a>
+                </div>
+                <div className="socialIcons">
+                  <a href="#" aria-label="Suivez-nous sur Facebook" rel="noopener noreferrer">
+                    <FaFacebookF aria-hidden="true" />
+                  </a>
+                  <a href="#" aria-label="Suivez-nous sur X" rel="noopener noreferrer">
+                    <FaXTwitter aria-hidden="true" />
+                  </a>
+                  <a href="#" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer">
+                    <FaInstagram aria-hidden="true" />
+                  </a>
+                  <a href="#" aria-label="Suivez-nous sur TikTok" rel="noopener noreferrer">
+                    <FaTiktok aria-hidden="true" />
+                  </a>
+                  <a href="#" aria-label="Connectez-vous sur LinkedIn" rel="noopener noreferrer">
+                    <FaLinkedinIn aria-hidden="true" />
                   </a>
                 </div>
               </div>
