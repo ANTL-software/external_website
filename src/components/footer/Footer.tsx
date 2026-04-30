@@ -63,8 +63,8 @@ export default function Footer(): ReactElement {
                 <li><Link to="/#fidelisation">{t("footer.loyalty")}</Link></li>
                 <li><Link to="/#retention">{t("footer.retention")}</Link></li>
                 <li><Link to="/#conception">{t("footer.conception")}</Link></li>
-                <li><Link to="/#branding">{t("footer.branding")}</Link></li>
-                <li><Link to="/#conseil">{t("footer.consulting")}</Link></li>
+                <li><Link to="/#branding">{t("footer.onlineVisibility")}</Link></li>
+                <li><Link to="/#conseil">{t("footer.branding")}</Link></li>
               </ul>
             </nav>
           </section>

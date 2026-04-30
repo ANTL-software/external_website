@@ -45,16 +45,16 @@ export default function OurExpertise(): ReactElement {
     },
     {
       image: mockup5,
-      imageAlt: t("ourExpertise.branding.title"),
-      subtitle: t("ourExpertise.branding.title"),
-      description: t("ourExpertise.branding.description"),
+      imageAlt: t("ourExpertise.onlineVisibility.title"),
+      subtitle: t("ourExpertise.onlineVisibility.title"),
+      description: t("ourExpertise.onlineVisibility.description"),
       cardId: "branding",
     },
     {
       image: mockup1,
-      imageAlt: t("ourExpertise.consulting.title"),
-      subtitle: t("ourExpertise.consulting.title"),
-      description: t("ourExpertise.consulting.description"),
+      imageAlt: t("ourExpertise.branding.title"),
+      subtitle: t("ourExpertise.branding.title"),
+      description: t("ourExpertise.branding.description"),
       cardId: "conseil",
     },
   ];

@@ -20,8 +20,8 @@
     "loyalty": "Fidélisation",
     "retention": "Rétention",
     "conception": "Conception & Outils",
+    "onlineVisibility": "Visibilité online",
     "branding": "Branding",
-    "consulting": "Conseil",
     "copyright": "© antl 2026 | Tous droits réservés"
   },
   "hero": {
@@ -55,12 +55,12 @@
       "title": "Conception",
       "description": "Génération d'outils administratifs, CRM, intégration IA."
     },
+    "onlineVisibility": {
+      "title": "Visibilité online",
+      "description": "Création, amélioration et animation de sites internet et de réseaux sociaux."
+    },
     "branding": {
       "title": "Branding",
-      "description": "Visibilité Online (Site vitrine, réseau sociaux...)."
-    },
-    "consulting": {
-      "title": "Conseil",
       "description": "Communication, repositionnement marketing, optimisation image de marque."
     }
   },
