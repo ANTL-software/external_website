@@ -16,7 +16,6 @@ export default function Header(): ReactElement {
   const { t } = useTranslation();
   const headerRef = useRef<HTMLElement>(null);
   const tabsContainerRef = useRef<HTMLDivElement>(null);
-  const [activeTab, setActiveTab] = useState("");
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
@@ -82,11 +81,6 @@ export default function Header(): ReactElement {
     return function() {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
-  // Update active tab based on current path
-  useEffect(function() {
-    setActiveTab(window.location.pathname);
   }, []);
 
   // Auto-scroll to active tab on mount
@@ -172,28 +166,24 @@ export default function Header(): ReactElement {
           <NavLink
             to="/"
             className="tabLink"
-            onClick={function() { setActiveTab("/"); }}
           >
             <span className="tabLabel">{t("header.home")}</span>
           </NavLink>
           <NavLink
             to="/about_us"
             className="tabLink"
-            onClick={function() { setActiveTab("/about_us"); }}
           >
             <span className="tabLabel">{t("header.about")}</span>
           </NavLink>
           <NavLink
             to="/contact_us"
             className="tabLink"
-            onClick={function() { setActiveTab("/contact_us"); }}
           >
             <span className="tabLabel">{t("header.contact")}</span>
           </NavLink>
           <NavLink
             to="/join_us"
             className="tabLink"
-            onClick={function() { setActiveTab("/join_us"); }}
           >
             <span className="tabLabel">{t("header.join")}</span>
           </NavLink>
