@@ -90,6 +90,9 @@ export default function OurExpertise(): ReactElement {
                 imageAlt={expertise.imageAlt}
                 subtitle={expertise.subtitle}
                 description={expertise.description}
+                linkTo="/contact_us"
+                linkText={t("ourExpertise.contactLink")}
+                ariaLabel={`En savoir plus sur ${expertise.subtitle}`}
               />
             </div>
           );

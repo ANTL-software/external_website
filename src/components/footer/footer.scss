@@ -106,7 +106,7 @@
   padding-top: vars.$spacing-lg;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: vars.$spacing-base;
 }
@@ -121,9 +121,12 @@
   margin: 0;
 }
 
-#footerComponent .footerBottomRight {
+#footerComponent .languageSelectorContainer {
   display: flex;
   align-items: center;
+  margin-top: vars.$spacing-base;
+  padding-top: vars.$spacing-base;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -148,10 +151,5 @@
     flex-flow: column nowrap;
     text-align: center;
     gap: vars.$spacing-base;
-  }
-
-  #footerComponent .footerBottomRight {
-    width: 100%;
-    justify-content: center;
   }
 }

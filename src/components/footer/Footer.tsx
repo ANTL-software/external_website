@@ -65,6 +65,7 @@ export default function Footer(): ReactElement {
                 <li><Link to="/#conception">{t("footer.conception")}</Link></li>
                 <li><Link to="/#branding">{t("footer.onlineVisibility")}</Link></li>
                 <li><Link to="/#conseil">{t("footer.branding")}</Link></li>
+                <li className="languageSelectorContainer"><LanguageSelector /></li>
               </ul>
             </nav>
           </section>
@@ -73,9 +74,6 @@ export default function Footer(): ReactElement {
         <div className="footerBottom">
           <div className="footerBottomLeft">
             <p><small>{t("footer.copyright")}</small></p>
-          </div>
-          <div className="footerBottomRight">
-            <LanguageSelector />
           </div>
         </div>
       </div>

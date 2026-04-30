@@ -4,7 +4,6 @@ import antlLogo from "../../assets/brand/antlLogo.png";
 
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
@@ -12,12 +11,14 @@ import { useTranslation } from "react-i18next";
 import type { ReactElement } from "react";
 
 import GoToConsultationLink from "../goToConsultationLink/GoToConsultationLink";
-import LanguageSelector from "../languageSelector/LanguageSelector";
 
 export default function Header(): ReactElement {
   const { t } = useTranslation();
   const headerRef = useRef<HTMLElement>(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const tabsContainerRef = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState("");
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
 
   useEffect(function() {
     // Offset adaptatif selon la taille d'écran
@@ -83,27 +84,50 @@ export default function Header(): ReactElement {
     };
   }, []);
 
-  function toggleMobileMenu() {
-    const newState = !isMobileMenuOpen;
-    setIsMobileMenuOpen(newState);
-    
-    // Disable/enable scroll
-    if (newState) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }
-
-  function closeMobileMenu() {
-    setIsMobileMenuOpen(false);
-    document.body.style.overflow = '';
-  }
-
-  // Cleanup on unmount
+  // Update active tab based on current path
   useEffect(function() {
+    setActiveTab(window.location.pathname);
+  }, []);
+
+  // Auto-scroll to active tab on mount
+  useEffect(function() {
+    if (tabsContainerRef.current) {
+      const activeTabElement = tabsContainerRef.current.querySelector('.tabLink.active');
+      if (activeTabElement) {
+        activeTabElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+    }
+  }, []);
+
+  // Check if we can scroll left or right
+  useEffect(function() {
+    function checkScroll() {
+      if (tabsContainerRef.current) {
+        const el = tabsContainerRef.current;
+        const tolerance = 2;
+        setCanScrollLeft(el.scrollLeft > tolerance);
+        setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - tolerance);
+      }
+    }
+
+    const container = tabsContainerRef.current;
+    if (container) {
+      container.addEventListener('scroll', checkScroll);
+      window.addEventListener('resize', checkScroll);
+      // Initial check with delay to ensure DOM is ready
+      setTimeout(checkScroll, 100);
+      setTimeout(checkScroll, 300);
+    }
+
     return function() {
-      document.body.style.overflow = '';
+      if (container) {
+        container.removeEventListener('scroll', checkScroll);
+      }
+      window.removeEventListener('resize', checkScroll);
     };
   }, []);
 
@@ -141,83 +165,47 @@ export default function Header(): ReactElement {
         </ul>
       </nav>
 
+      {/* Mobile Horizontal Tabs Navigation */}
+      <nav className="mobileTabsContainer">
+        {canScrollLeft && <span className="ellipsis ellipsisLeft">...</span>}
+        <div className="tabsWrapper" ref={tabsContainerRef}>
+          <NavLink
+            to="/"
+            className="tabLink"
+            onClick={function() { setActiveTab("/"); }}
+          >
+            <span className="tabLabel">{t("header.home")}</span>
+          </NavLink>
+          <NavLink
+            to="/about_us"
+            className="tabLink"
+            onClick={function() { setActiveTab("/about_us"); }}
+          >
+            <span className="tabLabel">{t("header.about")}</span>
+          </NavLink>
+          <NavLink
+            to="/contact_us"
+            className="tabLink"
+            onClick={function() { setActiveTab("/contact_us"); }}
+          >
+            <span className="tabLabel">{t("header.contact")}</span>
+          </NavLink>
+          <NavLink
+            to="/join_us"
+            className="tabLink"
+            onClick={function() { setActiveTab("/join_us"); }}
+          >
+            <span className="tabLabel">{t("header.join")}</span>
+          </NavLink>
+        </div>
+        {canScrollRight && <span className="ellipsis ellipsisRight">...</span>}
+      </nav>
+
       <div className="headerActions">
         <div className="desktopOnly">
           <GoToConsultationLink />
-          <LanguageSelector />
         </div>
-
-        {/* Mobile Language Selector - visible only when menu is open */}
-        {isMobileMenuOpen && (
-          <div className="mobileLanguageSelector">
-            <LanguageSelector />
-          </div>
-        )}
-
-        {/* Mobile Menu Button */}
-        <button
-          className="mobileMenuButton"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          <div className={`hamburgerIcon ${isMobileMenuOpen ? "open" : ""}`}>
-            {isMobileMenuOpen ? <RiCloseLine /> : <RiMenuLine />}
-          </div>
-        </button>
       </div>
-
-      {/* Mobile Menu Panel */}
-      {isMobileMenuOpen && (
-        <div
-          className="mobileMenuOverlay"
-          data-aos="slide-left"
-          data-aos-duration="300"
-        >
-          <nav className="mobileNav">
-            <ul className="mobileNavList">
-              <li className="mobileNavItem">
-                <NavLink
-                  to={"/"}
-                  className="mobileNavLink"
-                  onClick={closeMobileMenu}
-                >
-                  {t("header.home")}
-                </NavLink>
-              </li>
-              <li className="mobileNavItem">
-                <NavLink
-                  to={"/about_us"}
-                  className="mobileNavLink"
-                  onClick={closeMobileMenu}
-                >
-                  {t("header.about")}
-                </NavLink>
-              </li>
-              <li className="mobileNavItem">
-                <NavLink
-                  to={"/contact_us"}
-                  className="mobileNavLink"
-                  onClick={closeMobileMenu}
-                >
-                  {t("header.contact")}
-                </NavLink>
-              </li>
-              <li className="mobileNavItem">
-                <NavLink
-                  to={"/join_us"}
-                  className="mobileNavLink"
-                  onClick={closeMobileMenu}
-                >
-                  {t("header.join")}
-                </NavLink>
-              </li>
-            </ul>
-            <div className="mobileMenuActions">
-              <GoToConsultationLink />
-            </div>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }
