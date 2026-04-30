@@ -144,7 +144,7 @@
     }
   },
   "getInTouch": {
-    "title": "Demande de devis",
+    "title": "Demande de contact",
     "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous recontactera dans les plus brefs délais.",
     "form": {
       "company": "Nom de l'entreprise",
