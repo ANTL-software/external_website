@@ -1,55 +1,93 @@
 @use '../../utils/styles/variables' as vars;
 
 #callToActionComponent {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    justify-content: center;
-    gap: vars.$spacing-lg;
-    width: 100%;
-    height: 40dvh;
-    min-height: 40dvh;
-    padding-top: vars.$spacing-xxl;
+  width: 100%;
+  padding: vars.$spacing-lg 0;
+  display: flex;
+  justify-content: center;
 }
 
-#callToActionComponent p {
-    font-size: clamp(0.9rem, 2.5vw + 0.3rem, 1.3rem);
-    font-weight: vars.$font-weight-medium;
-    color: vars.$text-color;
-    width: clamp(280px, 50vw, 650px);
+#callToActionComponent .callToActionContent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: vars.$spacing-xl;
+  width: 100%;
 }
 
-#callToActionComponent .buttonContainer {
-    width: clamp(280px, 50vw, 650px);
-    display: flex;
-    align-items: center;
-    gap: vars.$spacing-lg;
-    flex-flow: row nowrap;
+#callToActionComponent .callToActionImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#callToActionComponent .buttonContainer .button {
-    text-decoration: underline;
+#callToActionComponent .callToActionImage img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: vars.$border-radius-lg;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;  
+}
+
+#callToActionComponent .callToActionText {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#callToActionComponent .callToActionText p {
+  font-size: clamp(1rem, 2vw + 0.3rem, 1.4rem);
+  font-weight: vars.$font-weight-medium;
+  color: vars.$text-color;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  max-width: 600px;
 }
 
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
-    #callToActionComponent {
-        align-items: center;
-        padding-top: vars.$spacing-xl;
-        height: 40dvh;
-        min-height: 40dvh;
-    }
-    
-    #callToActionComponent p {
-        width: 90%;
-        padding: 0 vars.$spacing-base;
-        text-align: center;
-    }
-    
-    #callToActionComponent .buttonContainer {
-        width: 90%;
-        flex-flow: column nowrap;
-        gap: vars.$spacing-base;
-        padding: 0 vars.$spacing-base;
-    }
+  #callToActionComponent {
+    padding: vars.$spacing-lg vars.$spacing-base;
+  }
+
+  #callToActionComponent .callToActionContent {
+    flex-flow: column nowrap;
+    gap: vars.$spacing-lg;
+    text-align: center;
+  }
+
+  #callToActionComponent .callToActionImage {
+    justify-content: center;
+    order: 1;
+  }
+
+  #callToActionComponent .callToActionImage img {
+    max-width: clamp(280px, 60vw, 400px);
+  }
+
+  #callToActionComponent .callToActionText {
+    order: 2;
+  }
+
+  #callToActionComponent .callToActionText p {
+    font-size: clamp(0.9rem, 2.5vw + 0.3rem, 1.1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  #callToActionComponent {
+    padding: vars.$spacing-base vars.$spacing-base;
+  }
+
+  #callToActionComponent .callToActionContent {
+    gap: vars.$spacing-base;
+  }
+
+  #callToActionComponent .callToActionImage img {
+    max-width: clamp(250px, 70vw, 350px);
+  }
 }

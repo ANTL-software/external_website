@@ -1,10 +1,11 @@
 import "./ourExpertise.scss";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
-import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
-import mockup5 from "../../assets/images/mockup/Stationery_Mockup_5.webp";
+import branding from "../../assets/images/cards/branding.webp";
+import conception from "../../assets/images/cards/conception.webp";
+import conquete from "../../assets/images/cards/conquete.webp";
+import fidelisation from "../../assets/images/cards/fidelisation.webp";
+import retention from "../../assets/images/cards/retention.webp";
+import onlineVisibility from "../../assets/images/cards/onlineVisibility.webp";
 
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
@@ -16,42 +17,42 @@ export default function OurExpertise(): ReactElement {
 
   const expertiseData = [
     {
-      image: mockup1,
+      image: conquete,
       imageAlt: t("ourExpertise.conquest.title"),
       subtitle: t("ourExpertise.conquest.title"),
       description: t("ourExpertise.conquest.description"),
       cardId: "conquete",
     },
     {
-      image: mockup2,
+      image: fidelisation,
       imageAlt: t("ourExpertise.loyalty.title"),
       subtitle: t("ourExpertise.loyalty.title"),
       description: t("ourExpertise.loyalty.description"),
       cardId: "fidelisation",
     },
     {
-      image: mockup3,
+      image: retention,
       imageAlt: t("ourExpertise.retention.title"),
       subtitle: t("ourExpertise.retention.title"),
       description: t("ourExpertise.retention.description"),
       cardId: "retention",
     },
     {
-      image: mockup4,
+      image: conception,
       imageAlt: t("ourExpertise.conception.title"),
       subtitle: t("ourExpertise.conception.title"),
       description: t("ourExpertise.conception.description"),
       cardId: "conception",
     },
     {
-      image: mockup5,
+      image: onlineVisibility,
       imageAlt: t("ourExpertise.onlineVisibility.title"),
       subtitle: t("ourExpertise.onlineVisibility.title"),
       description: t("ourExpertise.onlineVisibility.description"),
       cardId: "branding",
     },
     {
-      image: mockup1,
+      image: branding,
       imageAlt: t("ourExpertise.branding.title"),
       subtitle: t("ourExpertise.branding.title"),
       description: t("ourExpertise.branding.description"),

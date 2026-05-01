@@ -1,4 +1,5 @@
 import "./callToAction.scss";
+import callToActionImg from "../../assets/images/callToAction.webp";
 
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
@@ -20,8 +21,18 @@ export default function CallToAction(): ReactElement {
   };
 
   return (
-    <section id="callToActionComponent" className="callToActionSection">
-      <p>{ getDescription() }</p>
+    <section id="callToActionComponent" className="callToActionSection container">
+      <div className="callToActionContent">
+        <figure className="callToActionImage">
+          <img
+            src={callToActionImg}
+            alt="Représentation d'un graphique de croissance"
+          />
+        </figure>
+        <div className="callToActionText">
+          <p>{getDescription()}</p>
+        </div>
+      </div>
     </section>
   );
 }

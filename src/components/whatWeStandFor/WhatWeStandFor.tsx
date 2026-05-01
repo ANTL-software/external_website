@@ -3,10 +3,12 @@ import "./whatWeStandFor.scss";
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
-import mockup1 from "../../assets/images/mockup/Stationery_Mockup_1.webp";
-import mockup2 from "../../assets/images/mockup/Stationery_Mockup_2.webp";
-import mockup3 from "../../assets/images/mockup/Stationery_Mockup_3.webp";
-import mockup4 from "../../assets/images/mockup/Stationery_Mockup_4.webp";
+import branding from "../../assets/images/cards/branding.webp";
+import conception from "../../assets/images/cards/conception.webp";
+import conquete from "../../assets/images/cards/conquete.webp";
+import fidelisation from "../../assets/images/cards/fidelisation.webp";
+import retention from "../../assets/images/cards/retention.webp";
+import onlineVisibility from "../../assets/images/cards/onlineVisibility.webp";
 
 export default function WhatWeStandFor(): ReactElement {
   const { t } = useTranslation();
@@ -30,7 +32,7 @@ export default function WhatWeStandFor(): ReactElement {
     }
   ];
 
-  const images = [mockup1, mockup2, mockup3, mockup4];
+  const images = [branding, conception, conquete, fidelisation, retention, onlineVisibility];
 
   return (
     <section id="whatWeStandForComponent" className="whatWeStandFor container">
@@ -55,7 +57,7 @@ export default function WhatWeStandFor(): ReactElement {
             >
               <div className="valueImageContainer">
                 <img
-                  src={images[index] || mockup1}
+                  src={images[index] || branding}
                   alt={`Value ${index + 1}`}
                   className="valueImage"
                   loading="lazy"
