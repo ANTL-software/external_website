@@ -132,7 +132,6 @@ export default function JobApplication(): ReactElement {
         <article className="jobOffer">
           {/* NOUS REJOINDRE */}
           <section className="contentSection">
-            <h3>{t("joinUs.nousRejoindre.title")}</h3>
             <p>{t("joinUs.nousRejoindre.description")}</p>
             <p><strong>{t("joinUs.nousRejoindre.question")}</strong></p>
             <p><em>{t("joinUs.nousRejoindre.answer")}</em></p>

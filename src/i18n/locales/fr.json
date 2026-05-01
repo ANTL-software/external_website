@@ -145,7 +145,7 @@
   },
   "getInTouch": {
     "title": "Demande de contact",
-    "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous recontactera dans les plus brefs délais.",
+    "subtitle": "Nous nous engageons à vous répondre dans un délai de 24h !",
     "form": {
       "company": "Nom de l'entreprise",
       "email": "Email professionnel",

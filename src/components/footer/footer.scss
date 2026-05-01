@@ -129,6 +129,18 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+#footerComponent .languageSelector .languageSelect {
+  background: rgba(255, 255, 255, 0.1);
+  color: vars.$background-color;
+  border-color: vars.$background-color;
+}
+
+#footerComponent .languageSelector .languageSelect:hover {
+  background: vars.$primary-color;
+  color: vars.$background-color;
+  border-color: vars.$primary-color;
+}
+
 @media (max-width: 768px) {
   #footerComponent {
     padding: vars.$spacing-xl vars.$spacing-base;
