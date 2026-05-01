@@ -21,7 +21,14 @@ export default function CallToAction(): ReactElement {
   };
 
   return (
-    <section id="callToActionComponent" className="callToActionSection container">
+    <section
+      id="callToActionComponent"
+      className="callToActionSection container"
+      data-aos="fade-right"
+      data-aos-duration="800"
+      data-aos-easing="ease-out-back"
+      data-aos-delay="200"
+    >
       <div className="callToActionContent">
         <figure className="callToActionImage">
           <img

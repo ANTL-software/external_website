@@ -302,7 +302,7 @@
 
 @media (max-width: 768px) {
   #getInTouchComponent {
-    padding: vars.$spacing-xl vars.$spacing-base;
+    padding: vars.$spacing-xl 0;
   }
 
   #getInTouchComponent .getInTouchContent {
@@ -310,12 +310,12 @@
   }
 
   #getInTouchComponent .contactForm {
-    padding: vars.$spacing-lg;
+    padding: vars.$spacing-base;
     gap: vars.$spacing-base;
   }
 
   #getInTouchComponent .contactCard {
-    padding: vars.$spacing-lg;
+    padding: vars.$spacing-base;
   }
 }
 
