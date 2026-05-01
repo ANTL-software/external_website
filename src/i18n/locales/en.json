@@ -25,7 +25,7 @@
     "copyright": "© antl 2026 | All rights reserved"
   },
   "hero": {
-    "title": "Customer Experience Expert",
+    "title": "Customer Experience Specialist",
     "firstLine": "Your partner in optimizing your sales performance,",
     "secondLine": "and improving your customer relationship.",
     "aboutTitle": "About Us",
@@ -63,7 +63,7 @@
       "title": "Branding",
       "description": "Communication, marketing repositioning, brand image optimization."
     },
-    "contactLink": "Contact us !"
+    "contactLink": "Let's talk!"
   },
   "ourStory": {
     "title": "Who we are",
@@ -245,8 +245,8 @@
     "back": "Back to Home"
   },
   "meta": {
-    "title": "antl – Customer Experience Expert",
-    "description": "antl - Customer Experience Expert. Digital solutions and consulting to develop your sales performance.",
+    "title": "antl – Customer Experience Specialist",
+    "description": "antl - Customer Experience Specialist. Digital solutions and consulting to develop your sales performance.",
     "keywords": "antl, customer experience, call center, contact center, customer relationship, sales performance, digital solutions, telephony, sales prospecting, customer relationship management"
   },
   "a11y": {

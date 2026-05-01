@@ -105,8 +105,33 @@
     #ourExpertiseComponent {
         padding: vars.$spacing-xxl vars.$spacing-base;
     }
-    
+
     #ourExpertiseComponent blockquote {
         width: 90%;
     }
+}
+
+/* Styles spécifiques par image - Ajuster selon vos besoins */
+#ourExpertiseComponent .expertiseImageConquete {
+    object-position: center;
+}
+
+#ourExpertiseComponent .expertiseImageFidelisation {
+    object-position: 0px 0px;
+}
+
+#ourExpertiseComponent .expertiseImageRetention {
+    object-position: 0px 0px;
+}
+
+#ourExpertiseComponent .expertiseImageConception {
+    object-position: center;
+}
+
+#ourExpertiseComponent .expertiseImageOnlineVisibility {
+    object-position: center;
+}
+
+#ourExpertiseComponent .expertiseImageBranding {
+    object-position: center;
 }

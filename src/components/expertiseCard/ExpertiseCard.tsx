@@ -13,6 +13,7 @@ interface ExpertiseCardProps {
   linkTo?: string;
   linkText?: string;
   ariaLabel?: string;
+  imageClassName?: string;
 }
 
 export default function ExpertiseCard({
@@ -23,6 +24,7 @@ export default function ExpertiseCard({
   linkTo,
   linkText,
   ariaLabel,
+  imageClassName,
 }: ExpertiseCardProps): ReactElement {
   return (
     <article
@@ -32,7 +34,7 @@ export default function ExpertiseCard({
       aria-labelledby="expertise-subtitle"
     >
       <figure className="cardImageContainer" aria-hidden="true">
-        <img src={image} alt={imageAlt} className="cardImage" loading="lazy" />
+        <img src={image} alt={imageAlt} className={`cardImage ${imageClassName || ""}`} loading="lazy" />
       </figure>
 
       <header className="cardHeader">

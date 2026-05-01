@@ -94,6 +94,7 @@ export default function OurExpertise(): ReactElement {
                 linkTo="/contact_us"
                 linkText={t("ourExpertise.contactLink")}
                 ariaLabel={`En savoir plus sur ${expertise.subtitle}`}
+                imageClassName={`expertiseImage ${index === 0 ? "expertiseImageConquete" : ""} ${index === 1 ? "expertiseImageFidelisation" : ""} ${index === 2 ? "expertiseImageRetention" : ""} ${index === 3 ? "expertiseImageConception" : ""} ${index === 4 ? "expertiseImageOnlineVisibility" : ""} ${index === 5 ? "expertiseImageBranding" : ""}`}
               />
             </div>
           );

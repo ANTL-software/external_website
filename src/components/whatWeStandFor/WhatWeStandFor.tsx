@@ -3,12 +3,10 @@ import "./whatWeStandFor.scss";
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
-import branding from "../../assets/images/cards/branding.webp";
-import conception from "../../assets/images/cards/conception.webp";
-import conquete from "../../assets/images/cards/conquete.webp";
-import fidelisation from "../../assets/images/cards/fidelisation.webp";
-import retention from "../../assets/images/cards/retention.webp";
-import onlineVisibility from "../../assets/images/cards/onlineVisibility.webp";
+import prospection from "../../assets/images/cards/prospection.webp";
+import personnalisation from "../../assets/images/cards/personnalisation.webp";
+import adaptation from "../../assets/images/cards/adaptation.webp";
+import antl from "../../assets/images/cards/antl.webp";
 
 export default function WhatWeStandFor(): ReactElement {
   const { t } = useTranslation();
@@ -16,35 +14,41 @@ export default function WhatWeStandFor(): ReactElement {
   const values = [
     {
       title: t("whatWeStandFor.value1.title"),
-      description: t("whatWeStandFor.value1.description")
+      description: t("whatWeStandFor.value1.description"),
     },
     {
       title: t("whatWeStandFor.value2.title"),
-      description: t("whatWeStandFor.value2.description")
+      description: t("whatWeStandFor.value2.description"),
     },
     {
       title: t("whatWeStandFor.value3.title"),
-      description: t("whatWeStandFor.value3.description")
+      description: t("whatWeStandFor.value3.description"),
     },
     {
       title: t("whatWeStandFor.value4.title"),
-      description: t("whatWeStandFor.value4.description")
-    }
+      description: t("whatWeStandFor.value4.description"),
+    },
   ];
 
-  const images = [branding, conception, conquete, fidelisation, retention, onlineVisibility];
+  const images = [prospection, antl, personnalisation, adaptation];
 
   return (
     <section id="whatWeStandForComponent" className="whatWeStandFor container">
       <header className="whatWeStandForHeader">
-        <h2 className="whatWeStandForTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
+        <h2
+          className="whatWeStandForTitle"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-easing="ease-out-back"
+          data-aos-delay="200"
+        >
           {t("whatWeStandFor.title")}
         </h2>
       </header>
 
       <div className="valuesGrid">
-        {values.map(function(value, index) {
-          const delay = 600 + (index * 150);
+        {values.map(function (value, index) {
+          const delay = 600 + index * 150;
 
           return (
             <article
@@ -57,9 +61,9 @@ export default function WhatWeStandFor(): ReactElement {
             >
               <div className="valueImageContainer">
                 <img
-                  src={images[index] || branding}
+                  src={images[index]}
                   alt={`Value ${index + 1}`}
-                  className="valueImage"
+                  className={`valueImage ${index === 0 ? "valueImageProspection" : ""} ${index === 1 ? "valueImageAntl" : ""} ${index === 2 ? "valueImagePersonnalisation" : ""} ${index === 3 ? "valueImageAdaptation" : ""}`}
                   loading="lazy"
                 />
               </div>
