@@ -3,10 +3,7 @@
 #heroSectionComponent {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     gap: vars.$spacing-lg;
-    // height: 50dvh;
     width: 100%;
 }
 
@@ -14,6 +11,9 @@
 @media (max-width: 768px) {
     #heroSectionComponent {
         height: 40dvh;
+        justify-content: center;
+        align-items: center;
+        gap: vars.$spacing-sm;
     }
 }
 
@@ -21,21 +21,20 @@
     font-size: clamp(1.8rem, 2.5vw + 0.8rem, 3rem);
     font-weight: vars.$font-weight-bold;
     color: vars.$text-color;
-    // margin-top: 1em;
     margin-bottom: 1.3em;
-    width: 27%;
-    text-align: center;
+    width: 30%;
 }
 
 @media (max-width: 1280px) {
     #heroSectionComponent h1 {
-        width: 35%;
+        width: 45%;
     }
 }
 
-@media (max-width: 728px) {
+@media (max-width: 768px) {
     #heroSectionComponent h1 {
         width: 75%;
+        text-align: center;
     }
 }
 
@@ -47,7 +46,7 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 0.2em;
-    text-align: center;
+    text-align: left;
 }
 
 #heroSectionComponent blockquote .firstLine {
@@ -56,4 +55,11 @@
 
 #heroSectionComponent blockquote .secondLine {
     display: block;
+}
+
+@media (max-width: 768px) {
+    #heroSectionComponent blockquote {
+        width: 75%;
+        text-align: center;
+    }
 }
