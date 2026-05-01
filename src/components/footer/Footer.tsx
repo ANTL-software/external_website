@@ -50,6 +50,7 @@ export default function Footer(): ReactElement {
                 <li><Link to="/about_us#meetOurTeamComponent">{t("footer.team")}</Link></li>
                 <li><Link to="/about_us#getInTouchComponent">{t("footer.contact")}</Link></li>
                 <li><Link to="/join_us">{t("footer.join")}</Link></li>
+                <li><Link to="/legal">{t("footer.legal")}</Link></li>
               </ul>
             </nav>
           </section>

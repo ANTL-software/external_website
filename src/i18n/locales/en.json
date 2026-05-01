@@ -357,5 +357,17 @@
   "backToTop": {
     "ariaLabel": "Back to top of page",
     "title": "Back to top"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "companyInfo": "antl is a simplified joint-stock company with a capital of €20,000.00, registered with the Paris Trade and Companies Register under n° 493 861 363, with its registered office at 48b avenue Charles de Gaulle, 17300 Rochefort, France (VAT ID: FR 87 493 861 363). antl is represented by Ms. Nelly Ahobaut, its President.",
+    "activity": "antl is a private establishment specializing in customer relations.",
+    "director": "The Director of Publication for the platform and the Director of the Private Establishment is Ms. Nelly Ahobaut.",
+    "hosting": "The site is hosted by Vercel.inc: Amazon Web Services, 440 N Barranca Avenue #4133, Covina, CA 91723 United States",
+    "contactTitle": "Contact us",
+    "contactPhone": "By phone: +33 1 80 88 80 30",
+    "contactEmail": "By email: contact@antl.fr",
+    "contactAddress": "By mail: 48b avenue Charles de Gaulle, 17300 Rochefort, France",
+    "rights": "You have the right to access and rectify information concerning you, which you can exercise by email to info@antl.fr or by mail to the following address: antl, 48b avenue Charles de Gaulle, 17300 Rochefort, France. You may also, for legitimate reasons, object to the processing of data concerning you."
   }
 }

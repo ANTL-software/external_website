@@ -357,5 +357,17 @@
   "backToTop": {
     "ariaLabel": "Retour en haut de la page",
     "title": "Retour en haut"
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "companyInfo": "La société antl est une société par actions simplifiée au capital de 20 000,00 euros, immatriculée au Registre du Commerce et des Sociétés de Paris sous le n° 493 861 363 et dont le siège social est situé au 48b avenue Charles de Gaulle, 17300 Rochefort, France (N° TVA intracommunautaire : FR 87 493 861 363). antl est représentée par Mme. Nelly Ahobaut, sa Présidente.",
+    "activity": "antl est un établissement privé spécialiste de la relation client.",
+    "director": "La Directrice de la Publication de la plateforme et la Directrice de l'Établissement Privé est Mme. Nelly Ahobaut.",
+    "hosting": "Le site est hébergé par Vercel.inc : Amazon Web Services, 440 N Barranca Avenue #4133, Covina, CA 91723 United States",
+    "contactTitle": "Nous contacter",
+    "contactPhone": "Par téléphone : +33 1 80 88 80 30",
+    "contactEmail": "Par email : contact@antl.fr",
+    "contactAddress": "Par courrier : 48b avenue Charles de Gaulle, 17300 Rochefort, France",
+    "rights": "Vous bénéficiez d'un droit d'accès et de rectification aux informations qui vous concernent, que vous pouvez exercer par email à l'adresse info@antl.fr ou par courrier à l'adresse suivante : antl, 48b avenue Charles de Gaulle, 17300 Rochefort, France. Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant."
   }
 }

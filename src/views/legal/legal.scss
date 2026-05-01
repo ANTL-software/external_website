@@ -1,0 +1,84 @@
+@use '../../utils/styles/mixins' as mixins;
+@use '../../utils/styles/variables' as vars;
+
+#legal {
+  @include mixins.viewBackground;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#legal .legalContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: vars.$spacing-xxl vars.$spacing-base;
+  flex: 1;
+}
+
+#legal .legalTitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: vars.$font-weight-bold;
+  color: vars.$text-color;
+  margin-bottom: vars.$spacing-xl;
+  text-align: center;
+}
+
+#legal .legalSection {
+  background: vars.$background-color;
+  border-radius: vars.$border-radius-lg;
+  padding: vars.$spacing-xl;
+  box-shadow: vars.$shadow-base;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+#legal .legalContent {
+  font-size: vars.$font-size-base;
+  line-height: 1.8;
+  color: vars.$text-color;
+}
+
+#legal .legalContent p {
+  margin-bottom: vars.$spacing-base;
+}
+
+#legal .legalContent h3 {
+  font-size: vars.$font-size-lg;
+  font-weight: vars.$font-weight-semibold;
+  color: vars.$primary-color;
+  margin-top: vars.$spacing-lg;
+  margin-bottom: vars.$spacing-sm;
+}
+
+#legal .legalContent ul {
+  list-style: none;
+  padding: 0;
+  margin: vars.$spacing-base 0;
+}
+
+#legal .legalContent ul li {
+  padding-left: vars.$spacing-base;
+  position: relative;
+  margin-bottom: vars.$spacing-xs;
+}
+
+#legal .legalContent ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: vars.$primary-color;
+  font-weight: vars.$font-weight-bold;
+}
+
+@media (max-width: 768px) {
+  #legal .legalContainer {
+    padding: vars.$spacing-xl vars.$spacing-base;
+  }
+
+  #legal .legalSection {
+    padding: vars.$spacing-lg;
+  }
+
+  #legal .legalTitle {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+}

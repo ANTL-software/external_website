@@ -21,6 +21,7 @@
     font-size: clamp(1.8rem, 2.5vw + 0.8rem, 3rem);
     font-weight: vars.$font-weight-bold;
     color: vars.$text-color;
+    margin-top: 1.3em;
     margin-bottom: 1.3em;
     width: 30%;
 }
@@ -33,6 +34,7 @@
 
 @media (max-width: 768px) {
     #heroSectionComponent h1 {
+        margin-top: unset;
         width: 75%;
         text-align: center;
     }

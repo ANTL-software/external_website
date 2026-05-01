@@ -4,6 +4,7 @@ import Home from "./views/home/Home";
 import AboutUs from "./views/aboutUs/AboutUs";
 import ContactUs from "./views/contactUs/ContactUs";
 import JoinUs from "./views/joinUs/JoinUs";
+import Legal from "./views/legal/Legal";
 import NotFound from "./views/notFound/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import MetaTags from "./components/metaTags/MetaTags";
@@ -18,7 +19,7 @@ function App() {
         <Route path="/about_us" element={<AboutUs />} />
         <Route path="/contact_us" element={<ContactUs />} />
         <Route path="/join_us" element={<JoinUs />} />
-        <Route path="/legal" element={<NotFound />} />
+        <Route path="/legal" element={<Legal />} />
         <Route path="/case_studies" element={<NotFound />} />
         <Route path="/services" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
