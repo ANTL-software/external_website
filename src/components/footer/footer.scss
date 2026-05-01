@@ -136,11 +136,20 @@
 
   #footerComponent .footerContent {
     grid-template-columns: 1fr;
-    gap: vars.$spacing-lg;
+    gap: vars.$spacing-base;
+    margin-bottom: vars.$spacing-sm;
   }
 
   #footerComponent .companySection {
     max-width: none;
+  }
+
+  #footerComponent .footerSection h4 {
+    margin: 0 0 vars.$spacing-sm 0;
+  }
+
+  #footerComponent .footerSection ul {
+    gap: vars.$spacing-xs;
   }
 
   #footerComponent .socialIcons {
@@ -150,6 +159,12 @@
   #footerComponent .footerBottom {
     flex-flow: column nowrap;
     text-align: center;
-    gap: vars.$spacing-base;
+    gap: vars.$spacing-sm;
+    padding-top: vars.$spacing-sm;
+  }
+
+  #footerComponent .languageSelectorContainer {
+    margin-top: vars.$spacing-xs;
+    padding-top: vars.$spacing-xs;
   }
 }

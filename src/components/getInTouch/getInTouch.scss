@@ -20,7 +20,7 @@
 }
 
 #getInTouchComponent .getInTouchHeader h2 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.2vw + 0.65rem, 2.25rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin: 0;
@@ -101,7 +101,7 @@
   align-items: center;
   justify-content: center;
   gap: vars.$spacing-xs;
-  padding: vars.$spacing-xs vars.$spacing-sm;
+  padding: vars.$spacing-sm vars.$spacing-lg;
   background: vars.$primary-color;
   color: vars.$background-color;
   border: none;
@@ -109,26 +109,44 @@
   font-size: vars.$font-size-base;
   font-weight: vars.$font-weight-semibold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
   margin-top: vars.$spacing-sm;
   width: fit-content;
-  max-width: 180px;
+  min-width: 200px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+#getInTouchComponent .submitButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background-color: vars.$accent-color;
+  transition: transform 0.5s ease;
+  z-index: -1;
+  transform: translateX(-100%) skewX(15deg);
+  transform-origin: center;
+}
+
+#getInTouchComponent .submitButton:not(:disabled):hover::before {
+  transform: translateX(35%) skewX(15deg);
 }
 
 #getInTouchComponent .submitButton:disabled {
   background: vars.$text-light;
   cursor: not-allowed;
-  opacity: 0.5;
-  box-shadow: none;
+  opacity: 0.7;
 }
 
-#getInTouchComponent .submitButton:not(:disabled):hover {
-  background: vars.$accent-color;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-  gap: vars.$spacing-base;
+#getInTouchComponent .submitButton:disabled::before {
+  display: none;
 }
+
 
 #getInTouchComponent .submitButton:focus {
   outline: 2px solid vars.$primary-color;
@@ -138,10 +156,16 @@
 #getInTouchComponent .buttonArrow {
   font-size: vars.$font-size-lg;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 #getInTouchComponent .submitButton:hover .buttonArrow {
   transform: translateX(4px);
+}
+
+#getInTouchComponent .formActions .submitButton {
+  width: 100%;
 }
 
 #getInTouchComponent .formActions {
@@ -285,6 +309,10 @@
 }
 
 @media (max-width: 1024px) {
+  #getInTouchComponent .getInTouchHeader h2 {
+    font-size: clamp(1.6rem, 3vw + 0.7rem, 2.5rem);
+  }
+
   #getInTouchComponent .getInTouchContent {
     grid-template-columns: 1fr;
     max-width: 700px;
@@ -301,6 +329,10 @@
 }
 
 @media (max-width: 768px) {
+  #getInTouchComponent .getInTouchHeader h2 {
+    font-size: clamp(1.4rem, 4vw + 0.6rem, 2rem);
+  }
+
   #getInTouchComponent {
     padding: vars.$spacing-xl 0;
   }

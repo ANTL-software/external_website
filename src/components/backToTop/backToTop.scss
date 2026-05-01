@@ -20,6 +20,22 @@
   transition: all 0.3s ease;
   z-index: 99;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.backToTopButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: vars.$accent-color;
+  transition: transform 0.5s ease;
+  z-index: 0;
+  transform: translateX(-100%);
+  transform-origin: center;
 }
 
 .backToTopButton.visible {
@@ -28,8 +44,11 @@
   transform: translateY(0);
 }
 
+.backToTopButton:hover::before {
+  transform: translateX(0);
+}
+
 .backToTopButton:hover {
-  background: vars.$accent-color;
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
 }
@@ -42,6 +61,8 @@
 .backToTopButton .backToTopIcon {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .backToTopButton:hover .backToTopIcon {

@@ -15,7 +15,7 @@
 }
 
 #meetOurTeamComponent .meetOurTeamTitle {
-  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-size: clamp(1.5rem, 2.2vw + 0.65rem, 2.25rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin-bottom: vars.$spacing-base;
@@ -213,26 +213,47 @@
   text-decoration: none;
   font-weight: vars.$font-weight-medium;
   font-size: vars.$font-size-base;
-  transition: color 0.3s ease, gap 0.3s ease;
+  padding: vars.$spacing-xs vars.$spacing-sm;
+  border-radius: vars.$border-radius-base;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+#meetOurTeamComponent .joinTeamLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background-color: vars.$accent-color;
+  transition: transform 0.5s ease;
+  z-index: -1;
+  transform: translateX(-100%) skewX(15deg);
+  transform-origin: center;
+}
+
+#meetOurTeamComponent .joinTeamLink:hover::before {
+  transform: translateX(35%) skewX(15deg);
 }
 
 #meetOurTeamComponent .joinTeamLink:hover {
-  color: vars.$accent-color;
+  color: vars.$background-color;
   gap: vars.$spacing-sm;
 }
 
 #meetOurTeamComponent .linkText {
-  border-bottom: 1px solid transparent;
-  transition: border-bottom-color 0.3s ease;
-}
-
-#meetOurTeamComponent .joinTeamLink:hover .linkText {
-  border-bottom-color: vars.$accent-color;
+  position: relative;
+  z-index: 2;
 }
 
 #meetOurTeamComponent .linkArrow {
   font-size: vars.$font-size-lg;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 #meetOurTeamComponent .joinTeamLink:hover .linkArrow {
@@ -241,6 +262,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
+  #meetOurTeamComponent .meetOurTeamTitle {
+    font-size: clamp(1.6rem, 3vw + 0.7rem, 2.5rem);
+  }
+
   #meetOurTeamComponent .teamGrid {
     grid-template-columns: repeat(3, 1fr);
     gap: vars.$spacing-base;
@@ -309,6 +334,10 @@
 @media (max-width: 768px) {
   #meetOurTeamComponent.meetOurTeam {
     padding: vars.$spacing-xl 0;
+  }
+
+  #meetOurTeamComponent .meetOurTeamTitle {
+    font-size: clamp(1.4rem, 4vw + 0.6rem, 2rem);
   }
 
   #meetOurTeamComponent .meetOurTeamHeader {

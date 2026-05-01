@@ -25,10 +25,9 @@
 
 #callToActionComponent .callToActionImage img {
   width: 100%;
-  max-width: 500px;
   height: auto;
   border-radius: vars.$border-radius-lg;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;  
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 #callToActionComponent .callToActionText {
@@ -51,12 +50,12 @@
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   #callToActionComponent {
-    padding: vars.$spacing-lg vars.$spacing-base;
+    padding: vars.$spacing-base 0;
   }
 
   #callToActionComponent .callToActionContent {
     flex-flow: column nowrap;
-    gap: vars.$spacing-lg;
+    gap: vars.$spacing-base;
     text-align: center;
   }
 
@@ -66,11 +65,15 @@
   }
 
   #callToActionComponent .callToActionImage img {
-    max-width: clamp(280px, 60vw, 400px);
+    max-width: none;
   }
 
   #callToActionComponent .callToActionText {
     order: 2;
+  }
+
+  #callToActionComponent .callToActionText {
+    padding: 0 vars.$spacing-base;
   }
 
   #callToActionComponent .callToActionText p {
@@ -80,14 +83,15 @@
 
 @media (max-width: 480px) {
   #callToActionComponent {
-    padding: vars.$spacing-base vars.$spacing-base;
+    margin-top: -5dvh;
+    padding: vars.$spacing-sm 0;
   }
 
   #callToActionComponent .callToActionContent {
-    gap: vars.$spacing-base;
+    gap: vars.$spacing-sm;
   }
 
   #callToActionComponent .callToActionImage img {
-    max-width: clamp(250px, 70vw, 350px);
+    max-width: none;
   }
 }

@@ -63,6 +63,7 @@ export default function GetInTouch(): ReactElement {
     return !!(
       formData.companyName.trim() &&
       formData.email.trim() &&
+      formData.phone.trim() &&
       formData.message.trim()
     );
   }

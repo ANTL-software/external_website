@@ -69,41 +69,72 @@
 #expertiseCardComponent .cardFooter {
     padding: 0 vars.$spacing-base vars.$spacing-lg;
     margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #expertiseCardComponent .cardLink {
-    display: flex;
+    display: inline-flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: center;
     gap: vars.$spacing-xs;
-    color: vars.$primary-color;
+    padding: vars.$spacing-xs vars.$spacing-base;
+    background-color: vars.$primary-color;
+    color: vars.$background-color;
     text-decoration: none;
-    font-weight: vars.$font-weight-medium;
-    transition: color 0.2s ease, gap 0.2s ease;
+    font-weight: vars.$font-weight-semibold;
+    font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1rem);
+    border-radius: vars.$border-radius-base;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+#expertiseCardComponent .cardLink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 150%;
+    height: 100%;
+    background-color: vars.$accent-color;
+    transition: transform 0.5s ease;
+    z-index: -1;
+    transform: translateX(-100%) skewX(15deg);
+    transform-origin: center;
+}
+
+#expertiseCardComponent .cardLink:hover::before {
+    transform: translateX(35%) skewX(15deg);
 }
 
 #expertiseCardComponent .cardLink:hover {
-    color: vars.$accent-color;
-    gap: vars.$spacing-sm;
+    gap: vars.$spacing-base;
 }
 
 #expertiseCardComponent .cardLink:focus {
     outline: 2px solid vars.$primary-color;
     outline-offset: 2px;
-    border-radius: vars.$border-radius-sm;
+    border-radius: vars.$border-radius-base;
 }
 
 #expertiseCardComponent .cardLinkText {
     font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1rem);
+    position: relative;
+    z-index: 2;
 }
 
 #expertiseCardComponent .cardLinkIcon {
     font-size: 1rem;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 #expertiseCardComponent .cardLink:hover .cardLinkIcon {
-    transform: translateX(2px);
+    transform: translateX(4px);
 }
 
 /* Responsive adjustments */

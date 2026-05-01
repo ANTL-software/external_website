@@ -10,7 +10,7 @@
 }
 
 #ourExpertiseComponent .expertiseTitle {
-    font-size: clamp(2rem, 4vw + 1rem, 3rem);
+    font-size: clamp(1.5rem, 2.2vw + 0.65rem, 2.25rem);
     font-weight: vars.$font-weight-bold;
     color: vars.$text-color;
     margin: 0 0 vars.$spacing-base 0;
@@ -44,6 +44,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+    #ourExpertiseComponent .expertiseTitle {
+        font-size: clamp(1.6rem, 3vw + 0.7rem, 2.5rem);
+    }
+
     #ourExpertiseComponent .expertiseGrid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -54,18 +58,22 @@
     #ourExpertiseComponent.ourExpertise {
         padding: vars.$spacing-xl 0;
     }
-    
+
+    #ourExpertiseComponent .expertiseTitle {
+        font-size: clamp(1.4rem, 4vw + 0.6rem, 2rem);
+    }
+
     #ourExpertiseComponent .expertiseHeader {
         margin-bottom: vars.$spacing-xl;
     }
-    
+
     #ourExpertiseComponent .expertiseGrid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
         gap: vars.$spacing-base;
         max-width: 400px;
     }
-    
+
     #ourExpertiseComponent .expertiseGrid > * {
         max-width: none;
         min-width: 280px;

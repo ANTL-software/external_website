@@ -13,7 +13,7 @@
 }
 
 #ourStoryComponent .ourStoryTitle {
-  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-size: clamp(1.5rem, 2.2vw + 0.65rem, 2.25rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin-bottom: vars.$spacing-base;
@@ -121,9 +121,19 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  #ourStoryComponent .ourStoryTitle {
+    font-size: clamp(1.6rem, 3vw + 0.7rem, 2.5rem);
+  }
+}
+
 @media (max-width: 768px) {
   #ourStoryComponent.ourStory {
     padding: vars.$spacing-xl 0;
+  }
+
+  #ourStoryComponent .ourStoryTitle {
+    font-size: clamp(1.4rem, 4vw + 0.6rem, 2rem);
   }
 
   #ourStoryComponent .ourStoryHeader {

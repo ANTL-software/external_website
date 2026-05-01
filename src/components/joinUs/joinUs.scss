@@ -15,7 +15,7 @@
 }
 
 #joinUsComponent .joinUsTitle {
-  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  font-size: clamp(1.5rem, 2.2vw + 0.65rem, 2.25rem);
   font-weight: vars.$font-weight-bold;
   color: vars.$text-color;
   margin-bottom: vars.$spacing-base;
@@ -112,26 +112,50 @@
   text-decoration: none;
   font-weight: vars.$font-weight-medium;
   font-size: vars.$font-size-base;
-  transition: color 0.3s ease, gap 0.3s ease;
   padding: vars.$spacing-sm vars.$spacing-lg;
   border: 2px solid vars.$primary-color;
   border-radius: vars.$border-radius-base;
   background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+#joinUsComponent .joinOurTeamLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 150%;
+  height: 100%;
+  background-color: vars.$primary-color;
+  transition: transform 0.5s ease;
+  z-index: -1;
+  transform: translateX(-100%) skewX(15deg);
+  transform-origin: center;
+}
+
+#joinUsComponent .joinOurTeamLink:hover::before {
+  transform: translateX(35%) skewX(15deg);
 }
 
 #joinUsComponent .joinOurTeamLink:hover {
   color: vars.$background-color;
-  background: vars.$primary-color;
   gap: vars.$spacing-sm;
 }
 
 #joinUsComponent .linkText {
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 #joinUsComponent .linkArrow {
   font-size: vars.$font-size-lg;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 #joinUsComponent .joinOurTeamLink:hover .linkArrow {
@@ -140,6 +164,10 @@
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  #joinUsComponent .joinUsTitle {
+    font-size: clamp(1.6rem, 3vw + 0.7rem, 2.5rem);
+  }
+
   #joinUsComponent .benefitsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: vars.$spacing-base;
@@ -164,6 +192,10 @@
 @media (max-width: 768px) {
   #joinUsComponent.joinUs {
     padding: vars.$spacing-xl 0;
+  }
+
+  #joinUsComponent .joinUsTitle {
+    font-size: clamp(1.4rem, 4vw + 0.6rem, 2rem);
   }
 
   #joinUsComponent .joinUsHeader {
