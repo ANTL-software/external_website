@@ -112,7 +112,6 @@ export default function JobApplication(): ReactElement {
         cv: null,
         coverLetter: null
       });
-      setShowForm(false);
     } else {
       setSubmitStatus('error');
     }
