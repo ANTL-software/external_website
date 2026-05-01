@@ -287,6 +287,8 @@
   flex-flow: row nowrap;
   gap: vars.$spacing-base;
   margin-top: vars.$spacing-base;
+  align-items: center;
+  justify-content: center;
 }
 
 #getInTouchComponent .socialIcons a {

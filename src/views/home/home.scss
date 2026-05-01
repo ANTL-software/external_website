@@ -23,7 +23,7 @@
 
 /* Sections after CallToAction maintain consistent spacing */
 #home main > section:nth-child(n+3) {
-    margin-top: vars.$spacing-xxl;
+    // margin-top: vars.$spacing-xxl;
 }
 
 /* Mobile viewport management */
@@ -41,6 +41,6 @@
     
     /* Sections after CallToAction maintain consistent spacing */
     #home main > section:nth-child(n+3) {
-        margin-top: vars.$spacing-xxl;
+        // margin-top: vars.$spacing-xxl;
     }
 }

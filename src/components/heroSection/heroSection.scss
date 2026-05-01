@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    align-items: center;
     gap: vars.$spacing-lg;
     // height: 50dvh;
     width: 100%;
@@ -12,7 +13,7 @@
 /* Mobile: Hero + CallToAction = 90dvh (Header = 10dvh) */
 @media (max-width: 768px) {
     #heroSectionComponent {
-        height: 50dvh;
+        height: 30dvh;
     }
 }
 
@@ -22,6 +23,7 @@
     color: vars.$text-color;
     margin-bottom: -.3em;
     width: 27%;
+    text-align: center;
 }
 
 @media (max-width: 1280px) {
@@ -32,7 +34,7 @@
 
 @media (max-width: 728px) {
     #heroSectionComponent h1 {
-        width: 50%;
+        width: 75%;
     }
 }
 
@@ -44,6 +46,7 @@
     display: flex;
     flex-flow: column nowrap;
     gap: 0.2em;
+    text-align: center;
 }
 
 #heroSectionComponent blockquote .firstLine {
