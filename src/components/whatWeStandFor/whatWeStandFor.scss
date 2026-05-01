@@ -154,6 +154,12 @@
 }
 
 @media (max-width: 768px) {
+  #whatWeStandForComponent .valueImageProspection {
+    object-position: 0.2px -23px;
+  }
+}
+
+@media (max-width: 768px) {
   #whatWeStandForComponent.whatWeStandFor {
     padding: vars.$spacing-xl 0;
   }
