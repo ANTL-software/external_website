@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { sendDevisEmail } from "../../services/emailjs.service";
+import { sendContactEmail } from "../../services/api.service";
 
 export default function GetInTouch(): ReactElement {
   const { t } = useTranslation();
@@ -35,7 +35,7 @@ export default function GetInTouch(): ReactElement {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    const success = await sendDevisEmail({
+    const success = await sendContactEmail({
       company: formData.companyName,
       email: formData.email,
       phone: formData.phone,

@@ -4,7 +4,7 @@ import type { ReactElement } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Select from "react-select";
-import { sendCandidatureEmail } from "../../services/emailjs.service";
+import { sendCandidatureEmail } from "../../services/api.service";
 
 interface CivilityOption {
   value: string;
