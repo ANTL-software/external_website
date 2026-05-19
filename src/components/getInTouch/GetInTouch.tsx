@@ -154,12 +154,12 @@ export default function GetInTouch(): ReactElement {
                 </a>
               </div>
 
-              <div className="contactItem">
+              {/* <div className="contactItem">
                 <h4>{t("getInTouch.contactInfo.phoneLabel")}</h4>
                 <a href={`tel:${t("getInTouch.contactInfo.phone")}`} aria-label={`Appeler le ${t("getInTouch.contactInfo.phone")}`}>
                   {t("getInTouch.contactInfo.phone")}
                 </a>
-              </div>
+              </div> */}
 
               <div className="contactItem">
                 <h4>{t("getInTouch.contactInfo.addressLabel")}</h4>
