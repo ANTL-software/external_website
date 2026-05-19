@@ -26,7 +26,7 @@ export default function Legal(): ReactElement {
             <p>{t("legal.hosting")}</p>
             <h3>{t("legal.contactTitle")}</h3>
             <ul>
-              <li>{t("legal.contactPhone")}</li>
+              {/* <li>{t("legal.contactPhone")}</li> */}
               <li>{t("legal.contactEmail")}</li>
               <li>{t("legal.contactAddress")}</li>
             </ul>
