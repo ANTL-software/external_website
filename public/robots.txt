@@ -1,6 +1,12 @@
-# robots.txt for ANTEL
+# robots.txt for antl
+# https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Allow: /
+Disallow: /admin/
 
-# Sitemaps
-Sitemap: https://your-domain.com/sitemap.xml
+# Sitemap
+Sitemap: https://antl.fr/sitemap.xml
+
+# Crawl-delay (optionnel, pour éviter la surcharge)
+# Crawl-delay: 1
