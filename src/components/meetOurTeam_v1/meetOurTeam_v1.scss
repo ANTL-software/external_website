@@ -32,77 +32,19 @@
 }
 
 #meetOurTeamComponent .teamMemberCard {
-  background: transparent;
+  background: vars.$background-color;
   box-shadow: vars.$shadow-base;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   position: relative;
   z-index: 10;
   border-radius: vars.$border-radius-base;
-  perspective: 1000px;
-  min-height: 400px;
 }
 
 #meetOurTeamComponent .teamMemberCard:hover {
+  transform: translateY(-8px);
   box-shadow: vars.$shadow-lg;
-}
-
-#meetOurTeamComponent .cardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  border-radius: vars.$border-radius-base;
-}
-
-#meetOurTeamComponent .teamMemberCard.flipped .cardInner {
-  transform: rotateY(180deg);
-}
-
-#meetOurTeamComponent .cardFront,
-#meetOurTeamComponent .cardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: vars.$border-radius-base;
-  overflow: hidden;
-}
-
-#meetOurTeamComponent .cardFront {
-  background: vars.$background-color;
-}
-
-#meetOurTeamComponent .cardBack {
-  background: rgba(37, 99, 235, 0.95);
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#meetOurTeamComponent .infoButton {
-  position: absolute;
-  top: vars.$spacing-sm;
-  right: vars.$spacing-sm;
-  background: transparent;
-  border: none;
   cursor: pointer;
-  padding: 0;
-  z-index: 20;
-  transition: transform 0.2s ease;
-}
-
-#meetOurTeamComponent .infoButton:hover {
-  transform: scale(1.1);
-}
-
-#meetOurTeamComponent .infoIcon {
-  width: 32px;
-  height: 32px;
-  color: vars.$primary-color;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 #meetOurTeamComponent .memberImage {
@@ -110,8 +52,44 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
   border-radius: vars.$border-radius-base;
+}
+
+#meetOurTeamComponent .memberOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  padding: vars.$spacing-lg vars.$spacing-base;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: vars.$border-radius-base;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar styling */
+#meetOurTeamComponent .memberOverlay::-webkit-scrollbar {
+  width: 4px;
+}
+
+#meetOurTeamComponent .memberOverlay::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+#meetOurTeamComponent .memberOverlay::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+#meetOurTeamComponent .memberOverlay::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 #meetOurTeamComponent .memberContent {
@@ -121,9 +99,14 @@
   width: 100%;
   height: 100%;
   gap: vars.$spacing-sm;
-  padding: vars.$spacing-lg vars.$spacing-base;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+}
+
+#meetOurTeamComponent .teamMemberCard:hover .memberOverlay {
+  opacity: 1;
+}
+
+#meetOurTeamComponent .teamMemberCard:hover .memberImage {
+  filter: brightness(0.7);
 }
 
 #meetOurTeamComponent .memberRole {
@@ -160,29 +143,6 @@
   flex-grow: 1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-/* Scrollbar styling pour memberBio et memberContent */
-#meetOurTeamComponent .memberContent::-webkit-scrollbar,
-#meetOurTeamComponent .memberBio::-webkit-scrollbar {
-  width: 4px;
-}
-
-#meetOurTeamComponent .memberContent::-webkit-scrollbar-track,
-#meetOurTeamComponent .memberBio::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-}
-
-#meetOurTeamComponent .memberContent::-webkit-scrollbar-thumb,
-#meetOurTeamComponent .memberBio::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-}
-
-#meetOurTeamComponent .memberContent::-webkit-scrollbar-thumb:hover,
-#meetOurTeamComponent .memberBio::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
 }
 
 #meetOurTeamComponent .memberBio::-webkit-scrollbar {
@@ -326,14 +286,13 @@
     grid-row: auto;
   }
 
-  /* Mobile : carte plus haute */
-  #meetOurTeamComponent .teamMemberCard {
-    min-height: 500px;
+  /* Mobile : texte plus gros et remplit la hauteur */
+  #meetOurTeamComponent .memberOverlay {
+    padding: vars.$spacing-lg vars.$spacing-base;
   }
 
   #meetOurTeamComponent .memberContent {
     gap: vars.$spacing-base;
-    padding: vars.$spacing-lg vars.$spacing-base;
   }
 
   #meetOurTeamComponent .memberRole {
@@ -350,9 +309,8 @@
     line-height: 1.6;
   }
 
-  #meetOurTeamComponent .infoIcon {
-    width: 36px;
-    height: 36px;
+  #meetOurTeamComponent .teamMemberCard {
+    min-height: 500px;
   }
 }
 
@@ -371,15 +329,16 @@
     transform: none;
   }
 
-  #meetOurTeamComponent .cardInner {
-    transition: none;
-  }
-
   #meetOurTeamComponent .memberImage {
     transition: none;
   }
 
-  #meetOurTeamComponent .infoButton {
+  #meetOurTeamComponent .teamMemberCard:hover .memberImage {
+    transform: none;
+    filter: none;
+  }
+
+  #meetOurTeamComponent .memberOverlay {
     transition: none;
   }
 
