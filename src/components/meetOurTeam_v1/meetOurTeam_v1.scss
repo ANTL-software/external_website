@@ -44,7 +44,65 @@
 #meetOurTeamComponent .teamMemberCard:hover {
   transform: translateY(-8px);
   box-shadow: vars.$shadow-lg;
+}
+
+#meetOurTeamComponent .infoButton {
+  position: absolute;
+  top: vars.$spacing-sm;
+  right: vars.$spacing-sm;
+  background: vars.$primary-color;
+  border: none;
   cursor: pointer;
+  padding: 0;
+  z-index: 20;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#meetOurTeamComponent .infoButton:hover {
+  transform: scale(1.1);
+}
+
+#meetOurTeamComponent .infoIcon {
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+}
+
+#meetOurTeamComponent .closeButton {
+  position: absolute;
+  top: vars.$spacing-sm;
+  right: vars.$spacing-sm;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: vars.$spacing-xs;
+  z-index: 25;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#meetOurTeamComponent .closeButton:hover {
+  transform: scale(1.1);
+}
+
+#meetOurTeamComponent .closeIcon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Cacher l'icône info quand l'overlay est actif */
+#meetOurTeamComponent .teamMemberCard.overlayActive .infoButton {
+  opacity: 0;
+  pointer-events: none;
 }
 
 #meetOurTeamComponent .memberImage {
@@ -101,11 +159,11 @@
   gap: vars.$spacing-sm;
 }
 
-#meetOurTeamComponent .teamMemberCard:hover .memberOverlay {
+#meetOurTeamComponent .teamMemberCard.overlayActive .memberOverlay {
   opacity: 1;
 }
 
-#meetOurTeamComponent .teamMemberCard:hover .memberImage {
+#meetOurTeamComponent .teamMemberCard.overlayActive .memberImage {
   filter: brightness(0.7);
 }
 
@@ -312,6 +370,16 @@
   #meetOurTeamComponent .teamMemberCard {
     min-height: 500px;
   }
+
+  #meetOurTeamComponent .infoIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  #meetOurTeamComponent .closeIcon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -333,12 +401,19 @@
     transition: none;
   }
 
-  #meetOurTeamComponent .teamMemberCard:hover .memberImage {
-    transform: none;
+  #meetOurTeamComponent .teamMemberCard.overlayActive .memberImage {
     filter: none;
   }
 
   #meetOurTeamComponent .memberOverlay {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .infoButton {
+    transition: none;
+  }
+
+  #meetOurTeamComponent .closeButton {
     transition: none;
   }
 

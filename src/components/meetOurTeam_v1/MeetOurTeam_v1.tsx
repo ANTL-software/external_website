@@ -3,6 +3,8 @@ import "./meetOurTeam_v1.scss";
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { BsInfoCircle } from "react-icons/bs";
+import { BsXLg } from "react-icons/bs";
 
 import ppNA from "../../assets/images/pp/NA_BW.webp";
 import ppSH from "../../assets/images/pp/SH_BW.webp";
@@ -18,6 +20,13 @@ type TeamMember = {
 
 export default function MeetOurTeam(): ReactElement {
   const { t } = useTranslation();
+
+  function toggleCard(event: React.MouseEvent<HTMLButtonElement>) {
+    const card = event.currentTarget.closest(".teamMemberCard");
+    if (card instanceof HTMLElement) {
+      card.classList.toggle("overlayActive");
+    }
+  }
 
   const memberImages = [ppNA, ppND, ppSH, ppLC, ppMS];
   const memberImageAlts = [
@@ -65,7 +74,21 @@ export default function MeetOurTeam(): ReactElement {
                 className="memberImage"
                 loading="lazy"
               />
+              <button
+                className="infoButton"
+                onClick={toggleCard}
+                aria-label="Plus d'informations"
+              >
+                <BsInfoCircle className="infoIcon" />
+              </button>
               <div className="memberOverlay">
+                <button
+                  className="closeButton"
+                  onClick={toggleCard}
+                  aria-label="Fermer"
+                >
+                  <BsXLg className="closeIcon" />
+                </button>
                 <div className="memberContent">
                   <p className="memberRole">{member.role}</p>
                   <h3 className="memberName">{member.name}</h3>
