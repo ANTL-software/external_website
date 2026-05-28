@@ -10,6 +10,12 @@ import ppLC from "../../assets/images/pp/LC_BW.webp";
 import ppMS from "../../assets/images/pp/MS_BW.webp";
 import ppND from "../../assets/images/pp/ND_BW.webp";
 
+type TeamMember = {
+  name: string;
+  role: string;
+  bio: string;
+};
+
 export default function MeetOurTeam(): ReactElement {
   const { t } = useTranslation();
 
@@ -40,7 +46,7 @@ export default function MeetOurTeam(): ReactElement {
       </header>
 
       <div className="teamGrid">
-        {t("meetOurTeam.members", { returnObjects: true }).map(function (member: { name: string; role: string; bio: string }, index: number) {
+        {(t("meetOurTeam.members", { returnObjects: true }) as TeamMember[]).map(function (member: TeamMember, index: number) {
           const delay = 900 + index * 100;
           const memberClass = `member-${index}`;
 
