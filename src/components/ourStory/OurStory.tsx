@@ -32,9 +32,6 @@ export default function OurStory(): ReactElement {
   return (
     <section id="ourStoryComponent" className="ourStory container">
       <header className="ourStoryHeader">
-        <h2 className="ourStoryTitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="200">
-          {t("ourStory.title")}
-        </h2>
         <p className="ourStorySubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-back" data-aos-delay="400">
           {t("ourStory.subtitle")}
         </p>
