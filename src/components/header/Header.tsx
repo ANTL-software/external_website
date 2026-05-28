@@ -193,6 +193,9 @@ export default function Header(): ReactElement {
           <NavLink to="/about_us" className="tabLink">
             <span className="tabLabel">{t("header.about")}</span>
           </NavLink>
+          <NavLink to="/team" className="tabLink">
+            <span className="tabLabel">{t("header.team")}</span>
+          </NavLink>
           <NavLink to="/join_us" className="tabLink">
             <span className="tabLabel">{t("header.join")}</span>
           </NavLink>
