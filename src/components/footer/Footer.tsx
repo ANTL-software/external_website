@@ -3,8 +3,12 @@ import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import antlLogo from "../../assets/brand/antlLogo.png";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
+// import { FaXTwitter } from "react-icons/fa6";
 
 import LanguageSelector from "../languageSelector/LanguageSelector";
 
@@ -15,7 +19,10 @@ export default function Footer(): ReactElement {
     <footer id="footerComponent" role="contentinfo">
       <div className="container">
         <div className="footerContent">
-          <section className="footerSection companySection" aria-labelledby="company-heading">
+          <section
+            className="footerSection companySection"
+            aria-labelledby="company-heading"
+          >
             <header className="companyLogo">
               <figure className="logoIcon" role="img" aria-label="antl logo">
                 <img src={antlLogo} alt="antl logo" />
@@ -23,34 +30,74 @@ export default function Footer(): ReactElement {
             </header>
             <p>{t("footer.description")}</p>
             <nav className="socialIcons" aria-label="Social media links">
-              <a href="#" aria-label="Follow us on Facebook" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/share/1CopGyD6m9/?mibextid=wwXIfr"
+                target="_blank"
+                aria-label="Follow us on Facebook"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF aria-hidden="true" />
               </a>
-              <a href="#" aria-label="Follow us on X" rel="noopener noreferrer">
+              {/* <a href="#" aria-label="Follow us on X" rel="noopener noreferrer">
                 <FaXTwitter aria-hidden="true" />
-              </a>
-              <a href="#" aria-label="Follow us on Instagram" rel="noopener noreferrer">
+              </a> */}
+              <a
+                href="https://www.instagram.com/antl.officiel/"
+                target="_blank"
+                aria-label="Follow us on Instagram"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram aria-hidden="true" />
               </a>
-              <a href="#" aria-label="Follow us on TikTok" rel="noopener noreferrer">
+              {/* <a
+                href="#"
+                aria-label="Follow us on TikTok"
+                rel="noopener noreferrer"
+              >
                 <FaTiktok aria-hidden="true" />
-              </a>
-              <a href="#" aria-label="Connect with us on LinkedIn" rel="noopener noreferrer">
+              </a> */}
+              <a
+                href="https://www.linkedin.com/company/antlofficiel/"
+                target="_blank"
+                aria-label="Connect with us on LinkedIn"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedinIn aria-hidden="true" />
               </a>
             </nav>
           </section>
 
-          <section className="footerSection" aria-labelledby="navigation-heading">
+          <section
+            className="footerSection"
+            aria-labelledby="navigation-heading"
+          >
             <h4 id="navigation-heading">{t("footer.navigation")}</h4>
             <nav aria-label="Footer navigation">
               <ul>
-                <li><Link to="/#ourExpertiseComponent">{t("footer.expertises")}</Link></li>
-                <li><Link to="/about_us">{t("footer.about")}</Link></li>
-                <li><Link to="/about_us#meetOurTeamComponent">{t("footer.team")}</Link></li>
-                <li><Link to="/about_us#getInTouchComponent">{t("footer.contact")}</Link></li>
-                <li><Link to="/join_us">{t("footer.join")}</Link></li>
-                <li><Link to="/legal">{t("footer.legal")}</Link></li>
+                <li>
+                  <Link to="/#ourExpertiseComponent">
+                    {t("footer.expertises")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about_us">{t("footer.about")}</Link>
+                </li>
+                <li>
+                  <Link to="/about_us#meetOurTeamComponent">
+                    {t("footer.team")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/about_us#getInTouchComponent">
+                    {t("footer.contact")}
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/join_us">{t("footer.join")}</Link>
+                </li>
+                <li>
+                  <Link to="/legal">{t("footer.legal")}</Link>
+                </li>
               </ul>
             </nav>
           </section>
@@ -59,13 +106,27 @@ export default function Footer(): ReactElement {
             <h4 id="services-heading">{t("footer.services")}</h4>
             <nav aria-label="Services navigation">
               <ul>
-                <li><Link to="/#conquete">{t("footer.conquest")}</Link></li>
-                <li><Link to="/#fidelisation">{t("footer.loyalty")}</Link></li>
-                <li><Link to="/#retention">{t("footer.retention")}</Link></li>
-                <li><Link to="/#conception">{t("footer.conception")}</Link></li>
-                <li><Link to="/#branding">{t("footer.onlineVisibility")}</Link></li>
-                <li><Link to="/#conseil">{t("footer.branding")}</Link></li>
-                <li className="languageSelectorContainer"><LanguageSelector /></li>
+                <li>
+                  <Link to="/#conquete">{t("footer.conquest")}</Link>
+                </li>
+                <li>
+                  <Link to="/#fidelisation">{t("footer.loyalty")}</Link>
+                </li>
+                <li>
+                  <Link to="/#retention">{t("footer.retention")}</Link>
+                </li>
+                <li>
+                  <Link to="/#conception">{t("footer.conception")}</Link>
+                </li>
+                <li>
+                  <Link to="/#branding">{t("footer.onlineVisibility")}</Link>
+                </li>
+                <li>
+                  <Link to="/#conseil">{t("footer.branding")}</Link>
+                </li>
+                <li className="languageSelectorContainer">
+                  <LanguageSelector />
+                </li>
               </ul>
             </nav>
           </section>
@@ -73,7 +134,9 @@ export default function Footer(): ReactElement {
 
         <div className="footerBottom">
           <div className="footerBottomLeft">
-            <p><small>{t("footer.copyright")}</small></p>
+            <p>
+              <small>{t("footer.copyright")}</small>
+            </p>
           </div>
         </div>
       </div>

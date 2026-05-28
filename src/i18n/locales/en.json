@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "about": "About",
+    "team": "Who we are",
     "contact": "Contact",
     "join": "Join Us",
     "consultation": "Contact Us"
@@ -41,27 +42,33 @@
     "subtitle": "Customized solutions to meet your specific needs",
     "conquest": {
       "title": "Acquisition",
-      "description": "Prospecting, appointment setting, and lead generation."
+      "description": "Prospecting, appointment setting, and lead generation.",
+      "linkText": "Let's talk!"
     },
     "loyalty": {
       "title": "Loyalty",
-      "description": "Personalized customer follow-up, proximity through human contact, quality of discourse."
+      "description": "Personalized customer follow-up, proximity through human contact, quality of discourse.",
+      "linkText": "Let's connect!"
     },
     "retention": {
       "title": "Retention",
-      "description": "Customer recovery and retention, conflict management."
+      "description": "Customer recovery and retention, conflict management.",
+      "linkText": "Let's consolidate!"
     },
     "conception": {
       "title": "Design",
-      "description": "Generation of administrative tools, CRM, AI integration."
+      "description": "Generation of administrative tools, CRM, AI integration.",
+      "linkText": "Let's go!"
     },
     "onlineVisibility": {
       "title": "Online visibility",
-      "description": "Creation, improvement and animation of websites and social networks."
+      "description": "Creation, improvement and animation of websites and social networks.",
+      "linkText": "Let's discuss!"
     },
     "branding": {
       "title": "Branding",
-      "description": "Communication, marketing repositioning, brand image optimization."
+      "description": "Communication, marketing repositioning, brand image optimization.",
+      "linkText": "Contact us!"
     },
     "contactLink": "Let's talk!"
   },
@@ -306,13 +313,21 @@
         "imageAlt": "Global reach services",
         "title": "Global reach",
         "description": "Serving customers worldwide, from startups to Fortune 500 companies across all time zones and markets.",
-        "features": ["24/7 global support", "Multi-timezone coverage", "International standards"]
+        "features": [
+          "24/7 global support",
+          "Multi-timezone coverage",
+          "International standards"
+        ]
       },
       {
         "imageAlt": "Scalable solutions architecture",
         "title": "Scalable solutions",
         "description": "Flexible services tailored to businesses of all sizes with proven scalability frameworks.",
-        "features": ["Enterprise ready", "Flexible architecture", "Growth-oriented"]
+        "features": [
+          "Enterprise ready",
+          "Flexible architecture",
+          "Growth-oriented"
+        ]
       },
       {
         "imageAlt": "Expert team and quality assurance",
@@ -360,7 +375,7 @@
   },
   "legal": {
     "title": "Legal Notice",
-    "companyInfo": "antl is a simplified joint-stock company with a capital of €20,000.00, registered with the Paris Trade and Companies Register under n° 104 768 056, with its registered office at 48b avenue Charles de Gaulle, 17300 Rochefort, France. VAT number: FR27104768056. antl is represented by Ms. Nelly Ahobaut, its President.",
+    "companyInfo": "antl is a simplified joint-stock company with a capital of €20,000.00, registered with the La Rochelle Trade and Companies Register under n° 104 768 056 00012, with its registered office at 48b avenue Charles de Gaulle, 17300 Rochefort, France. VAT number: FR27104768056. antl is represented by Ms. Nelly Ahobaut, its President.",
     "activity": "antl is a private establishment specializing in customer relations.",
     "director": "The Director of Publication for the platform and the Director of the Private Establishment is Ms. Nelly Ahobaut.",
     "hosting": "The site is hosted by Vercel.inc: 440 N Barranca Avenue #4133, Covina, CA 91723 United States",

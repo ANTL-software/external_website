@@ -52,7 +52,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: vars.$spacing-base;
+  gap: vars.$spacing-sm;
 }
 
 #header.header .navItem {
@@ -62,7 +62,7 @@
 #header.header .navItem:not(:last-child)::after {
   content: "•";
   position: absolute;
-  right: calc(-1 * vars.$spacing-sm - 2px);
+  right: calc(-1 * vars.$spacing-xs - 2px);
   top: 50%;
   transform: translateY(-50%);
   color: vars.$text-color;
@@ -100,7 +100,7 @@
 }
 
 #header.header .navLinkText {
-  font-size: clamp(0.9rem, 1.5vw + 0.2rem, 1.1rem);
+  font-size: clamp(0.8rem, 1.3vw + 0.15rem, 1rem);
   font-weight: vars.$font-weight-medium;
 }
 
@@ -229,7 +229,7 @@
 }
 
 /* Mobile breakpoint */
-@media (max-width: 1220px) {
+@media (max-width: 1280px) {
   .desktopNav {
     display: none;
   }

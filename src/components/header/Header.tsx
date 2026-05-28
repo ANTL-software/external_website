@@ -19,16 +19,16 @@ export default function Header(): ReactElement {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  useEffect(function() {
+  useEffect(function () {
     // Offset adaptatif selon la taille d'écran
     const isMobile = window.innerWidth <= 1220;
     const offset = isMobile ? 50 : 100;
 
     AOS.init({
       duration: 800,
-      easing: 'ease-out-back',
+      easing: "ease-out-back",
       offset: offset,
-      once: true
+      once: true,
     });
 
     // Réinitialiser AOS lors du redimensionnement
@@ -38,35 +38,35 @@ export default function Header(): ReactElement {
 
       AOS.init({
         duration: 800,
-        easing: 'ease-out-back',
+        easing: "ease-out-back",
         offset: newOffset,
-        once: true
+        once: true,
       });
     }
 
-    window.addEventListener('resize', handleResize);
-    return function() {
-      window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return function () {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  useEffect(function() {
+  useEffect(function () {
     let ticking = false;
 
     function handleScroll() {
       if (!ticking) {
-        requestAnimationFrame(function() {
+        requestAnimationFrame(function () {
           if (headerRef.current) {
             if (window.scrollY > 20) {
-              headerRef.current.classList.add('scrolled');
+              headerRef.current.classList.add("scrolled");
             } else {
               // Retour instantané en haut
-              headerRef.current.style.transition = 'none';
-              headerRef.current.classList.remove('scrolled');
+              headerRef.current.style.transition = "none";
+              headerRef.current.classList.remove("scrolled");
               // Remettre les transitions après un court délai
-              setTimeout(function() {
+              setTimeout(function () {
                 if (headerRef.current) {
-                  headerRef.current.style.transition = '';
+                  headerRef.current.style.transition = "";
                 }
               }, 50);
             }
@@ -77,51 +77,54 @@ export default function Header(): ReactElement {
       }
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return function() {
-      window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return function () {
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   // Auto-scroll to active tab on mount
-  useEffect(function() {
+  useEffect(function () {
     if (tabsContainerRef.current) {
-      const activeTabElement = tabsContainerRef.current.querySelector('.tabLink.active');
+      const activeTabElement =
+        tabsContainerRef.current.querySelector(".tabLink.active");
       if (activeTabElement) {
         activeTabElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
         });
       }
     }
   }, []);
 
   // Check if we can scroll left or right
-  useEffect(function() {
+  useEffect(function () {
     function checkScroll() {
       if (tabsContainerRef.current) {
         const el = tabsContainerRef.current;
         const tolerance = 2;
         setCanScrollLeft(el.scrollLeft > tolerance);
-        setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - tolerance);
+        setCanScrollRight(
+          el.scrollLeft < el.scrollWidth - el.clientWidth - tolerance,
+        );
       }
     }
 
     const container = tabsContainerRef.current;
     if (container) {
-      container.addEventListener('scroll', checkScroll);
-      window.addEventListener('resize', checkScroll);
+      container.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
       // Initial check with delay to ensure DOM is ready
       setTimeout(checkScroll, 100);
       setTimeout(checkScroll, 300);
     }
 
-    return function() {
+    return function () {
       if (container) {
-        container.removeEventListener('scroll', checkScroll);
+        container.removeEventListener("scroll", checkScroll);
       }
-      window.removeEventListener('resize', checkScroll);
+      window.removeEventListener("resize", checkScroll);
     };
   }, []);
 
@@ -142,17 +145,38 @@ export default function Header(): ReactElement {
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/about_us"} className="navLink" aria-label={t("header.about")}>
+            <NavLink
+              to={"/about_us"}
+              className="navLink"
+              aria-label={t("header.about")}
+            >
               <span className="navLinkText">{t("header.about")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/join_us"} className="navLink" aria-label={t("header.join")}>
+            <NavLink
+              to={"/team"}
+              className="navLink"
+              aria-label={t("header.team")}
+            >
+              <span className="navLinkText">{t("header.team")}</span>
+            </NavLink>
+          </li>
+          <li className="navItem">
+            <NavLink
+              to={"/join_us"}
+              className="navLink"
+              aria-label={t("header.join")}
+            >
               <span className="navLinkText">{t("header.join")}</span>
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to={"/contact_us"} className="navLink" aria-label={t("header.contact")}>
+            <NavLink
+              to={"/contact_us"}
+              className="navLink"
+              aria-label={t("header.contact")}
+            >
               <span className="navLinkText">{t("header.contact")}</span>
             </NavLink>
           </li>
@@ -163,28 +187,16 @@ export default function Header(): ReactElement {
       <nav className="mobileTabsContainer">
         {canScrollLeft && <span className="ellipsis ellipsisLeft">...</span>}
         <div className="tabsWrapper" ref={tabsContainerRef}>
-          <NavLink
-            to="/"
-            className="tabLink"
-          >
+          <NavLink to="/" className="tabLink">
             <span className="tabLabel">{t("header.home")}</span>
           </NavLink>
-          <NavLink
-            to="/about_us"
-            className="tabLink"
-          >
+          <NavLink to="/about_us" className="tabLink">
             <span className="tabLabel">{t("header.about")}</span>
           </NavLink>
-          <NavLink
-            to="/join_us"
-            className="tabLink"
-          >
+          <NavLink to="/join_us" className="tabLink">
             <span className="tabLabel">{t("header.join")}</span>
           </NavLink>
-          <NavLink
-            to="/contact_us"
-            className="tabLink"
-          >
+          <NavLink to="/contact_us" className="tabLink">
             <span className="tabLabel">{t("header.contact")}</span>
           </NavLink>
         </div>

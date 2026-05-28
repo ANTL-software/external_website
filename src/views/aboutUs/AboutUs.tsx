@@ -9,9 +9,6 @@ import BackgroundCircle from "../../components/backgroundCircle/BackgroundCircle
 import BackgroundGrid from "../../components/backgroundGrid/BackgroundGrid";
 import OurStory from "../../components/ourStory/OurStory";
 import WhatWeStandFor from "../../components/whatWeStandFor/WhatWeStandFor";
-import MeetOurTeam from "../../components/meetOurTeam/MeetOurTeam";
-import Quote from "../../components/quote/Quote";
-import JoinUs from "../../components/joinUs/JoinUs";
 import GetInTouch from "../../components/getInTouch/GetInTouch";
 import Footer from "../../components/footer/Footer";
 import BackToTop from "../../components/backToTop/BackToTop";
@@ -45,9 +42,6 @@ export default function AboutUs(): ReactElement {
       <main className="container">
         <OurStory />
         <WhatWeStandFor />
-        <MeetOurTeam />
-        <Quote />
-        <JoinUs />
         <GetInTouch />
       </main>
       <Footer />

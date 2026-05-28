@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./views/home/Home";
 import AboutUs from "./views/aboutUs/AboutUs";
+import Team from "./views/team/Team";
 import ContactUs from "./views/contactUs/ContactUs";
 import JoinUs from "./views/joinUs/JoinUs";
 import Legal from "./views/legal/Legal";
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<AboutUs />} />
+        <Route path="/team" element={<Team />} />
         <Route path="/contact_us" element={<ContactUs />} />
         <Route path="/join_us" element={<JoinUs />} />
         <Route path="/legal" element={<Legal />} />

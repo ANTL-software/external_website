@@ -22,6 +22,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.conquest.title"),
       description: t("ourExpertise.conquest.description"),
       cardId: "conquete",
+      linkTextKey: "ourExpertise.conquest.linkText",
     },
     {
       image: fidelisation,
@@ -29,6 +30,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.loyalty.title"),
       description: t("ourExpertise.loyalty.description"),
       cardId: "fidelisation",
+      linkTextKey: "ourExpertise.loyalty.linkText",
     },
     {
       image: retention,
@@ -36,6 +38,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.retention.title"),
       description: t("ourExpertise.retention.description"),
       cardId: "retention",
+      linkTextKey: "ourExpertise.retention.linkText",
     },
     {
       image: conception,
@@ -43,6 +46,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.conception.title"),
       description: t("ourExpertise.conception.description"),
       cardId: "conception",
+      linkTextKey: "ourExpertise.conception.linkText",
     },
     {
       image: onlineVisibility,
@@ -50,6 +54,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.onlineVisibility.title"),
       description: t("ourExpertise.onlineVisibility.description"),
       cardId: "branding",
+      linkTextKey: "ourExpertise.onlineVisibility.linkText",
     },
     {
       image: branding,
@@ -57,6 +62,7 @@ export default function OurExpertise(): ReactElement {
       subtitle: t("ourExpertise.branding.title"),
       description: t("ourExpertise.branding.description"),
       cardId: "conseil",
+      linkTextKey: "ourExpertise.branding.linkText",
     },
   ];
 
@@ -92,7 +98,7 @@ export default function OurExpertise(): ReactElement {
                 subtitle={expertise.subtitle}
                 description={expertise.description}
                 linkTo="/contact_us"
-                linkText={t("ourExpertise.contactLink")}
+                linkText={t(expertise.linkTextKey)}
                 ariaLabel={`En savoir plus sur ${expertise.subtitle}`}
                 imageClassName={`expertiseImage ${index === 0 ? "expertiseImageConquete" : ""} ${index === 1 ? "expertiseImageFidelisation" : ""} ${index === 2 ? "expertiseImageRetention" : ""} ${index === 3 ? "expertiseImageConception" : ""} ${index === 4 ? "expertiseImageOnlineVisibility" : ""} ${index === 5 ? "expertiseImageBranding" : ""}`}
               />

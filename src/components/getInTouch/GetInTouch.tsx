@@ -3,8 +3,8 @@ import "./getInTouch.scss";
 import type { ReactElement } from "react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+// import { FaXTwitter } from "react-icons/fa6";
 import { sendContactEmail } from "../../services/api.service";
 
 export default function GetInTouch(): ReactElement {
@@ -69,7 +69,12 @@ export default function GetInTouch(): ReactElement {
   }
 
   return (
-    <section id="getInTouchComponent" data-aos="fade-up" data-aos-duration="800" aria-labelledby="contact-heading">
+    <section
+      id="getInTouchComponent"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      aria-labelledby="contact-heading"
+    >
       <header className="getInTouchHeader">
         <h2 id="contact-heading">{t("getInTouch.title")}</h2>
         <p>{t("getInTouch.subtitle")}</p>
@@ -129,14 +134,18 @@ export default function GetInTouch(): ReactElement {
           </div>
 
           <div className="formActions">
-            <button type="submit" className="submitButton" disabled={!isFormValid() || isSubmitting}>
+            <button
+              type="submit"
+              className="submitButton"
+              disabled={!isFormValid() || isSubmitting}
+            >
               <span>{t("getInTouch.form.submit")}</span>
               <span className="buttonArrow">→</span>
             </button>
-            {submitStatus === 'success' && (
+            {submitStatus === "success" && (
               <p className="successMessage">{t("getInTouch.form.success")}</p>
             )}
-            {submitStatus === 'error' && (
+            {submitStatus === "error" && (
               <p className="errorMessage">{t("getInTouch.form.error")}</p>
             )}
           </div>
@@ -149,23 +158,27 @@ export default function GetInTouch(): ReactElement {
             <div className="contactInfo">
               <div className="contactItem">
                 <h4>{t("getInTouch.contactInfo.emailLabel")}</h4>
-                <a href={`mailto:${t("getInTouch.contactInfo.email")}`} aria-label={`Envoyer un email à ${t("getInTouch.contactInfo.email")}`}>
+                <a
+                  href={`mailto:${t("getInTouch.contactInfo.email")}`}
+                  aria-label={`Envoyer un email à ${t("getInTouch.contactInfo.email")}`}
+                >
                   {t("getInTouch.contactInfo.email")}
                 </a>
               </div>
 
               <div className="contactItem">
                 <h4>{t("getInTouch.contactInfo.phoneLabel")}</h4>
-                <a href={`tel:${t("getInTouch.contactInfo.phone")}`} aria-label={`Appeler le ${t("getInTouch.contactInfo.phone")}`}>
+                <a
+                  href={`tel:${t("getInTouch.contactInfo.phone")}`}
+                  aria-label={`Appeler le ${t("getInTouch.contactInfo.phone")}`}
+                >
                   {t("getInTouch.contactInfo.phone")}
                 </a>
-              </div> 
+              </div>
 
               <div className="contactItem">
                 <h4>{t("getInTouch.contactInfo.addressLabel")}</h4>
-                <address>
-                  {t("getInTouch.contactInfo.address")}
-                </address>
+                <address>{t("getInTouch.contactInfo.address")}</address>
                 <div className="mapLinks">
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=48b+avenue+Charles+De+Gaulle+17300+ROCHEFORT"
@@ -195,19 +208,42 @@ export default function GetInTouch(): ReactElement {
                   </a>
                 </div>
                 <div className="socialIcons">
-                  <a href="#" aria-label="Suivez-nous sur Facebook" rel="noopener noreferrer">
+                  <a
+                    href="https://www.facebook.com/share/1CopGyD6m9/?mibextid=wwXIfr"
+                    target="_blank"
+                    aria-label="Suivez-nous sur Facebook"
+                    rel="noopener noreferrer"
+                  >
                     <FaFacebookF aria-hidden="true" />
                   </a>
-                  <a href="#" aria-label="Suivez-nous sur X" rel="noopener noreferrer">
+                  {/* <a
+                    href="#"
+                    aria-label="Suivez-nous sur X"
+                    rel="noopener noreferrer"
+                  >
                     <FaXTwitter aria-hidden="true" />
-                  </a>
-                  <a href="#" aria-label="Suivez-nous sur Instagram" rel="noopener noreferrer">
+                  </a> */}
+                  <a
+                    href="https://www.instagram.com/antl.officiel/"
+                    target="_blank"
+                    aria-label="Suivez-nous sur Instagram"
+                    rel="noopener noreferrer"
+                  >
                     <FaInstagram aria-hidden="true" />
                   </a>
-                  <a href="#" aria-label="Suivez-nous sur TikTok" rel="noopener noreferrer">
+                  {/* <a
+                    href="#"
+                    aria-label="Suivez-nous sur TikTok"
+                    rel="noopener noreferrer"
+                  >
                     <FaTiktok aria-hidden="true" />
-                  </a>
-                  <a href="#" aria-label="Connectez-vous sur LinkedIn" rel="noopener noreferrer">
+                  </a> */}
+                  <a
+                    href="https://www.linkedin.com/company/antlofficiel/"
+                    target="_blank"
+                    aria-label="Connectez-vous sur LinkedIn"
+                    rel="noopener noreferrer"
+                  >
                     <FaLinkedinIn aria-hidden="true" />
                   </a>
                 </div>
