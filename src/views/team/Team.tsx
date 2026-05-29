@@ -8,7 +8,6 @@ import BackgroundCircle from "../../components/backgroundCircle/BackgroundCircle
 import BackgroundGrid from "../../components/backgroundGrid/BackgroundGrid";
 import MeetOurTeam_v1 from "../../components/meetOurTeam_v1/MeetOurTeam_v1";
 import Quote from "../../components/quote/Quote";
-import JobApplication from "../../components/jobApplication/JobApplication";
 import Footer from "../../components/footer/Footer";
 import BackToTop from "../../components/backToTop/BackToTop";
 
