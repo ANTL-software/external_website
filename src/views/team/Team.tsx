@@ -43,7 +43,6 @@ export default function Team(): ReactElement {
       <main className="container">        
         <MeetOurTeam_v1 />
         <Quote />
-        <JobApplication />
       </main>
       <Footer />
       <BackToTop />
