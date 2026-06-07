@@ -5,11 +5,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-# Bloquer les sous-domaines non publics
-User-agent: *
-Disallow: https://usv.antl.fr/
-Disallow: https://script.antl.fr/
-Disallow: https://api.antl.fr/
 
 # Sitemap
 Sitemap: https://antl.fr/sitemap.xml

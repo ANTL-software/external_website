@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./views/home/Home";
 import AboutUs from "./views/aboutUs/AboutUs";
@@ -12,7 +12,7 @@ import MetaTags from "./components/metaTags/MetaTags";
 
 function App() {
   return (
-    <Router>
+    <>
       <MetaTags />
       <ScrollToTop />
       <Routes>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/services" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Router>
+    </>
   );
 }
 

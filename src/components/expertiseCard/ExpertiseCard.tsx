@@ -10,6 +10,7 @@ interface ExpertiseCardProps {
   imageAlt: string;
   subtitle: string;
   description: string;
+  cardId: string;
   linkTo?: string;
   linkText?: string;
   ariaLabel?: string;
@@ -21,24 +22,27 @@ export default function ExpertiseCard({
   imageAlt,
   subtitle,
   description,
+  cardId,
   linkTo,
   linkText,
   ariaLabel,
   imageClassName,
 }: ExpertiseCardProps): ReactElement {
+  const titleId = `expertise-subtitle-${cardId}`;
+
   return (
     <article
-      id="expertiseCardComponent"
+      id={`expertiseCard-${cardId}`}
       className="expertiseCard"
       role="region"
-      aria-labelledby="expertise-subtitle"
+      aria-labelledby={titleId}
     >
       <figure className="cardImageContainer" aria-hidden="true">
         <img src={image} alt={imageAlt} className={`cardImage ${imageClassName || ""}`} loading="lazy" />
       </figure>
 
       <header className="cardHeader">
-        <h3 id="expertise-subtitle" className="cardSubtitle">
+        <h3 id={titleId} className="cardSubtitle">
           {subtitle}
         </h3>
       </header>

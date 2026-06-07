@@ -62,7 +62,7 @@ export default function WhatWeStandFor(): ReactElement {
               <div className="valueImageContainer">
                 <img
                   src={images[index]}
-                  alt={`Value ${index + 1}`}
+                  alt={value.title}
                   className={`valueImage ${index === 0 ? "valueImageProspection" : ""} ${index === 1 ? "valueImageAntl" : ""} ${index === 2 ? "valueImagePersonnalisation" : ""} ${index === 3 ? "valueImageAdaptation" : ""}`}
                   loading="lazy"
                 />

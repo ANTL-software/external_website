@@ -97,6 +97,7 @@ export default function OurExpertise(): ReactElement {
                 imageAlt={expertise.imageAlt}
                 subtitle={expertise.subtitle}
                 description={expertise.description}
+                cardId={expertise.cardId}
                 linkTo="/contact_us"
                 linkText={t(expertise.linkTextKey)}
                 ariaLabel={`En savoir plus sur ${expertise.subtitle}`}
