@@ -52,23 +52,45 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "antl",
-      "url": "https://antl.fr",
-      "logo": "https://antl.fr/logo.png",
-      "description": "Expert de l'expérience client. Solutions digitales et conseil pour développer votre performance commerciale.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "FR"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "contact@antl.fr"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/antl",
-        "https://twitter.com/antl"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://antl.fr/#organization",
+          "name": "ANTL",
+          "url": "https://antl.fr/",
+          "logo": "https://antl.fr/logo.png",
+          "image": "https://antl.fr/logo.png",
+          "description": "Expert de l'expérience client. Solutions digitales et conseil pour développer votre performance commerciale.",
+          "email": "contact@antl.fr",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "48b avenue Charles De Gaulle",
+            "postalCode": "17300",
+            "addressLocality": "Rochefort",
+            "addressCountry": "FR"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@antl.fr"
+          },
+          "sameAs": [
+            "https://www.facebook.com/share/1CopGyD6m9/?mibextid=wwXIfr",
+            "https://www.instagram.com/antl.officiel/",
+            "https://www.linkedin.com/company/antlofficiel/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://antl.fr/#website",
+          "url": "https://antl.fr/",
+          "name": "ANTL",
+          "description": "Expert de l'expérience client. Solutions digitales et conseil pour développer votre performance commerciale.",
+          "inLanguage": "fr-FR",
+          "publisher": {
+            "@id": "https://antl.fr/#organization"
+          }
+        }
       ]
     }
     </script>
