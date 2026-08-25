@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import Home from "./views/home/Home";
 import AboutUs from "./views/aboutUs/AboutUs";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/services" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Analytics />
     </>
   );
 }
