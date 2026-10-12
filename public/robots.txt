@@ -8,6 +8,7 @@ Disallow: /admin/
 
 # Sitemap
 Sitemap: https://antl.fr/sitemap.xml
+Sitemap: https://showcase.antl.fr/sitemap.xml
 
 # Crawl-delay (optionnel, pour éviter la surcharge)
 # Crawl-delay: 1
