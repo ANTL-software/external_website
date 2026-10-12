@@ -81,3 +81,13 @@ Projet développé pour antl - Experts de l'expérience client.
 
 **Version** : 1.0
 **Dernière mise à jour** : 2026-04-28
+
+## Confidentialité et mesure d’audience
+
+La fenêtre de consentement s’inspire du site personnel `ndecressac.fr`, avec l’identité antl. Accepter et refuser sont proposés au même niveau ; personnalisation sans option précochée. Le bouton « Gérer mes cookies » permet de rouvrir les choix. Le panneau est non bloquant : le fermer ne donne aucun consentement.
+
+Le choix versionné est conservé en local pendant six mois, séparément sur chaque origine. Le stockage indisponible ne bloque pas le site. Google Analytics (`G-47QNW9WCG8`, propriété existante d’antl.fr) et Vercel Web Analytics restent désactivés tant que la mesure d’audience n’est pas acceptée. Les visites des deux sites se distinguent par leur hostname dans Google Analytics. Le retrait arrête Google Analytics, efface ses cookies accessibles et recharge la page pour enlever tous les écouteurs tiers. Les autres onglets du même site suivent le changement de choix.
+
+Les cookies Google sont limités à 180 jours et au hostname du site ; les paramètres d’URL sont retirés des adresses de pages envoyées. Les signaux publicitaires Google sont désactivés. Vercel Web Analytics doit être activé dans le dashboard du projet (Hobby inclus pour le showcase). Les bloqueurs peuvent empêcher la collecte, même après acceptation.
+
+Les informations et liens des fournisseurs figurent sur `https://antl.fr/legal#confidentialite`. Tests : `npm test` ; build : `npm run build`.

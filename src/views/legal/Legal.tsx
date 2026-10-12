@@ -1,5 +1,6 @@
 import "./legal.scss";
 
+import { useCookieConsent } from "../../hooks";
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -10,6 +11,7 @@ import Footer from "../../components/footer/Footer";
 
 export default function Legal(): ReactElement {
   const { t } = useTranslation();
+  const { openPreferences } = useCookieConsent();
 
   return (
     <div id="legal">
@@ -31,6 +33,14 @@ export default function Legal(): ReactElement {
               <li>{t("legal.contactAddress")}</li>
             </ul>
             <p>{t("legal.rights")}</p>
+          </div>
+        </section>
+        <section id="confidentialite" className="legalSection" aria-labelledby="privacy-heading">
+          <div className="legalContent">
+            <h2 id="privacy-heading">{t("privacy.title")}</h2>
+            {[0, 1, 2, 3].map(index => <p key={index}>{t(`privacy.paragraphs.${index}`)}</p>)}
+            <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">{t("privacy.google")}</a> · <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">{t("privacy.vercel")}</a></p>
+            <button type="button" className="cookie-settings-button" onClick={openPreferences}>{t("cookieConsent.settings")}</button>
           </div>
         </section>
       </main>

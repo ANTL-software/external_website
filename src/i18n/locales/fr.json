@@ -2,7 +2,7 @@
   "header": {
     "home": "Accueil",
     "about": "À propos",
-    "team":"Qui sommes-nous",
+    "team": "Qui sommes-nous",
     "contact": "Nous contacter",
     "join": "Nous rejoindre",
     "consultation": "Contactez-nous"
@@ -314,19 +314,31 @@
         "imageAlt": "Services de portée mondiale",
         "title": "Portée mondiale",
         "description": "Servir des clients dans le monde entier, des startups aux entreprises Fortune 500 sur tous les fuseaux horaires et marchés.",
-        "features": ["Support mondial 24/7", "Couverture multi-fuseaux horaires", "Standards internationaux"]
+        "features": [
+          "Support mondial 24/7",
+          "Couverture multi-fuseaux horaires",
+          "Standards internationaux"
+        ]
       },
       {
         "imageAlt": "Architecture de solutions évolutives",
         "title": "Solutions évolutives",
         "description": "Services flexibles adaptés aux entreprises de toutes tailles avec des cadres d'évolutivité prouvés.",
-        "features": ["Prêt pour l'entreprise", "Architecture flexible", "Orienté croissance"]
+        "features": [
+          "Prêt pour l'entreprise",
+          "Architecture flexible",
+          "Orienté croissance"
+        ]
       },
       {
         "imageAlt": "Équipe d'experts et assurance qualité",
         "title": "Expertise en laquelle vous pouvez avoir confiance",
         "description": "Décennies d'expérience dans la livraison de solutions de qualité avec une communication transparente.",
-        "features": ["Parcours prouvé", "Équipe d'experts", "Assurance qualité"]
+        "features": [
+          "Parcours prouvé",
+          "Équipe d'experts",
+          "Assurance qualité"
+        ]
       }
     ]
   },
@@ -377,5 +389,33 @@
     "contactEmail": "Par email : contact@antl.fr",
     "contactAddress": "Par courrier : 48b avenue Charles de Gaulle, 17300 Rochefort, France",
     "rights": "Vous bénéficiez d'un droit d'accès et de rectification aux informations qui vous concernent, que vous pouvez exercer par email à l'adresse info@antl.fr ou par courrier à l'adresse suivante : antl, 48b avenue Charles de Gaulle, 17300 Rochefort, France. Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant."
+  },
+  "cookieConsent": {
+    "title": "Votre vie privée compte.",
+    "description": "antl utilise Google Analytics et Vercel Analytics pour mesurer la fréquentation et améliorer ses sites. Ces outils ne sont activés qu’avec votre accord. Vous pouvez le retirer à tout moment depuis « Gérer mes cookies ».",
+    "accept": "Tout accepter",
+    "reject": "Tout refuser",
+    "customize": "Personnaliser",
+    "back": "Retour",
+    "requiredLabel": "Fonctionnement essentiel",
+    "requiredDescription": "Mémorise votre choix de cookies pendant six mois. Le site reste accessible si vous refusez la mesure d’audience.",
+    "requiredStatus": "Toujours actif",
+    "analyticsLabel": "Mesure d’audience",
+    "analyticsDescription": "Google Analytics et Vercel Analytics mesurent les pages consultées, les parcours et les caractéristiques techniques de la visite. Aucune publicité personnalisée n’est activée.",
+    "savePreferences": "Enregistrer mes choix",
+    "privacyLink": "Confidentialité et cookies",
+    "close": "Fermer sans modifier mon choix",
+    "settings": "Gérer mes cookies"
+  },
+  "privacy": {
+    "title": "Confidentialité et cookies",
+    "paragraphs": [
+      "Cette information concerne antl.fr et showcase.antl.fr, édités par antl. Les formulaires du site recueillent les données que vous choisissez de transmettre pour répondre à votre demande ou traiter votre candidature. Pour exercer vos droits d’accès, de rectification, d’effacement, de limitation ou d’opposition, contactez contact@antl.fr. Vous pouvez également adresser une réclamation à la CNIL.",
+      "La mesure d’audience utilise Google Analytics (Google) et Vercel Analytics (Vercel) uniquement après votre consentement. Elle sert à comprendre les pages consultées et les parcours, ainsi que les caractéristiques techniques des visites. Google Analytics utilise des identifiants de navigateur stockés dans des cookies ; Vercel Analytics fournit une mesure d’audience sans cookies. Aucun outil publicitaire ni signal de personnalisation publicitaire Google n’est activé par cette configuration.",
+      "Votre acceptation ou votre refus est mémorisé pendant six mois dans le stockage local de votre navigateur, séparément pour chaque site. Les cookies Google Analytics sont configurés avec une durée maximale de 180 jours. Vous pouvez modifier ou retirer votre accord à tout moment avec « Gérer mes cookies » dans le pied de page. Le retrait arrête les outils de mesure et supprime les cookies Google Analytics accessibles à ces sites. Les données déjà collectées ne sont pas effacées automatiquement par le retrait ; contactez antl pour toute demande concernant vos droits.",
+      "Le fonctionnement du site et vos préférences de langue ne dépendent pas de l’acceptation des outils de mesure d’audience. Les fournisseurs Google et Vercel peuvent traiter des données en dehors de l’Union européenne ; leurs politiques de confidentialité décrivent leurs traitements et les garanties applicables. Le consentement aux cookies ne vaut pas consentement à recevoir des communications commerciales."
+    ],
+    "google": "Confidentialité Google",
+    "vercel": "Confidentialité Vercel"
   }
 }

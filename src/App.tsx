@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react";
+import { CookieConsentProvider } from "./context";
+import { CookieConsentSection } from "./views/layouts";
+import { AudienceMeasurement } from "./views/components";
 
 import Home from "./views/home/Home";
 import AboutUs from "./views/aboutUs/AboutUs";
@@ -13,7 +15,7 @@ import MetaTags from "./components/metaTags/MetaTags";
 
 function App() {
   return (
-    <>
+    <CookieConsentProvider>
       <MetaTags />
       <ScrollToTop />
       <Routes>
@@ -27,8 +29,9 @@ function App() {
         <Route path="/services" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Analytics />
-    </>
+      <AudienceMeasurement />
+      <CookieConsentSection />
+    </CookieConsentProvider>
   );
 }
 

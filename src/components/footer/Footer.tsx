@@ -1,4 +1,5 @@
 import "./footer.scss";
+import { useCookieConsent } from "../../hooks";
 import type { ReactElement } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -14,6 +15,7 @@ import LanguageSelector from "../languageSelector/LanguageSelector";
 
 export default function Footer(): ReactElement {
   const { t } = useTranslation();
+  const { openPreferences } = useCookieConsent();
 
   return (
     <footer id="footerComponent" role="contentinfo">
@@ -97,6 +99,9 @@ export default function Footer(): ReactElement {
                 </li>
                 <li>
                   <Link to="/legal">{t("footer.legal")}</Link>
+                </li>
+                <li>
+                  <button className="cookie-settings-button" type="button" onClick={openPreferences}>{t("cookieConsent.settings")}</button>
                 </li>
               </ul>
             </nav>
